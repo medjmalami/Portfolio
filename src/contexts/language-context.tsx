@@ -1,7 +1,8 @@
+"use client"
 
 import { createContext, useContext, useEffect, useState, type ReactNode } from "react"
 
-type Language = "en" | "fr"
+type Language = "en" | "fr" | "ar"
 
 type LanguageContextType = {
   language: Language
@@ -18,6 +19,8 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     const browserLanguage = navigator.language.split("-")[0]
     if (browserLanguage === "fr") {
       setLanguage("fr")
+    } else if (browserLanguage === "ar") {
+      setLanguage("ar")
     }
 
     // Check if there's a stored preference
@@ -26,6 +29,19 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
       setLanguage(storedLanguage)
     }
   }, [])
+
+  // Apply RTL direction for Arabic
+  useEffect(() => {
+    if (language === "ar") {
+      document.documentElement.dir = "rtl"
+      document.documentElement.lang = "ar"
+      document.body.classList.add("rtl")
+    } else {
+      document.documentElement.dir = "ltr"
+      document.documentElement.lang = language
+      document.body.classList.remove("rtl")
+    }
+  }, [language])
 
   const handleSetLanguage = (newLanguage: Language) => {
     setLanguage(newLanguage)

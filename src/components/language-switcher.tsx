@@ -1,3 +1,4 @@
+"use client"
 
 import { useLanguage } from "@/contexts/language-context"
 import { Button } from "./ui/button"
@@ -23,6 +24,9 @@ export function LanguageSwitcher() {
         </DropdownMenuItem>
         <DropdownMenuItem onClick={() => setLanguage("fr")} className={language === "fr" ? "bg-accent" : ""}>
           {t("language.fr")}
+        </DropdownMenuItem>
+        <DropdownMenuItem onClick={() => setLanguage("ar")} className={language === "ar" ? "bg-accent" : ""}>
+          {t("language.ar")}
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
