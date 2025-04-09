@@ -27,6 +27,10 @@ type Translations = {
       en: "Contact",
       fr: "Contact",
     },
+    "nav.certificates": {
+      en: "Certificates",
+      fr: "Certificats",
+    },
     "nav.hireMe": {
       en: "Hire Me",
       fr: "Engagez-moi",
@@ -97,6 +101,32 @@ type Translations = {
       en: "Database & Tools",
       fr: "Base de données & Outils",
     },
+    // Certificates Section
+    "certificates.title": {
+      en: "Certificates",
+      fr: "Certificats",
+    },
+    "certificates.view":{
+      en: "View Certificate",
+      fr: "Voir le certificat",
+    },
+    "certificates.javascript.name": {
+      en: "JavaScript Algorithms and Data Structures",
+      fr: "JavaScript Alogorithmes et Structures de Données",
+    },
+    "certificates.frontend.name": {
+      en: "Front End Development Libraries",
+      fr: "Bibliothèques de Developpement Front End",
+    },
+    "certificates.backend.name": {
+      en: "Back End Development and APIs",
+      fr: "Developpement Back End et APIs",
+    },
+    "certificates.quality.name": {
+      en: "Quality Assurance",
+      fr: "Assurance Qualité",
+    },
+
   
     // Projects Section
     "projects.title": {
@@ -159,7 +189,7 @@ type Translations = {
     },
     "testimonials.client3.name": {
     en: "Professor Laila Amir",
-    fr: "Professeur Laila Amir",
+    fr: "Professeure Laila Amir",
     },
     "testimonials.client3.position": {
     en: "Computer Science Department",

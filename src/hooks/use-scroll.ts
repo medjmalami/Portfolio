@@ -1,3 +1,4 @@
+"use client"
 
 import { useEffect, useState } from "react"
 
@@ -21,7 +22,8 @@ export function useScroll() {
   // Update active section based on scroll position
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ["about", "skills", "projects", "testimonials", "contact"]
+      // Add "certificates" to the sections array between "skills" and "projects"
+      const sections = ["about", "skills", "certificates", "projects", "testimonials", "contact"]
       const scrollPosition = window.scrollY + 100 // Offset for better detection
 
       for (const section of sections) {
@@ -39,6 +41,8 @@ export function useScroll() {
     }
 
     window.addEventListener("scroll", handleScroll)
+    // Initial check on mount
+    handleScroll()
     return () => window.removeEventListener("scroll", handleScroll)
   }, [activeSection])
 

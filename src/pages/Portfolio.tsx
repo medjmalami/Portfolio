@@ -127,6 +127,14 @@ export default function Portfolio() {
               {t("nav.skills")}
             </button>
             <button
+              onClick={() => scrollToSection("certificates")}
+              className={`text-sm font-medium transition-colors ${
+                activeSection === "certificates" ? "text-foreground" : "text-muted-foreground hover:text-foreground"
+              }`}
+            >
+              {t("nav.certificates")}
+            </button>
+            <button
               onClick={() => scrollToSection("projects")}
               className={`text-sm font-medium transition-colors ${
                 activeSection === "projects" ? "text-foreground" : "text-muted-foreground hover:text-foreground"
@@ -154,7 +162,9 @@ export default function Portfolio() {
           <div className="flex items-center gap-2">
             <ThemeSwitcher />
             <LanguageSwitcher />
-            <Button onClick={() => scrollToSection("contact")} size="sm">{t("nav.hireMe")}</Button>
+            <Button onClick={() => scrollToSection("contact")} size="sm">
+              {t("nav.hireMe")}
+            </Button>
           </div>
         </div>
       </header>
@@ -323,6 +333,92 @@ export default function Portfolio() {
           </div>
         </section>
 
+        {/* Certificates Section */}
+        <section id="certificates" className="py-20">
+          <div className="container mx-auto px-4">
+            <SectionTransition>
+              <h2 className="text-3xl font-bold mb-12 text-center">{t("certificates.title")}</h2>
+            </SectionTransition>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <SectionTransition delay={0.1}>
+                <Card className="overflow-hidden">
+                  <div className="relative aspect-video w-full flex items-center justify-center bg-muted">
+                    <img
+                      src="/javascript.png?height=300&width=500&text=JavaScript+Algorithms+and+Data+Structures"
+                      alt="JavaScript Algorithms and Data Structures Certificate"
+                      className="object-cover w-full h-full"
+                    />
+                  </div>
+                  <CardContent className="p-6">
+                    <h3 className="text-xl font-semibold mb-2">{t("certificates.javascript.name")}</h3>
+                    <p className="text-muted-foreground mb-4">freeCodeCamp</p>
+                    <Button size="sm" variant="outline" className="flex items-center gap-1">
+                      <ExternalLink className="h-4 w-4" /> <a href="https://www.freecodecamp.org/certification/Mohamed-Amine-Jmal/javascript-algorithms-and-data-structures-v8">{t("certificates.view")}</a>
+                    </Button>
+                  </CardContent>
+                </Card>
+              </SectionTransition>
+
+              <SectionTransition delay={0.2}>
+                <Card className="overflow-hidden">
+                  <div className="relative aspect-video w-full flex items-center justify-center bg-muted">
+                    <img
+                      src="/frontend.png?height=300&width=500&text=Front+End+Development+Libraries"
+                      alt="Front End Development Libraries Certificate"
+                      className="object-cover w-full h-full"
+                    />
+                  </div>
+                  <CardContent className="p-6">
+                    <h3 className="text-xl font-semibold mb-2">{t("certificates.frontend.name")}</h3>
+                    <p className="text-muted-foreground mb-4">freeCodeCamp</p>
+                    <Button size="sm" variant="outline" className="flex items-center gap-1">
+                      <ExternalLink className="h-4 w-4" /> <a href="https://www.freecodecamp.org/certification/Mohamed-Amine-Jmal/front-end-development-libraries">{t("certificates.view")}</a> 
+                    </Button>
+                  </CardContent>
+                </Card>
+              </SectionTransition>
+
+              <SectionTransition delay={0.3}>
+                <Card className="overflow-hidden">
+                  <div className="relative aspect-video w-full flex items-center justify-center bg-muted">
+                    <img
+                      src="/backend.png?height=300&width=500&text=Back+End+Development+and+APIs"
+                      alt="Back End Development and APIs"
+                      className="object-cover w-full h-full"
+                    />
+                  </div>
+                  <CardContent className="p-6">
+                    <h3 className="text-xl font-semibold mb-2">{t("certificates.backend.name")}</h3>
+                    <p className="text-muted-foreground mb-4">freeCodeCamp</p>
+                    <Button size="sm" variant="outline" className="flex items-center gap-1">
+                      <ExternalLink className="h-4 w-4" /><a href="https://www.freecodecamp.org/certification/Mohamed-Amine-Jmal/back-end-development-and-apis">{t("certificates.view")}</a> 
+                    </Button>
+                  </CardContent>
+                </Card>
+              </SectionTransition>
+
+              <SectionTransition delay={0.4}>
+                <Card className="overflow-hidden">
+                  <div className="relative aspect-video w-full flex items-center justify-center bg-muted">
+                    <img
+                      src="/quality.png?height=300&width=500&text=Quality+Assurance"
+                      alt="Quality Assurance Certificate"
+                      className="object-cover w-full h-full"
+                    />
+                  </div>
+                  <CardContent className="p-6">
+                    <h3 className="text-xl font-semibold mb-2">{t("certificates.quality.name")}</h3>
+                    <p className="text-muted-foreground mb-4">freeCodeCamp</p>
+                    <Button size="sm" variant="outline" className="flex items-center gap-1">
+                      <ExternalLink className="h-4 w-4" /><a href="https://www.freecodecamp.org/certification/Mohamed-Amine-Jmal/quality-assurance-v7">{t("certificates.view")}</a> 
+                    </Button>
+                  </CardContent>
+                </Card>
+              </SectionTransition>
+            </div>
+          </div>
+        </section>
+
         {/* Projects Section */}
         <section id="projects" className="py-20 bg-muted/50">
           <div className="container mx-auto px-4">
@@ -349,7 +445,8 @@ export default function Portfolio() {
                     </div>
                     <div className="flex gap-4">
                       <Button size="sm" variant="outline" className="flex items-center gap-1">
-                        <ExternalLink className="h-4 w-4" /> <a href="https://ecommerce-front-jmal.vercel.app/">{t("projects.liveDemo")}</a>
+                        <ExternalLink className="h-4 w-4" />{" "}
+                        <a href="https://ecommerce-front-jmal.vercel.app/">{t("projects.liveDemo")}</a>
                       </Button>
                       <Button size="sm" variant="outline" className="flex items-center gap-1">
                         <Github className="h-4 w-4" /> {t("projects.code")}
@@ -379,7 +476,8 @@ export default function Portfolio() {
                     </div>
                     <div className="flex gap-4">
                       <Button size="sm" variant="outline" className="flex items-center gap-1">
-                        <ExternalLink className="h-4 w-4" /> <a href="https://3d-models-proj.vercel.app/">{t("projects.liveDemo")}</a>
+                        <ExternalLink className="h-4 w-4" />{" "}
+                        <a href="https://3d-models-proj.vercel.app/">{t("projects.liveDemo")}</a>
                       </Button>
                       <Button size="sm" variant="outline" className="flex items-center gap-1">
                         <Github className="h-4 w-4" /> {t("projects.code")}
