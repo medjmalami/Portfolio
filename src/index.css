@@ -89,25 +89,15 @@ body {
   text-align: right;
 }
 
-/* Fix layout direction for RTL */
-.rtl .flex,
-.rtl .items-center,
-.rtl .justify-between {
-  flex-direction: row-reverse;
-}
+
+
 
 /* Exception for cases where we don't want to reverse */
 .rtl .no-rtl-flip {
   flex-direction: row !important;
 }
 
-/* Fix icon positioning in RTL */
-.rtl .gap-1,
-.rtl .gap-2,
-.rtl .gap-3,
-.rtl .gap-4 {
-  direction: ltr;
-}
+
 
 /* Convert margins/paddings for RTL */
 .rtl .mr-2 {

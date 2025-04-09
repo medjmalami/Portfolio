@@ -53,7 +53,7 @@ export const translations: Translations = {
   "hero.description": {
     en: "I'm a Full Stack JavaScript & TypeScript Developer passionate about building modern web applications.",
     fr: "Je suis un développeur Full Stack JavaScript & TypeScript passionné par la création d'applications web modernes.",
-    ar: "أنا مطور ويب متكامل متخصص في جافاسكريبت وتايبسكريبت وشغوف ببناء تطبيقات الويب الحديثة.",
+    ar: "أنا مطور ويب متكامل متخصص في JavaScript و TypeScript و الذي يعتقد بالبناء الحديثة للتطبيقات الويب الموجهة.",
   },
   "hero.viewWork": {
     en: "View My Work",
