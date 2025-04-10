@@ -449,7 +449,7 @@ export default function Portfolio() {
                         <a href="https://ecommerce-front-jmal.netlify.app/">{t("projects.liveDemo")}</a>
                       </Button>
                       <Button size="sm" variant="outline" className="flex items-center gap-1">
-                        <Github className="h-4 w-4" /> {t("projects.code")}
+                        <Github className="h-4 w-4" /><a href="https://github.com/medjmalami/Ecommerce-front">{t("projects.code")}</a> 
                       </Button>
                     </div>
                   </CardContent>
@@ -480,7 +480,7 @@ export default function Portfolio() {
                         <a href="https://3d-models-proj-jmal.vercel.app/">{t("projects.liveDemo")}</a>
                       </Button>
                       <Button size="sm" variant="outline" className="flex items-center gap-1">
-                        <Github className="h-4 w-4" /> {t("projects.code")}
+                        <Github className="h-4 w-4" /><a href="https://github.com/medjmalami/3d-models-proj">{t("projects.code")}</a> 
                       </Button>
                     </div>
                   </CardContent>
