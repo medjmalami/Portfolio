@@ -446,7 +446,7 @@ export default function Portfolio() {
                     <div className="flex gap-4">
                       <Button size="sm" variant="outline" className="flex items-center gap-1">
                         <ExternalLink className="h-4 w-4" />{" "}
-                        <a href="https://ecommerce-front-jmal.vercel.app/">{t("projects.liveDemo")}</a>
+                        <a href="https://ecommerce-front-jmal.netlify.app/">{t("projects.liveDemo")}</a>
                       </Button>
                       <Button size="sm" variant="outline" className="flex items-center gap-1">
                         <Github className="h-4 w-4" /> {t("projects.code")}
@@ -477,7 +477,7 @@ export default function Portfolio() {
                     <div className="flex gap-4">
                       <Button size="sm" variant="outline" className="flex items-center gap-1">
                         <ExternalLink className="h-4 w-4" />{" "}
-                        <a href="https://3d-models-proj.vercel.app/">{t("projects.liveDemo")}</a>
+                        <a href="https://3d-models-proj-jmal.vercel.app/">{t("projects.liveDemo")}</a>
                       </Button>
                       <Button size="sm" variant="outline" className="flex items-center gap-1">
                         <Github className="h-4 w-4" /> {t("projects.code")}
