@@ -253,7 +253,7 @@ export default function Portfolio() {
                     <p className="text-muted-foreground">{t("about.degree")}</p>
                   </div>
                   <Button variant="outline" className="flex items-center gap-2">
-                    {t("about.resume")} <ChevronRight className="h-4 w-4" />
+                    <a href="/CV.pdf-3.pdf">{t("about.resume")}</a> <ChevronRight className="h-4 w-4" />
                   </Button>
                 </div>
               </SectionTransition>
