@@ -40,7 +40,7 @@ export const translations: Translations = {
   },
   "nav.hireMe": {
     en: "Hire Me",
-    fr: "Engagez-moi",
+    fr: "Recrutement",
     ar: "وظفني",
   },
 
@@ -111,12 +111,12 @@ export const translations: Translations = {
   },
   "skills.frontend": {
     en: "Frontend",
-    fr: "Frontend",
+    fr: "Front-end",
     ar: "واجهة المستخدم",
   },
   "skills.backend": {
     en: "Backend",
-    fr: "Backend",
+    fr: "Back-end",
     ar: "الخلفية",
   },
   "skills.database": {
