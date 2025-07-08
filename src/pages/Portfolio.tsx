@@ -27,8 +27,10 @@ import { useScroll } from "../hooks/use-scroll"
 import { motion } from "framer-motion"
 
 export default function Portfolio() {
-  const { t } = useTranslations()
+  const { t, language } = useTranslations()
   const { activeSection, scrollToSection } = useScroll()
+
+  const en = language === "en" ? "/CV.EN.pdf" : "/CV.FR.pdf"
 
   // Form state
   const [formData, setFormData] = useState({
@@ -71,19 +73,19 @@ export default function Portfolio() {
 
     try {
       // Using FormSubmit.co service - replace YOUR_EMAIL with your actual email
-      const response = await fetch(`https://formsubmit.co/jmalmohamedamine1@gmail.com`, {
+      const form = new FormData()
+      form.append("name", formData.name)
+      form.append("email", formData.email)
+      form.append("subject", formData.subject || "Portfolio Contact Form")
+      form.append("message", formData.message)
+      form.append("_captcha", "false")
+      form.append("_template", "box")
+
+      const response = await fetch("https://formsubmit.co/jmalmohamedamine1@gmail.com", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        body: JSON.stringify({
-          name: formData.name,
-          email: formData.email,
-          subject: formData.subject || "Portfolio Contact Form",
-          message: formData.message,
-        }),
+        body: form,
       })
+
 
       if (response.ok) {
         setFormStatus("success")
@@ -253,7 +255,7 @@ export default function Portfolio() {
                     <p className="text-muted-foreground">{t("about.degree")}</p>
                   </div>
                   <Button variant="outline" className="flex items-center gap-2">
-                    <a href="/CV.pdf-7.pdf">{t("about.resume")}</a> <ChevronRight className="h-4 w-4" />
+                    <a href={en}>{t("about.resume")}</a> <ChevronRight className="h-4 w-4" />
                   </Button>
                 </div>
               </SectionTransition>
