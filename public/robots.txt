@@ -1,0 +1,6 @@
+# robots.txt for Mohamed Amine Jmal Portfolio
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://portfolio-jmal.vercel.app/sitemap.xml

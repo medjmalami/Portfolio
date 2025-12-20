@@ -15,7 +15,6 @@ import {
   Code,
   Server,
   Database,
-  Briefcase,
   CheckCircle,
   AlertCircle,
 } from "lucide-react"
@@ -57,17 +56,20 @@ export default function Portfolio() {
 
     // Basic validation
     if (!formData.name || !formData.email || !formData.message) {
-      setFormError("Please fill in all required fields")
+      const errorMessage = language === "en" ? "Please fill in all required fields" : "Veuillez remplir tous les champs obligatoires"
+      setFormError(errorMessage)
       return
     }
 
     // Email validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
     if (!emailRegex.test(formData.email)) {
-      setFormError("Please enter a valid email address")
+      const errorMessage = language === "en" ? "Please enter a valid email address" : "Veuillez entrer une adresse email valide"
+      setFormError(errorMessage)
       return
     }
-
+    
+    
     setFormStatus("submitting")
     setFormError("")
 
@@ -201,14 +203,7 @@ export default function Portfolio() {
                 >
                   <Linkedin className="h-5 w-5" />
                 </a>
-                <a
-                  href="https://www.upwork.com/freelancers/~01716cf175956be0c0"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-muted-foreground hover:text-foreground"
-                >
-                  <Briefcase className="h-5 w-5" />
-                </a>
+
                 <a href="mailto:jmalmohamedamine1@gmail.com" className="text-muted-foreground hover:text-foreground">
                   <Mail className="h-5 w-5" />
                 </a>
@@ -279,9 +274,10 @@ export default function Portfolio() {
                     </div>
                     <div className="flex flex-wrap gap-2 flex-1">
                       <Badge>React</Badge>
+                      <Badge>Next.js</Badge>
                       <Badge>JavaScript</Badge>
                       <Badge>TypeScript</Badge>
-                      <Badge>HTML</Badge>
+                      <Badge>HTML5</Badge>
                       <Badge>CSS</Badge>
                       <Badge>Tailwind</Badge>
                       <Badge>Bootstrap</Badge>
@@ -301,13 +297,17 @@ export default function Portfolio() {
                     <div className="flex flex-wrap gap-2 flex-1">
                       <Badge>Node.js</Badge>
                       <Badge>Express</Badge>
+                      <Badge>Hono</Badge>
                       <Badge>Fastify</Badge>
                       <Badge>Nest.js</Badge>
+                      <Badge>REST APIs</Badge>
+                      <Badge>Socket.io</Badge>
+                      <Badge>WebSocket</Badge>
+                      <Badge>OAuth</Badge>
                       <Badge>PHP</Badge>
                       <Badge>Java</Badge>
                       <Badge>Python</Badge>
-                      <Badge>TypeScript</Badge>
-                      <Badge>JavaScript</Badge>
+                      <Badge>C</Badge>
                     </div>
                   </CardContent>
                 </Card>
@@ -323,6 +323,9 @@ export default function Portfolio() {
                       <Badge>MongoDB</Badge>
                       <Badge>PostgreSQL</Badge>
                       <Badge>MySQL</Badge>
+                      <Badge>Redis</Badge>
+                      <Badge>SQL</Badge>
+                      <Badge>Amazon S3</Badge>
                       <Badge>Docker</Badge>
                       <Badge>Git</Badge>
                       <Badge>GitHub</Badge>
@@ -566,15 +569,7 @@ export default function Portfolio() {
                       <Linkedin className="h-5 w-5 text-muted-foreground" />
                       <span>linkedin.com/in/mohamed-amine-jmal</span>
                     </a>
-                    <a
-                      href="https://www.upwork.com/freelancers/~01716cf175956be0c0"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-3 text-foreground hover:text-primary transition-colors"
-                    >
-                      <Briefcase className="h-5 w-5 text-muted-foreground" />
-                      <span>upwork.com/freelancers/~01716cf175956be0c0</span>
-                    </a>
+
                     <a
                       href="https://github.com/medjmalami"
                       target="_blank"
@@ -700,14 +695,7 @@ export default function Portfolio() {
               >
                 <Linkedin className="h-5 w-5" />
               </a>
-              <a
-                href="https://www.upwork.com/freelancers/~01716cf175956be0c0"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-primary-foreground/70 hover:text-primary-foreground transition-colors"
-              >
-                <Briefcase className="h-5 w-5" />
-              </a>
+
               <a
                 href="mailto:jmalmohamedamine1@gmail.com"
                 className="text-primary-foreground/70 hover:text-primary-foreground transition-colors"
