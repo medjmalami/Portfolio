@@ -40,7 +40,7 @@ export const translations: Translations = {
   },
   "nav.hireMe": {
     en: "Hire Me",
-    fr: "Recrutement",
+    fr: "Embauche",
     ar: "وظفني",
   },
 

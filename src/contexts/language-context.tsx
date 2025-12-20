@@ -1,6 +1,7 @@
 "use client"
 
 import { createContext, useContext, useEffect, useState, type ReactNode } from "react"
+import { useLocation, useNavigate } from "react-router-dom"
 
 type Language = "en" | "fr" | "ar"
 
@@ -12,44 +13,56 @@ type LanguageContextType = {
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined)
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [language, setLanguage] = useState<Language>("en")
+  const location = useLocation()
+  const navigate = useNavigate()
 
-  useEffect(() => {
-    // Detect browser language on client side
-    const browserLanguage = navigator.language.split("-")[0]
-    if (browserLanguage === "fr") {
-      setLanguage("fr")
-    } else if (browserLanguage === "ar") {
-      setLanguage("ar")
+  // Extract language from URL path
+  const getLanguageFromPath = (): Language => {
+    const path = location.pathname.split("/")[1]
+    if (["en", "fr", "ar"].includes(path)) {
+      return path as Language
     }
+    return "en" // default
+  }
 
-    // Check if there's a stored preference
-    const storedLanguage = localStorage.getItem("language") as Language
-    if (storedLanguage) {
-      setLanguage(storedLanguage)
-    }
-  }, [])
+  const [language, setLanguageState] = useState<Language>(getLanguageFromPath())
 
-  // Apply RTL direction for Arabic
+  // Sync language when URL changes
   useEffect(() => {
+    const langFromPath = getLanguageFromPath()
+    if (langFromPath !== language) {
+      setLanguageState(langFromPath)
+    }
+  }, [location.pathname])
+
+  // Handle RTL for Arabic and save to localStorage
+  useEffect(() => {
+    document.documentElement.lang = language
     if (language === "ar") {
       document.documentElement.dir = "rtl"
-      document.documentElement.lang = "ar"
       document.body.classList.add("rtl")
     } else {
       document.documentElement.dir = "ltr"
-      document.documentElement.lang = language
       document.body.classList.remove("rtl")
     }
+    // Save to localStorage for redirect preference
+    localStorage.setItem("language", language)
   }, [language])
 
-  const handleSetLanguage = (newLanguage: Language) => {
-    setLanguage(newLanguage)
-    localStorage.setItem("language", newLanguage)
+  // Navigate to new language URL
+  const setLanguage = (newLang: Language) => {
+    if (newLang === language) return // No change needed
+    
+    const currentPath = location.pathname
+    const pathWithoutLang = currentPath.replace(/^\/(en|fr|ar)/, "") || ""
+    const hash = location.hash // Preserve hash anchors like #contact
+    navigate(`/${newLang}${pathWithoutLang}${hash}`, { replace: true })
   }
 
   return (
-    <LanguageContext.Provider value={{ language, setLanguage: handleSetLanguage }}>{children}</LanguageContext.Provider>
+    <LanguageContext.Provider value={{ language, setLanguage }}>
+      {children}
+    </LanguageContext.Provider>
   )
 }
 
