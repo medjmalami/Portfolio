@@ -564,8 +564,8 @@ export default function Portfolio() {
                       href="mailto:jmalmohamedamine1@gmail.com"
                       className="flex items-center gap-3 text-foreground hover:text-primary transition-colors"
                     >
-                      <Mail className="h-5 w-5 text-muted-foreground" />
-                      <span>jmalmohamedamine1@gmail.com</span>
+                      <Mail className="h-5 w-5 text-muted-foreground flex-shrink-0" />
+                      <span className="break-all">jmalmohamedamine1@gmail.com</span>
                     </a>
                     <a
                       href="https://www.linkedin.com/in/mohamed-amine-jmal-b68965252/"
@@ -573,8 +573,8 @@ export default function Portfolio() {
                       rel="noopener noreferrer"
                       className="flex items-center gap-3 text-foreground hover:text-primary transition-colors"
                     >
-                      <Linkedin className="h-5 w-5 text-muted-foreground" />
-                      <span>linkedin.com/in/mohamed-amine-jmal</span>
+                      <Linkedin className="h-5 w-5 text-muted-foreground flex-shrink-0" />
+                      <span className="break-all">linkedin.com/in/mohamed-amine-jmal</span>
                     </a>
 
                     <a
@@ -583,8 +583,8 @@ export default function Portfolio() {
                       rel="noopener noreferrer"
                       className="flex items-center gap-3 text-foreground hover:text-primary transition-colors"
                     >
-                      <Github className="h-5 w-5 text-muted-foreground" />
-                      <span>github.com/medjmalami</span>
+                      <Github className="h-5 w-5 text-muted-foreground flex-shrink-0" />
+                      <span className="break-all">github.com/medjmalami</span>
                     </a>
                   </div>
                 </div>
@@ -612,7 +612,7 @@ export default function Portfolio() {
                           <span>{formError}</span>
                         </div>
                       )}
-                      <div className="grid grid-cols-2 gap-4">
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <div className="space-y-2">
                           <label htmlFor="name" className="text-sm font-medium">
                             {t("contact.name")} <span className="text-red-500">*</span>
