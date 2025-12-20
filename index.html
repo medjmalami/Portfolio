@@ -13,6 +13,12 @@
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://portfolio-jmal.vercel.app" />
     
+    <!-- Hreflang tags for multi-language SEO -->
+    <link rel="alternate" hreflang="en" href="https://portfolio-jmal.vercel.app/" />
+    <link rel="alternate" hreflang="fr" href="https://portfolio-jmal.vercel.app/" />
+    <link rel="alternate" hreflang="ar" href="https://portfolio-jmal.vercel.app/" />
+    <link rel="alternate" hreflang="x-default" href="https://portfolio-jmal.vercel.app/" />
+    
     <!-- Favicon -->
     <link rel="icon" type="image/jpeg" href="/profile.jpg" />
     <link rel="apple-touch-icon" href="/profile.jpg" />
@@ -39,32 +45,81 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Mohamed Amine Jmal",
-      "url": "https://portfolio-jmal.vercel.app",
-      "image": "https://portfolio-jmal.vercel.app/profile.jpg",
-      "jobTitle": "Full Stack JavaScript & TypeScript Developer",
-      "description": "Full Stack Developer specializing in JavaScript, TypeScript, React, Node.js, and modern web technologies.",
-      "email": "jmalmohamedamine1@gmail.com",
-      "sameAs": [
-        "https://github.com/medjmalami",
-        "https://www.linkedin.com/in/mohamed-amine-jmal-b68965252/"
-      ],
-      "knowsAbout": [
-        "JavaScript",
-        "TypeScript",
-        "React",
-        "Node.js",
-        "Express",
-        "PostgreSQL",
-        "MongoDB",
-        "Full Stack Development",
-        "Web Development"
-      ],
-      "alumniOf": {
-        "@type": "EducationalOrganization",
-        "name": "Software Engineering"
-      }
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "https://portfolio-jmal.vercel.app/#person",
+          "name": "Mohamed Amine Jmal",
+          "url": "https://portfolio-jmal.vercel.app",
+          "image": "https://portfolio-jmal.vercel.app/profile.jpg",
+          "jobTitle": "Full Stack JavaScript & TypeScript Developer",
+          "description": "Full Stack Developer specializing in JavaScript, TypeScript, React, Node.js, and modern web technologies.",
+          "email": "jmalmohamedamine1@gmail.com",
+          "sameAs": [
+            "https://github.com/medjmalami",
+            "https://www.linkedin.com/in/mohamed-amine-jmal-b68965252/"
+          ],
+          "knowsAbout": [
+            "JavaScript",
+            "TypeScript",
+            "React",
+            "Next.js",
+            "Node.js",
+            "Express",
+            "PostgreSQL",
+            "MongoDB",
+            "Full Stack Development",
+            "Web Development"
+          ],
+          "alumniOf": {
+            "@type": "EducationalOrganization",
+            "name": "Software Engineering"
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://portfolio-jmal.vercel.app/#website",
+          "name": "Mohamed Amine Jmal Portfolio",
+          "url": "https://portfolio-jmal.vercel.app",
+          "description": "Portfolio of Mohamed Amine Jmal - Full Stack JavaScript & TypeScript Developer",
+          "author": {
+            "@id": "https://portfolio-jmal.vercel.app/#person"
+          },
+          "inLanguage": ["en", "fr", "ar"]
+        },
+        {
+          "@type": "ItemList",
+          "@id": "https://portfolio-jmal.vercel.app/#projects",
+          "name": "Projects",
+          "description": "Web development projects by Mohamed Amine Jmal",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "item": {
+                "@type": "SoftwareApplication",
+                "name": "E-Commerce Website",
+                "description": "A responsive e-commerce website built with HTML, CSS, and JavaScript featuring product listings, shopping cart, and checkout process.",
+                "url": "https://ecommerce-front-jmal.netlify.app/",
+                "applicationCategory": "WebApplication",
+                "operatingSystem": "Web Browser"
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "item": {
+                "@type": "SoftwareApplication",
+                "name": "3D Models Showcase",
+                "description": "A full-stack application for showcasing 3D models built with React, Express, PostgreSQL, and Three.js.",
+                "url": "https://3d-models-proj-jmal.vercel.app/",
+                "applicationCategory": "WebApplication",
+                "operatingSystem": "Web Browser"
+              }
+            }
+          ]
+        }
+      ]
     }
     </script>
     

@@ -216,8 +216,8 @@ export default function Portfolio() {
               className="relative aspect-square max-w-md mx-auto"
             >
               <img
-                src="/profile.jpg?height=200&width=200"
-                alt="Mohamed Amine Jmal"
+                src="/profile.jpg"
+                alt="Mohamed Amine Jmal - Full Stack JavaScript Developer"
                 className="rounded-full object-cover w-full h-full"
               />
             </motion.div>
@@ -234,8 +234,9 @@ export default function Portfolio() {
               <SectionTransition delay={0.1}>
                 <div className="relative aspect-video w-full flex items-center justify-center bg-muted">
                   <img
-                    src="/final.jpg?height=600&width=600"
-                    alt="About Me"
+                    src="/final.jpg"
+                    alt="Anime-style illustration of Mohamed Amine Jmal working on a laptop"
+                    loading="lazy"
                     className="rounded-lg object-cover w-full h-full"
                   />
                 </div>
@@ -349,8 +350,9 @@ export default function Portfolio() {
                 <Card className="overflow-hidden">
                   <div className="relative aspect-video w-full flex items-center justify-center bg-muted">
                     <img
-                      src="/javascript.png?height=300&width=500&text=JavaScript+Algorithms+and+Data+Structures"
-                      alt="JavaScript Algorithms and Data Structures Certificate"
+                      src="/javascript.png"
+                      alt="JavaScript Algorithms and Data Structures Certificate from freeCodeCamp"
+                      loading="lazy"
                       className="object-cover w-full h-full"
                     />
                   </div>
@@ -368,8 +370,9 @@ export default function Portfolio() {
                 <Card className="overflow-hidden">
                   <div className="relative aspect-video w-full flex items-center justify-center bg-muted">
                     <img
-                      src="/frontend.png?height=300&width=500&text=Front+End+Development+Libraries"
-                      alt="Front End Development Libraries Certificate"
+                      src="/frontend.png"
+                      alt="Front End Development Libraries Certificate from freeCodeCamp"
+                      loading="lazy"
                       className="object-cover w-full h-full"
                     />
                   </div>
@@ -387,8 +390,9 @@ export default function Portfolio() {
                 <Card className="overflow-hidden">
                   <div className="relative aspect-video w-full flex items-center justify-center bg-muted">
                     <img
-                      src="/backend.png?height=300&width=500&text=Back+End+Development+and+APIs"
-                      alt="Back End Development and APIs"
+                      src="/backend.png"
+                      alt="Back End Development and APIs Certificate from freeCodeCamp"
+                      loading="lazy"
                       className="object-cover w-full h-full"
                     />
                   </div>
@@ -406,8 +410,9 @@ export default function Portfolio() {
                 <Card className="overflow-hidden">
                   <div className="relative aspect-video w-full flex items-center justify-center bg-muted">
                     <img
-                      src="/quality.png?height=300&width=500&text=Quality+Assurance"
-                      alt="Quality Assurance Certificate"
+                      src="/quality.png"
+                      alt="Quality Assurance Certificate from freeCodeCamp"
+                      loading="lazy"
                       className="object-cover w-full h-full"
                     />
                   </div>
@@ -435,8 +440,9 @@ export default function Portfolio() {
                 <Card className="overflow-hidden">
                   <div className="relative aspect-video w-full flex items-center justify-center bg-muted">
                     <img
-                      src="/ecommerce-front.png?height=300&width=500&text=E-Commerce+Website"
-                      alt="E-Commerce Website"
+                      src="/ecommerce-front.png"
+                      alt="E-Commerce Website project - responsive online store built with HTML, CSS, and JavaScript"
+                      loading="lazy"
                       className="object-cover w-full h-full"
                     />
                   </div>
@@ -465,8 +471,9 @@ export default function Portfolio() {
                 <Card className="overflow-hidden">
                   <div className="relative aspect-video w-full flex items-center justify-center bg-muted">
                     <img
-                      src="/3dModel.png?height=300&width=500&text=3D+Models+Showcase"
-                      alt="3D Models Showcase"
+                      src="/3dModel.png"
+                      alt="3D Models Showcase project - interactive 3D viewer built with React and Three.js"
+                      loading="lazy"
                       className="object-cover w-full h-full"
                     />
                   </div>
