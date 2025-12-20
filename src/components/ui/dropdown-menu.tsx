@@ -43,7 +43,7 @@ const DropdownMenu = ({ children }: { children: React.ReactNode }) => {
 const DropdownMenuTrigger = React.forwardRef<
   HTMLButtonElement,
   React.ButtonHTMLAttributes<HTMLButtonElement> & { asChild?: boolean }
->(({ className, asChild = false, onClick, ...props }, ref) => {
+>(({ className, asChild = false, onClick, children, ...props }, ref) => {
   const context = React.useContext(DropdownMenuContext)
   if (!context) {
     throw new Error("DropdownMenuTrigger must be used within a DropdownMenu")
@@ -56,6 +56,15 @@ const DropdownMenuTrigger = React.forwardRef<
     setOpen(!open)
   }
 
+  // If asChild, clone the child element and add our click handler
+  if (asChild && React.isValidElement(children)) {
+    return React.cloneElement(children as React.ReactElement<any>, {
+      onClick: handleClick,
+      ref,
+    })
+  }
+
+  // Otherwise render our own button
   return (
     <button
       ref={ref}
@@ -65,7 +74,9 @@ const DropdownMenuTrigger = React.forwardRef<
       )}
       onClick={handleClick}
       {...props}
-    />
+    >
+      {children}
+    </button>
   )
 })
 DropdownMenuTrigger.displayName = "DropdownMenuTrigger"
