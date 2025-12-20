@@ -2,7 +2,7 @@
 
 import type React from "react"
 
-import { useState, useEffect, type FormEvent } from "react"
+import { useState, type FormEvent } from "react"
 import { Button } from "../components/ui/button"
 import { Card, CardContent } from "../components/ui/card"
 import { Badge } from "../components/ui/badge"
@@ -30,11 +30,6 @@ export default function Portfolio() {
   const { activeSection, scrollToSection } = useScroll()
 
   const en = language === "en" ? "/CV.EN.pdf" : "/CV.FR.pdf"
-
-  // Signal to prerenderer that page is ready for capture
-  useEffect(() => {
-    document.dispatchEvent(new Event("render-complete"))
-  }, [])
 
   // Form state
   const [formData, setFormData] = useState({
