@@ -7,18 +7,30 @@ export interface Project {
   technologies: string[]
   liveUrl: string
   codeUrl: string
+  imagePosition?: string
 }
 
 export const projects: Project[] = [
   {
-    id: "ecommerce",
-    image: "/ecommerce-front.png",
-    alt: "E-Commerce Website project - responsive online store built with HTML, CSS, and JavaScript",
-    titleKey: "projects.ecommerce.title",
-    descriptionKey: "projects.ecommerce.description",
-    technologies: ["HTML", "CSS", "JavaScript"],
-    liveUrl: "https://ecommerce-front-jmal.netlify.app/",
-    codeUrl: "https://github.com/medjmalami/Ecommerce-front",
+    id: "employees-payroll",
+    image: "/employees-payroll-management.png",
+    alt: "Screenshot of employees payroll management system dashboard",
+    titleKey: "projects.payroll.title",
+    descriptionKey: "projects.payroll.description",
+    technologies: ["Next.js", "Hono", "PostgreSQL", "Drizzle ORM", "Zod","JWT"],
+    liveUrl: "",
+    codeUrl: "",
+  },
+  {
+    id: "chat-app",
+    image: "/chatApp.png",
+    alt: "Screenshot of a real-time group chat application with notifications",
+    titleKey: "projects.chatapp.title",
+    descriptionKey: "projects.chatapp.description",
+    technologies: ["Next.js", "Hono", "PostgreSQL", "Drizzle ORM", "Socket.io", "Zod", "OAuth", "JWT"],
+    liveUrl: "https://chat-front-a40y.onrender.com/",
+    codeUrl: "https://github.com/medjmalami/chat-notif-app/",
+    imagePosition: "object-[0%_center]",
   },
   {
     id: "3d-models",
@@ -26,7 +38,7 @@ export const projects: Project[] = [
     alt: "3D Models Showcase project - interactive 3D viewer built with React and Three.js",
     titleKey: "projects.3d.title",
     descriptionKey: "projects.3d.description",
-    technologies: ["React", "Express", "PostgreSQL", "Three.js"],
+    technologies: ["React", "Express", "PostgreSQL", "Drizzle ORM", "Zod", "JWT"],
     liveUrl: "https://3d-models-proj-jmal.vercel.app/",
     codeUrl: "https://github.com/medjmalami/3d-models-proj",
   },

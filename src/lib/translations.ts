@@ -168,15 +168,25 @@ export const translations: Translations = {
     fr: "Mes projets",
     ar: "مشاريعي",
   },
-  "projects.ecommerce.title": {
-    en: "E-Commerce Website",
-    fr: "Site E-Commerce",
-    ar: "موقع للتجارة الإلكترونية",
+  "projects.payroll.title": {
+    en: "Employees Payroll Management System",
+    fr: "Système de Gestion de la Paie des Employés",
+    ar: "نظام إدارة رواتب الموظفين",
   },
-  "projects.ecommerce.description": {
-    en: "A responsive e-commerce website built with HTML, CSS, and JavaScript. Features include product listings, shopping cart functionality, and a checkout process.",
-    fr: "Un site e-commerce responsive construit avec HTML, CSS et JavaScript. Les fonctionnalités comprennent des listes de produits, un panier d'achat et un processus de paiement.",
-    ar: "موقع تجارة إلكترونية متجاوب مبني بـ HTML و CSS و JavaScript. تشمل الميزات قوائم المنتجات ووظائف سلة التسوق وعملية الدفع.",
+  "projects.payroll.description": {
+    en: "A full-stack payroll management system for employees. Features include employee salary tracking, payslip generation, and secure authentication.",
+    fr: "Un système de gestion de paie complet pour les employés. Comprend le suivi des salaires, la génération de bulletins de paie et une authentification sécurisée.",
+    ar: "نظام شامل لإدارة رواتب الموظفين. يشمل تتبع الرواتب، إنشاء كشوف الرواتب، وتوفير تسجيل دخول آمن.",
+  },
+  "projects.chatapp.title": {
+    en: "Real-Time Chat Application",
+    fr: "Application de Chat en Temps Réel",
+    ar: "تطبيق الدردشة الفورية",
+  },
+  "projects.chatapp.description": {
+    en: "A real-time chat app with group messaging and notifications. Built to practice OAuth and Socket.io while learning secure authentication.",
+    fr: "Une application de chat en temps réel avec discussions de groupe et notifications. Réalisée pour pratiquer OAuth et Socket.io tout en apprenant l'authentification sécurisée.",
+    ar: "تطبيق دردشة فوري يدعم الدردشة الجماعية والإشعارات. تم تطويره لتعلم OAuth وSocket.io مع ممارسة المصادقة الآمنة.",
   },
   "projects.3d.title": {
     en: "3D Models Showcase",
@@ -197,6 +207,11 @@ export const translations: Translations = {
     en: "Code",
     fr: "Code",
     ar: "الكود",
+  },
+  "projects.clientProject": {
+    en: "Client Project",
+    fr: "Projet Client",
+    ar: "مشروع لعميل",
   },
 
   // Contact Section
