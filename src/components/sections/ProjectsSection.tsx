@@ -50,20 +50,20 @@ export function ProjectsSection() {
                     ) : (
                       <>
                         {project.liveUrl && (
-                          <Button size="sm" variant="outline" asChild>
-                            <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1">
+                          <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                            <Button size="sm" variant="outline" className="flex items-center gap-1">
                               <ExternalLink className="h-4 w-4" />
                               {t("projects.liveDemo")}
-                            </a>
-                          </Button>
+                            </Button>
+                          </a>
                         )}
                         {project.codeUrl && (
-                          <Button size="sm" variant="outline" asChild>
-                            <a href={project.codeUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1">
+                          <a href={project.codeUrl} target="_blank" rel="noopener noreferrer">
+                            <Button size="sm" variant="outline" className="flex items-center gap-1">
                               <Github className="h-4 w-4" />
                               {t("projects.code")}
-                            </a>
-                          </Button>
+                            </Button>
+                          </a>
                         )}
                       </>
                     )}

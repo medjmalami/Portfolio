@@ -18,18 +18,25 @@ export function Footer() {
             <a
               href="https://github.com/medjmalami"
               className="text-primary-foreground/70 hover:text-primary-foreground transition-colors"
+              aria-label="GitHub Profile"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <Github className="h-5 w-5" />
             </a>
             <a
               href="https://www.linkedin.com/in/mohamed-amine-jmal-b68965252/"
               className="text-primary-foreground/70 hover:text-primary-foreground transition-colors"
+              aria-label="LinkedIn Profile"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <Linkedin className="h-5 w-5" />
             </a>
             <a
               href="mailto:jmalmohamedamine1@gmail.com"
               className="text-primary-foreground/70 hover:text-primary-foreground transition-colors"
+              aria-label="Send Email"
             >
               <Mail className="h-5 w-5" />
             </a>

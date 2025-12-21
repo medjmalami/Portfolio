@@ -30,16 +30,29 @@ export function HeroSection({ scrollToSection }: HeroSectionProps) {
             </Button>
           </div>
           <div className="flex gap-4 pt-4">
-            <a href="https://github.com/medjmalami" className="text-muted-foreground hover:text-foreground">
+            <a
+              href="https://github.com/medjmalami"
+              className="text-muted-foreground hover:text-foreground"
+              aria-label="GitHub Profile"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Github className="h-5 w-5" />
             </a>
             <a
               href="https://www.linkedin.com/in/mohamed-amine-jmal-b68965252/"
               className="text-muted-foreground hover:text-foreground"
+              aria-label="LinkedIn Profile"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <Linkedin className="h-5 w-5" />
             </a>
-            <a href="mailto:jmalmohamedamine1@gmail.com" className="text-muted-foreground hover:text-foreground">
+            <a
+              href="mailto:jmalmohamedamine1@gmail.com"
+              className="text-muted-foreground hover:text-foreground"
+              aria-label="Send Email"
+            >
               <Mail className="h-5 w-5" />
             </a>
           </div>

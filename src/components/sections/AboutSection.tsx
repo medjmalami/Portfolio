@@ -1,5 +1,4 @@
 import { ChevronRight } from "lucide-react"
-import { Button } from "../ui/button"
 import { SectionTransition } from "../section-transition"
 import { useTranslations } from "../../hooks/use-translations"
 
@@ -33,9 +32,13 @@ export function AboutSection() {
                 <h4 className="font-medium mb-2">{t("about.education")}</h4>
                 <p className="text-muted-foreground">{t("about.degree")}</p>
               </div>
-              <Button variant="outline" className="flex items-center gap-2">
-                <a href={cvPath}>{t("about.resume")}</a> <ChevronRight className="h-4 w-4" />
-              </Button>
+              <a
+                href={cvPath}
+                download
+                className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-11 px-4 py-2 min-h-[48px]"
+              >
+                {t("about.resume")} <ChevronRight className="h-4 w-4" />
+              </a>
             </div>
           </SectionTransition>
         </div>
