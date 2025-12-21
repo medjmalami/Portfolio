@@ -109,16 +109,22 @@ export const translations: Translations = {
     fr: "Front-end",
     ar: "واجهة المستخدم",
   },
+  "skills.frontend.description": {
+    en: "Component-based architecture, state management, form handling, responsive UI, SEO, and frontend performance optimization",
+    fr: "Architecture par composants, gestion d'état, gestion des formulaires, UI responsive, SEO et optimisation des performances frontend",
+    ar: "بنية قائمة على المكونات، إدارة الحالة، معالجة النماذج، واجهة مستخدم متجاوبة، SEO، وتحسين أداء الواجهة",
+  },
   "skills.backend": {
     en: "Backend",
     fr: "Back-end",
     ar: "الخلفية",
   },
-  "skills.database": {
-    en: "Database & Tools",
-    fr: "Base de données & Outils",
-    ar: "قواعد البيانات والأدوات",
+  "skills.backend.description": {
+    en: "API design, authentication, real-time systems, transactional data modeling, indexing & query optimization, replication and sharding fundamentals",
+    fr: "Conception d'API, authentification, systèmes temps réel, modélisation transactionnelle, indexation et optimisation des requêtes, fondamentaux de réplication et sharding",
+    ar: "تصميم API، المصادقة، الأنظمة الفورية، نمذجة البيانات التعاملية، الفهرسة وتحسين الاستعلامات، أساسيات النسخ والتجزئة",
   },
+
   // Certificates Section
   "certificates.title": {
     en: "Certificates",
