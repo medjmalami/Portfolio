@@ -23,20 +23,15 @@ export const translations: Translations = {
     fr: "Projets",
     ar: "المشاريع",
   },
-  "nav.testimonials": {
-    en: "Testimonials",
-    fr: "Témoignages",
-    ar: "التوصيات",
+  "nav.certificates": {
+    en: "Certificates",
+    fr: "Certificats",
+    ar: "الشهادات",
   },
   "nav.contact": {
     en: "Contact",
     fr: "Contact",
     ar: "اتصل بي",
-  },
-  "nav.certificates": {
-    en: "Certificates",
-    fr: "Certificats",
-    ar: "الشهادات",
   },
   "nav.hireMe": {
     en: "Hire Me",
@@ -155,6 +150,11 @@ export const translations: Translations = {
     fr: "Assurance Qualité",
     ar: "ضمان الجودة",
   },
+  "certificates.machinelearning.name": {
+    en: "Machine Learning with Python",
+    fr: "Certificat en Machine Learning avec Python",
+    ar: "التعلم الآلي مع بايثون",
+  },
 
   // Projects Section
   "projects.title": {
@@ -191,58 +191,6 @@ export const translations: Translations = {
     en: "Code",
     fr: "Code",
     ar: "الكود",
-  },
-
-  // Testimonials Section
-  "testimonials.title": {
-    en: "Client Testimonials",
-    fr: "Témoignages clients",
-    ar: "آراء العملاء",
-  },
-  "testimonials.client1.name": {
-    en: "Mehdi Benali",
-    fr: "Mehdi Benali",
-    ar: "مهدي بن علي",
-  },
-  "testimonials.client1.position": {
-    en: "Small Business Owner",
-    fr: "Propriétaire de Petite Entreprise",
-    ar: "صاحب مشروع صغير",
-  },
-  "testimonials.client1.text": {
-    en: "Despite being a student, their work on my website was professional and efficient. They listened to my requirements and delivered exactly what I needed within the agreed timeframe.",
-    fr: "Bien qu'étudiant, son travail sur mon site web était professionnel et efficace. Il a écouté mes besoins et livré exactement ce dont j'avais besoin dans les délais convenus.",
-    ar: "على الرغم من كونه طالبًا، كان عمله على موقعي احترافيًا وفعالًا. لقد استمع إلى متطلباتي وقدم بالضبط ما كنت أحتاجه في الإطار الزمني المتفق عليه.",
-  },
-  "testimonials.client2.name": {
-    en: "Ahmed Touzani",
-    fr: "Ahmed Touzani",
-    ar: "أحمد التوزاني",
-  },
-  "testimonials.client2.position": {
-    en: "Project Supervisor",
-    fr: "Superviseur de Projet",
-    ar: "مشرف المشروع",
-  },
-  "testimonials.client2.text": {
-    en: "I supervised this student during a technical project. Their problem-solving approach and coding skills were impressive for their level. They showed great potential in software development.",
-    fr: "J'ai supervisé cet étudiant lors d'un projet technique. Son approche de résolution de problèmes et ses compétences en programmation étaient impressionnantes pour son niveau. Il a montré un grand potentiel en développement logiciel.",
-    ar: "أشرفت على هذا الطالب خلال مشروع تقني. كان نهجه في حل المشكلات ومهارات البرمجة مثيرة للإعجاب بالنسبة لمستواه. أظهر إمكانات كبيرة في تطوير البرمجيات.",
-  },
-  "testimonials.client3.name": {
-    en: "Professor Laila Amir",
-    fr: "Professeure Laila Amir",
-    ar: "الأستاذة ليلى أمير",
-  },
-  "testimonials.client3.position": {
-    en: "Computer Science Department",
-    fr: "Département d'Informatique",
-    ar: "قسم علوم الحاسوب",
-  },
-  "testimonials.client3.text": {
-    en: "This student shows exceptional dedication to mastering programming concepts. Their assignments are always well-structured and they demonstrate strong problem-solving skills that will serve them well in software engineering.",
-    fr: "Cet étudiant fait preuve d'un dévouement exceptionnel pour maîtriser les concepts de programmation. Ses travaux sont toujours bien structurés et il démontre de solides compétences en résolution de problèmes qui lui serviront en génie logiciel.",
-    ar: "يُظهر هذا الطالب تفانيًا استثنائيًا في إتقان مفاهيم البرمجة. مهامه منظمة دائمًا بشكل جيد ويُظهر مهارات قوية في حل المشكلات ستفيده في هندسة البرمجيات.",
   },
 
   // Contact Section

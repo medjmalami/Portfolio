@@ -1,0 +1,58 @@
+import { Github, ExternalLink } from "lucide-react"
+import { Button } from "../ui/button"
+import { Card, CardContent } from "../ui/card"
+import { Badge } from "../ui/badge"
+import { SectionTransition } from "../section-transition"
+import { useTranslations } from "../../hooks/use-translations"
+import { projects } from "../../data/projects"
+
+export function ProjectsSection() {
+  const { t } = useTranslations()
+
+  return (
+    <section id="projects" className="py-20">
+      <div className="container mx-auto px-4">
+        <SectionTransition>
+          <h2 className="text-3xl font-bold mb-12 text-center">{t("projects.title")}</h2>
+        </SectionTransition>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {projects.map((project, index) => (
+            <SectionTransition key={project.id} delay={0.1 * (index + 1)}>
+              <Card className="overflow-hidden">
+                <div className="relative aspect-video w-full flex items-center justify-center bg-muted">
+                  <img
+                    src={project.image}
+                    alt={project.alt}
+                    loading="lazy"
+                    className="object-cover w-full h-full"
+                  />
+                </div>
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-semibold mb-2">{t(project.titleKey)}</h3>
+                  <p className="text-muted-foreground mb-4">{t(project.descriptionKey)}</p>
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {project.technologies.map((tech) => (
+                      <Badge key={tech} variant="outline">
+                        {tech}
+                      </Badge>
+                    ))}
+                  </div>
+                  <div className="flex gap-4">
+                    <Button size="sm" variant="outline" className="flex items-center gap-1">
+                      <ExternalLink className="h-4 w-4" />
+                      <a href={project.liveUrl}>{t("projects.liveDemo")}</a>
+                    </Button>
+                    <Button size="sm" variant="outline" className="flex items-center gap-1">
+                      <Github className="h-4 w-4" />
+                      <a href={project.codeUrl}>{t("projects.code")}</a>
+                    </Button>
+                  </div>
+                </CardContent>
+              </Card>
+            </SectionTransition>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
