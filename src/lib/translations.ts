@@ -46,9 +46,14 @@ export const translations: Translations = {
     ar: "مرحبًا، أنا",
   },
   "hero.description": {
-    en: "I'm a Full Stack JavaScript & TypeScript Developer passionate about building modern web applications.",
-    fr: "Je suis un développeur Full Stack JavaScript & TypeScript passionné par la création d'applications web modernes.",
-    ar: "أنا مطور ويب متكامل متخصص في JavaScript و TypeScript و الذي يعتقد بالبناء الحديثة للتطبيقات الويب الموجهة.",
+    en: "Full Stack JavaScript & TypeScript Developer based in Sfax, Tunisia. I build modern, scalable web applications and I'm available for freelance and remote opportunities worldwide.",
+    fr: "Développeur Full Stack JavaScript & TypeScript basé à Sfax, Tunisie. Je crée des applications web modernes et évolutives. Disponible pour des missions freelance et opportunités à distance.",
+    ar: "مطور ويب متكامل متخصص في JavaScript و TypeScript مقيم في صفاقس، تونس. أقوم ببناء تطبيقات ويب حديثة وقابلة للتوسع. متاح للعمل الحر والفرص عن بعد.",
+  },
+  "hero.location": {
+    en: "Sfax, Tunisia | Available for Remote Work",
+    fr: "Sfax, Tunisie | Disponible pour travail à distance",
+    ar: "صفاقس، تونس | متاح للعمل عن بعد",
   },
   "hero.viewWork": {
     en: "View My Work",
@@ -73,9 +78,9 @@ export const translations: Translations = {
     ar: "مسيرتي",
   },
   "about.description1": {
-    en: "I'm a Full Stack Developer with a passion for creating efficient, scalable, and user-friendly web applications. As a first-year software engineer, I've already built and deployed multiple projects that showcase my technical abilities and problem-solving skills.",
-    fr: "Je suis un développeur Full Stack passionné par la création d'applications web efficaces, évolutives et conviviales. En tant qu'ingénieur logiciel de première année, j'ai déjà construit et déployé plusieurs projets qui démontrent mes compétences techniques et ma capacité à résoudre des problèmes.",
-    ar: "أنا مطور ويب متكامل شغوف بإنشاء تطبيقات ويب فعالة وقابلة للتوسع وسهلة الاستخدام. كمهندس برمجيات في السنة الأولى، قمت بالفعل ببناء ونشر مشاريع متعددة تعرض قدراتي التقنية ومهارات حل المشكلات.",
+    en: "I'm a Full Stack Developer based in Sfax, Tunisia, with a passion for creating efficient, scalable, and user-friendly web applications. As a software engineering student, I've built and deployed multiple projects that showcase my technical abilities. I'm available for freelance projects and remote opportunities worldwide.",
+    fr: "Je suis un développeur Full Stack basé à Sfax, Tunisie, passionné par la création d'applications web efficaces, évolutives et conviviales. En tant qu'étudiant en ingénierie logicielle, j'ai construit et déployé plusieurs projets. Je suis disponible pour des projets freelance et des opportunités à distance dans le monde entier.",
+    ar: "أنا مطور ويب متكامل مقيم في صفاقس، تونس، شغوف بإنشاء تطبيقات ويب فعالة وقابلة للتوسع وسهلة الاستخدام. كطالب هندسة برمجيات، قمت ببناء ونشر مشاريع متعددة. أنا متاح للمشاريع الحرة والفرص عن بعد في جميع أنحاء العالم.",
   },
   "about.description2": {
     en: "My approach combines modern frontend frameworks like React with robust backend technologies such as Node.js, Express, and various databases to deliver complete solutions that meet client needs.",
@@ -226,9 +231,14 @@ export const translations: Translations = {
     ar: "معلومات الاتصال",
   },
   "contact.description": {
-    en: "Feel free to reach out if you're looking for a developer to help with your next project. I'm currently available for freelance work and open to full-time opportunities.",
-    fr: "N'hésitez pas à me contacter si vous recherchez un développeur pour vous aider sur votre prochain projet. Je suis actuellement disponible pour des missions freelance et ouvert à des opportunités à temps plein.",
-    ar: "لا تتردد في التواصل إذا كنت تبحث عن مطور للمساعدة في مشروعك القادم. أنا متاح حاليًا للعمل الحر ومنفتح على فرص العمل بدوام كامل.",
+    en: "I'm a Full Stack Developer based in Sfax, Tunisia, available for freelance projects and remote work worldwide. Whether you need a React application, Node.js API development, or full-stack consulting, I'd love to hear from you.",
+    fr: "Je suis un développeur Full Stack basé à Sfax, Tunisie, disponible pour des projets freelance et du travail à distance dans le monde entier. Que vous ayez besoin d'une application React, d'un développement d'API Node.js ou de conseil full-stack, n'hésitez pas à me contacter.",
+    ar: "أنا مطور ويب متكامل مقيم في صفاقس، تونس، متاح للمشاريع الحرة والعمل عن بعد في جميع أنحاء العالم. سواء كنت بحاجة إلى تطبيق React أو تطوير API Node.js أو استشارات full-stack، يسعدني التواصل معك.",
+  },
+  "contact.location": {
+    en: "Sfax, Tunisia",
+    fr: "Sfax, Tunisie",
+    ar: "صفاقس، تونس",
   },
   "contact.name": {
     en: "Name",

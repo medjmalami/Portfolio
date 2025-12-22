@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail } from "lucide-react"
+import { Github, Linkedin, Mail, MapPin } from "lucide-react"
 import { Button } from "../ui/button"
 import { useTranslations } from "../../hooks/use-translations"
 import { motion } from "framer-motion"
@@ -19,9 +19,15 @@ export function HeroSection({ scrollToSection }: HeroSectionProps) {
     >
       <div className="grid md:grid-cols-2 gap-12 items-center">
         <div className="space-y-6">
-          <h1 className="text-4xl md:text-5xl font-bold tracking-tight">
-            {t("hero.intro")} <span className="text-primary">Mohamed Amine Jmal</span>
-          </h1>
+          <div>
+            <h1 className="text-4xl md:text-5xl font-bold tracking-tight">
+              {t("hero.intro")} <span className="text-primary">Mohamed Amine Jmal</span>
+            </h1>
+            <p className="text-sm text-muted-foreground flex items-center gap-1 mt-2">
+              <MapPin className="h-4 w-4" />
+              {t("hero.location")}
+            </p>
+          </div>
           <p className="text-xl text-muted-foreground">{t("hero.description")}</p>
           <div className="flex gap-4">
             <Button onClick={() => scrollToSection("projects")}>{t("hero.viewWork")}</Button>

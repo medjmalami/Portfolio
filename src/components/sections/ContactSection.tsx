@@ -2,7 +2,7 @@
 
 import type React from "react"
 import { useState, type FormEvent } from "react"
-import { Github, Linkedin, Mail, CheckCircle, AlertCircle } from "lucide-react"
+import { Github, Linkedin, Mail, MapPin, CheckCircle, AlertCircle } from "lucide-react"
 import { Button } from "../ui/button"
 import { SectionTransition } from "../section-transition"
 import { useTranslations } from "../../hooks/use-translations"
@@ -95,6 +95,10 @@ export function ContactSection() {
               <h3 className="text-2xl font-semibold">{t("contact.info")}</h3>
               <p className="text-muted-foreground">{t("contact.description")}</p>
               <div className="space-y-4">
+                <div className="flex items-center gap-3 text-foreground">
+                  <MapPin className="h-5 w-5 text-muted-foreground flex-shrink-0" />
+                  <span>{t("contact.location")}</span>
+                </div>
                 <a
                   href="mailto:jmalmohamedamine1@gmail.com"
                   className="flex items-center gap-3 text-foreground hover:text-primary transition-colors"
