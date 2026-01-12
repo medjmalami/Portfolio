@@ -166,6 +166,11 @@ export const translations: Translations = {
     fr: "Certificat en Machine Learning avec Python",
     ar: "التعلم الآلي مع بايثون",
   },
+  "certificates.bigdata.name": {
+    en: "Software Architecture for Big Data",
+    fr: "Architecture logicielle pour le Big Data",
+    ar: "هندسة البرمجيات للبيانات الضخمة",
+  },
 
   // Projects Section
   "projects.title": {

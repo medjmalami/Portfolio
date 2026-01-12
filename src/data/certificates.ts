@@ -5,10 +5,19 @@ export interface Certificate {
   nameKey: string
   provider: string
   url: string
+  objectPosition?: string
 }
 
 export const certificates: Certificate[] = [
-
+  {
+    id: "bigdata",
+    image: "/Coursera Online Courses & Credentials From Clorado university.png",
+    alt: "Software Architecture for Big Data Certificate from University of Colorado Boulder",
+    nameKey: "certificates.bigdata.name",
+    provider: "University of Colorado Boulder (Coursera)",
+    url: "https://coursera.org/share/c14e18a8670c922522adee53c5de04a9",
+    objectPosition: "top",
+  },
   {
     id: "frontend",
     image: "/frontend.png",
@@ -26,14 +35,6 @@ export const certificates: Certificate[] = [
     url: "https://www.freecodecamp.org/certification/Mohamed-Amine-Jmal/back-end-development-and-apis",
   },
   {
-    id: "quality",
-    image: "/quality.png",
-    alt: "Quality Assurance Certificate from freeCodeCamp",
-    nameKey: "certificates.quality.name",
-    provider: "freeCodeCamp",
-    url: "https://www.freecodecamp.org/certification/Mohamed-Amine-Jmal/quality-assurance-v7",
-  },
-  {
     id: "machinelearning",
     image: "/machine-learning-certif.png",
     alt: "Machine Learning with Python Certificate from freeCodeCamp",
@@ -41,12 +42,20 @@ export const certificates: Certificate[] = [
     provider: "freeCodeCamp",
     url: "https://www.freecodecamp.org/certification/mohamed-amine-jmal/machine-learning-with-python-v7",
   },
-    {
+  {
     id: "javascript",
     image: "/javascript.png",
     alt: "JavaScript Algorithms and Data Structures Certificate from freeCodeCamp",
     nameKey: "certificates.javascript.name",
     provider: "freeCodeCamp",
     url: "https://www.freecodecamp.org/certification/Mohamed-Amine-Jmal/javascript-algorithms-and-data-structures-v8",
+  },
+  {
+    id: "quality",
+    image: "/quality.png",
+    alt: "Quality Assurance Certificate from freeCodeCamp",
+    nameKey: "certificates.quality.name",
+    provider: "freeCodeCamp",
+    url: "https://www.freecodecamp.org/certification/Mohamed-Amine-Jmal/quality-assurance-v7",
   },
 ]

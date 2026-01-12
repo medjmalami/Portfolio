@@ -24,6 +24,7 @@ export function CertificatesSection() {
                     alt={certificate.alt}
                     loading="lazy"
                     className="object-cover w-full h-full"
+                    style={{ objectPosition: certificate.objectPosition || "center" }}
                   />
                 </div>
                 <CardContent className="p-6">
