@@ -19,14 +19,6 @@ export const certificates: Certificate[] = [
     objectPosition: "top",
   },
   {
-    id: "frontend",
-    image: "/frontend.png",
-    alt: "Front End Development Libraries Certificate from freeCodeCamp",
-    nameKey: "certificates.frontend.name",
-    provider: "freeCodeCamp",
-    url: "https://www.freecodecamp.org/certification/Mohamed-Amine-Jmal/front-end-development-libraries",
-  },
-  {
     id: "backend",
     image: "/backend.png",
     alt: "Back End Development and APIs Certificate from freeCodeCamp",
@@ -41,6 +33,14 @@ export const certificates: Certificate[] = [
     nameKey: "certificates.machinelearning.name",
     provider: "freeCodeCamp",
     url: "https://www.freecodecamp.org/certification/mohamed-amine-jmal/machine-learning-with-python-v7",
+  },
+  {
+    id: "frontend",
+    image: "/frontend.png",
+    alt: "Front End Development Libraries Certificate from freeCodeCamp",
+    nameKey: "certificates.frontend.name",
+    provider: "freeCodeCamp",
+    url: "https://www.freecodecamp.org/certification/Mohamed-Amine-Jmal/front-end-development-libraries",
   },
   {
     id: "javascript",
