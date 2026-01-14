@@ -38,7 +38,7 @@ export const projects: Project[] = [
     alt: "3D Models Showcase project - interactive 3D viewer built with React and Three.js",
     titleKey: "projects.3d.title",
     descriptionKey: "projects.3d.description",
-    technologies: ["React", "Express", "PostgreSQL", "Drizzle ORM", "Zod", "JWT"],
+    technologies: ["React", "Express", "PostgreSQL", "Drizzle ORM", "Zod", "JWT", "S3"],
     liveUrl: "https://3d-models-proj-jmal.vercel.app/",
     codeUrl: "https://github.com/medjmalami/3d-models-proj",
   },
