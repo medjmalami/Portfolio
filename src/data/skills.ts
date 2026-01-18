@@ -1,4 +1,4 @@
-import { Code, Server, type LucideIcon } from "lucide-react"
+import { Code, Server, Cloud, type LucideIcon } from "lucide-react"
 
 export interface SkillCategory {
   id: string
@@ -24,7 +24,6 @@ export const skillCategories: SkillCategory[] = [
     skills: [
       "Node.js",
       "Express",
-      "NestJS",
       "Fastify",
       "Hono",
       "WebSockets",
@@ -34,8 +33,23 @@ export const skillCategories: SkillCategory[] = [
       "MongoDB",
       "Redis",
       "Drizzle ORM",
+      "RabbitMQ",
+    ],
+  },
+  {
+    id: "devops",
+    titleKey: "skills.devops",
+    descriptionKey: "skills.devops.description",
+    icon: Cloud,
+    skills: [
       "Docker",
+      "Docker Compose",
+      "CI/CD",
+      "GitHub Actions",
+      "Git",
+      "Nginx",
       "S3",
+      "Arch Linux (daily use)",
     ],
   },
 ]

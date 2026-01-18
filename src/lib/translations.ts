@@ -129,6 +129,17 @@ export const translations: Translations = {
     fr: "Conception d'API, authentification, systèmes temps réel, modélisation transactionnelle, indexation et optimisation des requêtes, fondamentaux de réplication et sharding",
     ar: "تصميم API، المصادقة، الأنظمة الفورية، نمذجة البيانات التعاملية، الفهرسة وتحسين الاستعلامات، أساسيات النسخ والتجزئة",
   },
+  "skills.devops": {
+  en: "DevOps",
+  fr: "DevOps",
+  ar: "عمليات التطوير",
+  },
+  "skills.devops.description": {
+    en: "CI/CD, containerization, version control, cloud storage, system administration, and Linux-based development environments",
+    fr: "CI/CD, conteneurisation, contrôle de version, stockage cloud, administration système et environnements de développement basés sur Linux",
+    ar: "CI/CD، الحاويات، التحكم في الإصدارات، التخزين السحابي، إدارة الأنظمة، وبيئات التطوير المعتمدة على Linux",
+  },
+
 
   // Certificates Section
   "certificates.title": {
