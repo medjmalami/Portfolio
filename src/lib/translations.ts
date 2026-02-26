@@ -152,25 +152,10 @@ export const translations: Translations = {
     fr: "Voir le certificat",
     ar: "عرض الشهادة",
   },
-  "certificates.javascript.name": {
-    en: "JavaScript Algorithms and Data Structures",
-    fr: "JavaScript Alogorithmes et Structures de Données",
-    ar: "خوارزميات جافاسكريبت وهياكل البيانات",
-  },
-  "certificates.frontend.name": {
-    en: "Front End Development Libraries",
-    fr: "Bibliothèques de Developpement Front End",
-    ar: "مكتبات تطوير واجهة المستخدم",
-  },
   "certificates.backend.name": {
     en: "Back End Development and APIs",
     fr: "Developpement Back End et APIs",
     ar: "تطوير الخلفية وواجهات برمجة التطبيقات",
-  },
-  "certificates.quality.name": {
-    en: "Quality Assurance",
-    fr: "Assurance Qualité",
-    ar: "ضمان الجودة",
   },
   "certificates.machinelearning.name": {
     en: "Machine Learning with Python",
@@ -182,6 +167,11 @@ export const translations: Translations = {
     fr: "Architecture logicielle pour le Big Data",
     ar: "هندسة البرمجيات للبيانات الضخمة",
   },
+  "certificates.cloudSolutionArchitect.name": {
+    en: "AWS Cloud Solution Architect",
+    fr: "Architecte de solutions cloud AWS",
+    ar: "مهندس حلول سحابية AWS",
+  }, 
 
   // Projects Section
   "projects.title": {
