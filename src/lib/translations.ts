@@ -209,6 +209,16 @@ export const translations: Translations = {
     fr: "Une application full-stack pour présenter des modèles 3D. Construite avec React, Express et PostgreSQL. Les fonctionnalités incluent la visualisation de modèles, la rotation et l'affichage d'informations.",
     ar: "تطبيق متكامل لعرض النماذج ثلاثية الأبعاد. مبني باستخدام React و Express و PostgreSQL. تشمل الميزات عرض النموذج والتدوير وعرض المعلومات.",
   },
+  "projects.erp.title": {
+    en: "Complete ERP Solution",
+    fr: "Solution ERP Complète",
+    ar: "حل تخطيط موارد المؤسسات الكامل",
+  },
+  "projects.erp.description": {
+    en: "A comprehensive ERP system with 7 integrated modules: Admin, HR, Commercial, Finance, Stock, Purchase, and Marketing. Features include PDF invoice generation, attendance tracking, and business analytics.",
+    fr: "Un système ERP complet avec 7 modules intégrés : Admin, RH, Commercial, Finance, Stock, Achats et Marketing. Comprend la génération de factures PDF, le suivi des présences et des analyses commerciales.",
+    ar: "نظام تخطيط موارد شامل يضم 7 وحدات: الإدارة، الموارد البشرية، التجارة، المالية، المخزون، المشتريات، والتسويق. يتضمن إنشاء فواتير PDF، تتبع الحضور، وتحليلات الأعمال.",
+  },
   "projects.liveDemo": {
     en: "Live Demo",
     fr: "Démo en ligne",

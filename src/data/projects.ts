@@ -12,6 +12,17 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: "erp",
+    image: "/erp.jpg",
+    alt: "Screenshot of a comprehensive ERP system dashboard showing multiple business management modules",
+    titleKey: "projects.erp.title",
+    descriptionKey: "projects.erp.description",
+    technologies: ["Next.js", "Node.js", "Hono", "PostgreSQL", "Drizzle ORM", "S3"],
+    liveUrl: "",
+    codeUrl: "",
+    imagePosition: "object-[0%_10%]",
+  },
+  {
     id: "employees-payroll",
     image: "/employees-payroll-management.png",
     alt: "Screenshot of employees payroll management system dashboard",
