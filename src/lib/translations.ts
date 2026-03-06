@@ -199,16 +199,6 @@ export const translations: Translations = {
     fr: "Une application de chat en temps réel avec discussions de groupe et notifications. Réalisée pour pratiquer OAuth et Socket.io tout en apprenant l'authentification sécurisée.",
     ar: "تطبيق دردشة فوري يدعم الدردشة الجماعية والإشعارات. تم تطويره لتعلم OAuth وSocket.io مع ممارسة المصادقة الآمنة.",
   },
-  "projects.3d.title": {
-    en: "3D Models Showcase",
-    fr: "Vitrine de modèles 3D",
-    ar: "عرض نماذج ثلاثية الأبعاد",
-  },
-  "projects.3d.description": {
-    en: "A full-stack application for showcasing 3D models. Built with React, Express, and PostgreSQL. Features include model viewing, rotation, and information display.",
-    fr: "Une application full-stack pour présenter des modèles 3D. Construite avec React, Express et PostgreSQL. Les fonctionnalités incluent la visualisation de modèles, la rotation et l'affichage d'informations.",
-    ar: "تطبيق متكامل لعرض النماذج ثلاثية الأبعاد. مبني باستخدام React و Express و PostgreSQL. تشمل الميزات عرض النموذج والتدوير وعرض المعلومات.",
-  },
   "projects.erp.title": {
     en: "Complete ERP Solution",
     fr: "Solution ERP Complète",
@@ -218,6 +208,16 @@ export const translations: Translations = {
     en: "A comprehensive ERP system with 7 integrated modules: Admin, HR, Commercial, Finance, Stock, Purchase, and Marketing. Features include PDF invoice generation, attendance tracking, and business analytics.",
     fr: "Un système ERP complet avec 7 modules intégrés : Admin, RH, Commercial, Finance, Stock, Achats et Marketing. Comprend la génération de factures PDF, le suivi des présences et des analyses commerciales.",
     ar: "نظام تخطيط موارد شامل يضم 7 وحدات: الإدارة، الموارد البشرية، التجارة، المالية، المخزون، المشتريات، والتسويق. يتضمن إنشاء فواتير PDF، تتبع الحضور، وتحليلات الأعمال.",
+  },
+  "projects.ecoshield.title": {
+    en: "EcoShield AI - Smart City Platform",
+    fr: "EcoShield AI - Plateforme Ville Intelligente",
+    ar: "EcoShield AI - منصة المدن الذكية",
+  },
+  "projects.ecoshield.description": {
+    en: "AI-powered platform for smart water infrastructure combining cybersecurity and energy optimization. Implements LSTM models for real-time FDI attack detection and pump power optimization with live monitoring dashboard. Built for AI Night Challenge hackathon.",
+    fr: "Plateforme alimentée par l'IA pour infrastructures d'eau intelligentes combinant cybersécurité et optimisation énergétique. Implémente des modèles LSTM pour la détection d'attaques FDI en temps réel et l'optimisation de puissance avec tableau de bord en direct. Développé pour le hackathon AI Night Challenge.",
+    ar: "منصة مدعومة بالذكاء الاصطناعي للبنية التحتية الذكية للمياه تجمع بين الأمن السيبراني وتحسين الطاقة. تطبق نماذج LSTM للكشف عن هجمات FDI في الوقت الفعلي وتحسين طاقة المضخات مع لوحة مراقبة حية. تم تطويرها لهاكاثون AI Night Challenge.",
   },
   "projects.liveDemo": {
     en: "Live Demo",

@@ -33,6 +33,16 @@ export const projects: Project[] = [
     codeUrl: "",
   },
   {
+    id: "ecoshield",
+    image: "/ecoShield.png",
+    alt: "EcoShield AI dashboard showing real-time FDI attack detection and pump power optimization for smart water infrastructure",
+    titleKey: "projects.ecoshield.title",
+    descriptionKey: "projects.ecoshield.description",
+    technologies: ["Next.js", "Express.js", "PyTorch", "LSTM", "FastAPI", "MongoDB", "Redis"],
+    liveUrl: "",
+    codeUrl: "",
+  },
+  {
     id: "chat-app",
     image: "/chatApp.png",
     alt: "Screenshot of a real-time group chat application with notifications",
@@ -42,15 +52,5 @@ export const projects: Project[] = [
     liveUrl: "https://chat-front-a40y.onrender.com/",
     codeUrl: "https://github.com/medjmalami/chat-notif-app/",
     imagePosition: "object-[0%_center]",
-  },
-  {
-    id: "3d-models",
-    image: "/3dModel.png",
-    alt: "3D Models Showcase project - interactive 3D viewer built with React and Three.js",
-    titleKey: "projects.3d.title",
-    descriptionKey: "projects.3d.description",
-    technologies: ["React", "Express", "PostgreSQL", "Drizzle ORM", "Zod", "JWT", "S3"],
-    liveUrl: "https://3d-models-proj-jmal.vercel.app/",
-    codeUrl: "https://github.com/medjmalami/3d-models-proj",
   },
 ]
