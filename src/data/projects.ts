@@ -40,7 +40,7 @@ export const projects: Project[] = [
     descriptionKey: "projects.ecoshield.description",
     technologies: ["Next.js", "Express.js", "PyTorch", "LSTM", "FastAPI", "MongoDB", "Redis"],
     liveUrl: "",
-    codeUrl: "",
+    codeUrl: "https://github.com/medjmalami/ecoShield",
   },
   {
     id: "chat-app",
