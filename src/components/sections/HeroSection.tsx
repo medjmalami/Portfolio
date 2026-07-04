@@ -23,6 +23,9 @@ export function HeroSection({ scrollToSection }: HeroSectionProps) {
             <h1 className="text-4xl md:text-5xl font-bold tracking-tight">
               {t("hero.intro")} <span className="text-primary">Mohamed Amine Jmal</span>
             </h1>
+            <p className="text-lg font-medium text-foreground/90 mt-2">
+              {t("hero.role")}
+            </p>
             <p className="text-sm text-muted-foreground flex items-center gap-1 mt-2">
               <MapPin className="h-4 w-4" />
               {t("hero.location")}

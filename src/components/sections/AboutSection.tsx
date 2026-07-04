@@ -1,10 +1,8 @@
-import { ChevronRight } from "lucide-react"
 import { SectionTransition } from "../section-transition"
 import { useTranslations } from "../../hooks/use-translations"
 
 export function AboutSection() {
   const { t, language } = useTranslations()
-  const cvPath = language === "en" ? "/CV.EN.pdf" : "/CV.FR.pdf"
 
   return (
     <section id="about" className="py-20 bg-muted/50">
@@ -30,7 +28,6 @@ export function AboutSection() {
               <p className="text-muted-foreground">{t("about.description2")}</p>
               <div>
                 <h4 className="font-medium mb-2">{t("about.education")}</h4>
-                <p className="text-muted-foreground">{t("about.degree")}</p>
               </div>
 
             </div>

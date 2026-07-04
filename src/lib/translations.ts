@@ -46,9 +46,14 @@ export const translations: Translations = {
     ar: "مرحبًا، أنا",
   },
   "hero.description": {
-    en: "Full Stack JavaScript & TypeScript Developer based in Sfax, Tunisia. I build modern, scalable web applications and I'm available for freelance and remote opportunities worldwide.",
-    fr: "Développeur Full Stack JavaScript & TypeScript basé à Sfax, Tunisie. Je crée des applications web modernes et évolutives. Disponible pour des missions freelance et opportunités à distance.",
-    ar: "مطور ويب متكامل متخصص في JavaScript و TypeScript مقيم في صفاقس، تونس. أقوم ببناء تطبيقات ويب حديثة وقابلة للتوسع. متاح للعمل الحر والفرص عن بعد.",
+    en: "I design backend systems and AI pipelines — from queue-driven microservices to LangGraph-based agentic workflows. My work spans NestJS/Node.js services, RabbitMQ-based architectures, and RAG/agentic AI systems. Open to backend and AI engineering roles.",
+    fr: "Je conçois des systèmes backend et des pipelines IA — des microservices orientés files d'attente aux workflows agentiques basés sur LangGraph. Mon travail couvre les services NestJS/Node.js, les architectures basées sur RabbitMQ, et les systèmes RAG/IA agentique. Ouvert aux postes d'ingénieur backend et IA.",
+    ar: "أصمم أنظمة خلفية (Backend) وخطوط معالجة للذكاء الاصطناعي — من الخدمات المصغرة القائمة على قوائم الانتظار إلى أنظمة العمل الوكيلية القائمة على LangGraph. يشمل عملي خدمات NestJS/Node.js، بنى قائمة على RabbitMQ، وأنظمة RAG والذكاء الاصطناعي الوكيلي. متاح لوظائف هندسة الخلفية والذكاء الاصطناعي.",
+  },
+  "hero.role": {
+    en: "Backend Engineer · Applied AI & Agentic Systems",
+    fr: "Ingénieur Backend · IA Appliquée & Systèmes Agentiques",
+    ar: "مهندس Backend · الذكاء الاصطناعي التطبيقي والأنظمة العاملة",
   },
   "hero.location": {
     en: "Sfax, Tunisia | Available for Remote Work",
@@ -78,29 +83,19 @@ export const translations: Translations = {
     ar: "مسيرتي",
   },
   "about.description1": {
-    en: "I'm a Full Stack Developer based in Sfax, Tunisia, with a passion for creating efficient, scalable, and user-friendly web applications. As a software engineering student, I've built and deployed multiple projects that showcase my technical abilities. I'm available for freelance projects and remote opportunities worldwide.",
-    fr: "Je suis un développeur Full Stack basé à Sfax, Tunisie, passionné par la création d'applications web efficaces, évolutives et conviviales. En tant qu'étudiant en ingénierie logicielle, j'ai construit et déployé plusieurs projets. Je suis disponible pour des projets freelance et des opportunités à distance dans le monde entier.",
-    ar: "أنا مطور ويب متكامل مقيم في صفاقس، تونس، شغوف بإنشاء تطبيقات ويب فعالة وقابلة للتوسع وسهلة الاستخدام. كطالب هندسة برمجيات، قمت ببناء ونشر مشاريع متعددة. أنا متاح للمشاريع الحرة والفرص عن بعد في جميع أنحاء العالم.",
+    en: "I'm a backend engineer with three years of experience building APIs, queue-driven services, and data-heavy systems in Node.js, NestJS, and PostgreSQL. Over the past year I've moved into applied AI — integrating LLM agent pipelines, RAG systems, and vector search into production backend architectures rather than working on model research. ",
+    fr: "Je suis ingénieur backend avec trois ans d'expérience dans la création d'API, de services orientés files d'attente et de systèmes de données complexes en Node.js, NestJS et PostgreSQL. Au cours de la dernière année, je me suis orienté vers l'IA appliquée — intégrant des pipelines d'agents LLM, des systèmes RAG et la recherche vectorielle dans des architectures backend en production. Je suis actuellement stagiaire Ingénieur IA chez ZetaBox et je dirige le département Web de GDSC Enetcom.",
+    ar: "أنا مهندس Backend لدي ثلاث سنوات من الخبرة في بناء واجهات برمجة التطبيقات (APIs) والخدمات القائمة على قوائم الانتظار والأنظمة الغنية بالبيانات باستخدام Node.js وNestJS وPostgreSQL. خلال العام الماضي، انتقلت إلى الذكاء الاصطناعي التطبيقي — دمج خطوط عمل وكلاء LLM وأنظمة RAG والبحث المتجهي في بنى Backend الإنتاجية. أعمل حاليًا كمتدرب مهندس ذكاء اصطناعي في ZetaBox، وأقود قسم الويب في GDSC Enetcom.",
   },
   "about.description2": {
-    en: "My approach combines modern frontend frameworks like React with robust backend technologies such as Node.js, Express, and various databases to deliver complete solutions that meet client needs.",
-    fr: "Mon approche combine des frameworks frontend modernes comme React avec des technologies backend robustes telles que Node.js, Express et diverses bases de données pour fournir des solutions complètes qui répondent aux besoins des clients.",
-    ar: "يجمع نهجي بين أطر عمل واجهة المستخدم الحديثة مثل React مع تقنيات الخلفية القوية مثل Node.js وExpress وقواعد البيانات المختلفة لتقديم حلول كاملة تلبي احتياجات العملاء.",
+    en: "My core stack is Node.js, NestJS, PostgreSQL, RabbitMQ, and Docker. On the AI side I work with LangGraph, FastAPI, and RAG pipelines using vector stores like pgvector, FAISS, and ChromaDB. I care about the same things in both worlds: clear service boundaries, async job design, and systems that stay correct under load — not just demos that work once.",
+    fr: "Ma stack principale est Node.js, NestJS, PostgreSQL, RabbitMQ et Docker. Côté IA, je travaille avec LangGraph, FastAPI et des pipelines RAG utilisant des bases vectorielles comme pgvector, FAISS et ChromaDB. Je m'intéresse aux mêmes principes dans les deux domaines : des limites de service claires, une conception asynchrone des tâches, et des systèmes qui restent corrects sous charge.",
+    ar: "تقنياتي الأساسية هي Node.js وNestJS وPostgreSQL وRabbitMQ وDocker. أما في جانب الذكاء الاصطناعي، فأعمل مع LangGraph وFastAPI وخطوط RAG باستخدام قواعد بيانات متجهية مثل pgvector وFAISS وChromaDB. أهتم بنفس المبادئ في المجالين: حدود خدمات واضحة، تصميم مهام غير متزامنة، وأنظمة تبقى صحيحة تحت الضغط.",
   },
   "about.education": {
-    en: "Education",
-    fr: "Formation",
-    ar: "التعليم",
-  },
-  "about.degree": {
-    en: "Engineering Degree in Software Engineering ",
-    fr: "Diplôme d'Ingénieur en Génie Logiciel ",
-    ar: "شهادة هندسة في هندسة البرمجيات",
-  },
-  "about.resume": {
-    en: "Download Resume",
-    fr: "Télécharger CV",
-    ar: "تحميل السيرة الذاتية",
+    en: "Engineering Degree in Software Engineering, ISIMS Sfax (expected 2028)",
+    fr: "Diplôme d'Ingénieur en Génie Logiciel, ISIMS Sfax (obtention prévue en 2028)",
+    ar: "شهادة هندسة في هندسة البرمجيات، ISIMS صفاقس (التخرج المتوقع 2028)",
   },
 
   // Skills Section
@@ -130,9 +125,9 @@ export const translations: Translations = {
     ar: "تصميم API، المصادقة، الأنظمة الفورية، نمذجة البيانات التعاملية، الفهرسة وتحسين الاستعلامات، أساسيات النسخ والتجزئة",
   },
   "skills.devops": {
-  en: "DevOps",
-  fr: "DevOps",
-  ar: "عمليات التطوير",
+    en: "DevOps",
+    fr: "DevOps",
+    ar: "عمليات التطوير",
   },
   "skills.devops.description": {
     en: "CI/CD, containerization, version control, cloud storage, system administration, and Linux-based development environments",
@@ -171,7 +166,7 @@ export const translations: Translations = {
     en: "AWS Cloud Solution Architect",
     fr: "Architecte de solutions cloud AWS",
     ar: "مهندس حلول سحابية AWS",
-  }, 
+  },
 
   // Projects Section
   "projects.title": {
