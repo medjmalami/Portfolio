@@ -134,6 +134,12 @@ export const translations: Translations = {
     fr: "CI/CD, conteneurisation, contrôle de version, stockage cloud, administration système et environnements de développement basés sur Linux",
     ar: "CI/CD، الحاويات، التحكم في الإصدارات، التخزين السحابي، إدارة الأنظمة، وبيئات التطوير المعتمدة على Linux",
   },
+  "skills.ai": { en: "AI ", fr: "IA ", ar: "الذكاء الاصطناعي" },
+  "skills.ai.description": {
+    en: "LLM agent orchestration, retrieval-augmented generation, vector search, and Python-based AI services",
+    fr: "Orchestration d'agents LLM, génération augmentée par récupération, recherche vectorielle et services IA en Python",
+    ar: "تنظيم وكلاء LLM، التوليد المعزز بالاسترجاع، البحث المتجهي، وخدمات الذكاء الاصطناعي القائمة على بايثون",
+  },
 
 
   // Certificates Section
