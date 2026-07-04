@@ -186,9 +186,9 @@ export const translations: Translations = {
     ar: "نظام إدارة رواتب الموظفين",
   },
   "projects.payroll.description": {
-    en: "A full-stack payroll management system for employees. Features include employee salary tracking, payslip generation, and secure authentication.",
-    fr: "Un système de gestion de paie complet pour les employés. Comprend le suivi des salaires, la génération de bulletins de paie et une authentification sécurisée.",
-    ar: "نظام شامل لإدارة رواتب الموظفين. يشمل تتبع الرواتب، إنشاء كشوف الرواتب، وتوفير تسجيل دخول آمن.",
+    en: "Backend-driven payroll platform handling salary calculation, payslip generation, and role-based access control. Designed the data model to support recurring pay cycles and audit history rather than one-off calculations.",
+    fr: "Plateforme de paie orientée backend gérant le calcul des salaires, la génération de bulletins de paie et le contrôle d'accès basé sur les rôles. Modèle de données conçu pour prendre en charge les cycles de paie récurrents et l'historique d'audit.",
+    ar: "منصة رواتب قائمة على الخلفية تدير حساب الرواتب وإنشاء كشوف الرواتب والتحكم في الوصول حسب الأدوار. صممت نموذج البيانات لدعم دورات الدفع المتكررة وسجل التدقيق بدلاً من الحسابات لمرة واحدة.",
   },
   "projects.chatapp.title": {
     en: "Real-Time Chat Application",
@@ -196,9 +196,9 @@ export const translations: Translations = {
     ar: "تطبيق الدردشة الفورية",
   },
   "projects.chatapp.description": {
-    en: "A real-time chat app with group messaging and notifications. Built to practice OAuth and Socket.io while learning secure authentication.",
-    fr: "Une application de chat en temps réel avec discussions de groupe et notifications. Réalisée pour pratiquer OAuth et Socket.io tout en apprenant l'authentification sécurisée.",
-    ar: "تطبيق دردشة فوري يدعم الدردشة الجماعية والإشعارات. تم تطويره لتعلم OAuth وSocket.io مع ممارسة المصادقة الآمنة.",
+    en: "Real-time group chat application with Socket.io-based messaging, live notifications, and OAuth/JWT authentication. Handles connection state and message delivery across multiple concurrent rooms.",
+    fr: "Application de chat de groupe en temps réel avec messagerie basée sur Socket.io, notifications en direct et authentification OAuth/JWT. Gère l'état des connexions et la livraison des messages sur plusieurs salons simultanés.",
+    ar: "تطبيق دردشة جماعية فورية باستخدام Socket.io للمراسلة، مع إشعارات مباشرة ومصادقة OAuth/JWT. يدير حالة الاتصال وتسليم الرسائل عبر عدة غرف متزامنة.",
   },
   "projects.erp.title": {
     en: "Complete ERP Solution",
@@ -206,9 +206,9 @@ export const translations: Translations = {
     ar: "حل تخطيط موارد المؤسسات الكامل",
   },
   "projects.erp.description": {
-    en: "A comprehensive ERP system with 7 integrated modules: Admin, HR, Commercial, Finance, Stock, Purchase, and Marketing. Features include PDF invoice generation, attendance tracking, and business analytics.",
-    fr: "Un système ERP complet avec 7 modules intégrés : Admin, RH, Commercial, Finance, Stock, Achats et Marketing. Comprend la génération de factures PDF, le suivi des présences et des analyses commerciales.",
-    ar: "نظام تخطيط موارد شامل يضم 7 وحدات: الإدارة، الموارد البشرية، التجارة، المالية، المخزون، المشتريات، والتسويق. يتضمن إنشاء فواتير PDF، تتبع الحضور، وتحليلات الأعمال.",
+    en: "7-module ERP system (Admin, HR, Commercial, Finance, Stock, Purchase, Marketing) for an industrial client, replacing spreadsheet-based operations. Includes PDF invoice generation, attendance tracking, and role-based dashboards across departments.",
+    fr: "Système ERP à 7 modules (Admin, RH, Commercial, Finance, Stock, Achats, Marketing) pour un client industriel, remplaçant des opérations basées sur des tableurs. Comprend la génération de factures PDF, le suivi des présences et des tableaux de bord par rôle.",
+    ar: "نظام ERP بسبع وحدات (الإدارة، الموارد البشرية، التجارة، المالية، المخزون، المشتريات، التسويق) لعميل صناعي، ليحل محل العمليات القائمة على جداول البيانات. يشمل إنشاء فواتير PDF، تتبع الحضور، ولوحات تحكم حسب الأدوار.",
   },
   "projects.ecoshield.title": {
     en: "EcoShield AI - Smart City Platform",
@@ -216,9 +216,9 @@ export const translations: Translations = {
     ar: "EcoShield AI - منصة المدن الذكية",
   },
   "projects.ecoshield.description": {
-    en: "AI-powered platform for smart water infrastructure combining cybersecurity and energy optimization. Implements LSTM models for real-time FDI attack detection and pump power optimization with live monitoring dashboard. Built for AI Night Challenge hackathon.",
-    fr: "Plateforme alimentée par l'IA pour infrastructures d'eau intelligentes combinant cybersécurité et optimisation énergétique. Implémente des modèles LSTM pour la détection d'attaques FDI en temps réel et l'optimisation de puissance avec tableau de bord en direct. Développé pour le hackathon AI Night Challenge.",
-    ar: "منصة مدعومة بالذكاء الاصطناعي للبنية التحتية الذكية للمياه تجمع بين الأمن السيبراني وتحسين الطاقة. تطبق نماذج LSTM للكشف عن هجمات FDI في الوقت الفعلي وتحسين طاقة المضخات مع لوحة مراقبة حية. تم تطويرها لهاكاثون AI Night Challenge.",
+    en: "AI-powered security and optimization platform for smart water infrastructure. Uses an LSTM model to detect false data injection (FDI) attacks on sensor streams in real time and optimizes pump power based on live readings, with per-sensor JWT authentication and AES-256 encrypted keys. Built for the AI Night Challenge hackathon.",
+    fr: "Plateforme de sécurité et d'optimisation alimentée par l'IA pour les infrastructures d'eau intelligentes. Utilise un modèle LSTM pour détecter en temps réel les attaques par injection de fausses données (FDI) sur les flux de capteurs et optimise la puissance des pompes selon les lectures en direct, avec authentification JWT par capteur et clés chiffrées AES-256. Développé pour le hackathon AI Night Challenge.",
+    ar: "منصة أمان وتحسين مدعومة بالذكاء الاصطناعي للبنية التحتية الذكية للمياه. تستخدم نموذج LSTM للكشف الفوري عن هجمات حقن البيانات الزائفة (FDI) على تدفقات المستشعرات وتحسين طاقة المضخات بناءً على القراءات الحية، مع مصادقة JWT لكل مستشعر ومفاتيح مشفرة AES-256. طُوّرت لهاكاثوني AI Night Challenge.",
   },
   "projects.liveDemo": {
     en: "Live Demo",
