@@ -248,9 +248,9 @@ export const translations: Translations = {
     ar: "معلومات الاتصال",
   },
   "contact.description": {
-    en: "I'm a Full Stack Developer based in Sfax, Tunisia, available for freelance projects and remote work worldwide. Whether you need a React application, Node.js API development, or full-stack consulting, I'd love to hear from you.",
-    fr: "Je suis un développeur Full Stack basé à Sfax, Tunisie, disponible pour des projets freelance et du travail à distance dans le monde entier. Que vous ayez besoin d'une application React, d'un développement d'API Node.js ou de conseil full-stack, n'hésitez pas à me contacter.",
-    ar: "أنا مطور ويب متكامل مقيم في صفاقس، تونس، متاح للمشاريع الحرة والعمل عن بعد في جميع أنحاء العالم. سواء كنت بحاجة إلى تطبيق React أو تطوير API Node.js أو استشارات full-stack، يسعدني التواصل معك.",
+    en: "I'm a backend engineer working on APIs, queue-driven services, and AI-integrated systems, based in Sfax, Tunisia. Open to backend and AI engineering roles, remote or on-site, as well as select freelance projects.",
+    fr: "Je suis ingénieur backend travaillant sur des API, des services orientés files d'attente et des systèmes intégrant l'IA, basé à Sfax, Tunisie. Ouvert aux postes d'ingénieur backend et IA, à distance ou sur site, ainsi qu'à certains projets freelance.",
+    ar: "أنا مهندس Backend أعمل على واجهات برمجة التطبيقات والخدمات القائمة على قوائم الانتظار والأنظمة المدمجة بالذكاء الاصطناعي، مقيم في صفاقس، تونس. متاح لوظائف هندسة الخلفية والذكاء الاصطناعي، عن بعد أو في الموقع، وكذلك لمشاريع مستقلة مختارة.",
   },
   "contact.location": {
     en: "Sfax, Tunisia",
