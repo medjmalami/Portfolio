@@ -152,11 +152,6 @@ export const translations: Translations = {
     fr: "Developpement Back End et APIs",
     ar: "تطوير الخلفية وواجهات برمجة التطبيقات",
   },
-  "certificates.machinelearning.name": {
-    en: "Machine Learning with Python",
-    fr: "Certificat en Machine Learning avec Python",
-    ar: "التعلم الآلي مع بايثون",
-  },
   "certificates.bigdata.name": {
     en: "Software Architecture for Big Data",
     fr: "Architecture logicielle pour le Big Data",
@@ -166,6 +161,11 @@ export const translations: Translations = {
     en: "AWS Cloud Solution Architect",
     fr: "Architecte de solutions cloud AWS",
     ar: "مهندس حلول سحابية AWS",
+  },
+  "certificates.ragAgentic.name": {
+    en: "RAG and Agentic AI Professional Certificate",
+    fr: "Certificat Professionnel RAG et IA Agentique",
+    ar: "شهادة احترافية في RAG والذكاء الاصطناعي الوكيلي",
   },
 
   // Projects Section

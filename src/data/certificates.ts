@@ -10,6 +10,15 @@ export interface Certificate {
 
 export const certificates: Certificate[] = [
   {
+    id: "ragAgentic",
+    image: "/ibm-rag-agentic.png",
+    alt: "IBM RAG and Agentic AI Professional Certificate",
+    nameKey: "certificates.ragAgentic.name",
+    provider: "IBM (Coursera)",
+    url: "https://coursera.org/share/549d3ab75d0b24009fe5333d55513957",
+    objectPosition: "top",
+  },
+  {
     id: "bigdata",
     image: "/Coursera Online Courses & Credentials From Clorado university.png",
     alt: "Software Architecture for Big Data Certificate from University of Colorado Boulder",
@@ -18,7 +27,7 @@ export const certificates: Certificate[] = [
     url: "https://coursera.org/share/c14e18a8670c922522adee53c5de04a9",
     objectPosition: "top",
   },
-    {
+  {
     id: "cloudSolutionArchitect",
     image: "/awsCloudSolution.png",
     alt: "AWS Cloud Solution Architect Certificate from Amazon Web Services",
@@ -34,13 +43,5 @@ export const certificates: Certificate[] = [
     nameKey: "certificates.backend.name",
     provider: "freeCodeCamp",
     url: "https://www.freecodecamp.org/certification/Mohamed-Amine-Jmal/back-end-development-and-apis",
-  },
-  {
-    id: "machinelearning",
-    image: "/machine-learning-certif.png",
-    alt: "Machine Learning with Python Certificate from freeCodeCamp",
-    nameKey: "certificates.machinelearning.name",
-    provider: "freeCodeCamp",
-    url: "https://www.freecodecamp.org/certification/mohamed-amine-jmal/machine-learning-with-python-v7",
   },
 ]
