@@ -107,13 +107,13 @@ export function ContactSection() {
                   <span className="break-all">jmalmohamedamine1@gmail.com</span>
                 </a>
                 <a
-                  href="https://www.linkedin.com/in/mohamed-amine-jmal-b68965252/"
+                  href="https://www.linkedin.com/in/medjmalami/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 text-foreground hover:text-primary transition-colors"
                 >
                   <Linkedin className="h-5 w-5 text-muted-foreground flex-shrink-0" />
-                  <span className="break-all">linkedin.com/in/mohamed-amine-jmal</span>
+                  <span className="break-all">linkedin.com/in/medjmalami</span>
                 </a>
                 <a
                   href="https://github.com/medjmalami"
