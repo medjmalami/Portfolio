@@ -46,9 +46,9 @@ export const translations: Translations = {
     ar: "مرحبًا، أنا",
   },
   "hero.description": {
-    en: "I design backend systems and AI pipelines — from queue-driven microservices to LangGraph-based agentic workflows. My work spans NestJS/Node.js services, RabbitMQ-based architectures, and RAG/agentic AI systems. Open to backend and AI engineering roles.",
-    fr: "Je conçois des systèmes backend et des pipelines IA — des microservices orientés files d'attente aux workflows agentiques basés sur LangGraph. Mon travail couvre les services NestJS/Node.js, les architectures basées sur RabbitMQ, et les systèmes RAG/IA agentique. Ouvert aux postes d'ingénieur backend et IA.",
-    ar: "أصمم أنظمة خلفية (Backend) وخطوط معالجة للذكاء الاصطناعي — من الخدمات المصغرة القائمة على قوائم الانتظار إلى أنظمة العمل الوكيلية القائمة على LangGraph. يشمل عملي خدمات NestJS/Node.js، بنى قائمة على RabbitMQ، وأنظمة RAG والذكاء الاصطناعي الوكيلي. متاح لوظائف هندسة الخلفية والذكاء الاصطناعي.",
+    en: "I design backend systems and AI pipelines — from FastAPI services and LangGraph-based agentic workflows to queue-driven Node.js architectures. Open to backend and AI engineering roles.",
+    fr: "Je conçois des systèmes backend et des pipelines IA — des services FastAPI et des workflows agentiques basés sur LangGraph aux architectures Node.js orientées files d'attente. Ouvert aux postes d'ingénieur backend et IA.",
+    ar: "أصمم أنظمة خلفية (Backend) وخطوط معالجة للذكاء الاصطناعي — من خدمات FastAPI وأنظمة العمل الوكيلية القائمة على LangGraph إلى بنى Node.js القائمة على قوائم الانتظار. متاح لوظائف هندسة الخلفية والذكاء الاصطناعي.",
   },
   "hero.role": {
     en: "Backend Engineer · Applied AI & Agentic Systems",
@@ -88,9 +88,9 @@ export const translations: Translations = {
     ar: "أنا مهندس Backend لدي ثلاث سنوات من الخبرة في بناء واجهات برمجة التطبيقات (APIs) والخدمات القائمة على قوائم الانتظار والأنظمة الغنية بالبيانات باستخدام Node.js وNestJS وPostgreSQL. خلال العام الماضي، انتقلت إلى الذكاء الاصطناعي التطبيقي — دمج خطوط عمل وكلاء LLM وأنظمة RAG والبحث المتجهي في بنى Backend الإنتاجية. أعمل حاليًا كمتدرب مهندس ذكاء اصطناعي في ZetaBox، وأقود قسم الويب في GDSC Enetcom.",
   },
   "about.description2": {
-    en: "My core stack is Node.js, NestJS, PostgreSQL, RabbitMQ, and Docker. On the AI side I work with LangGraph, FastAPI, and RAG pipelines using vector stores like pgvector, FAISS, and ChromaDB. I care about the same things in both worlds: clear service boundaries, async job design, and systems that stay correct under load — not just demos that work once.",
-    fr: "Ma stack principale est Node.js, NestJS, PostgreSQL, RabbitMQ et Docker. Côté IA, je travaille avec LangGraph, FastAPI et des pipelines RAG utilisant des bases vectorielles comme pgvector, FAISS et ChromaDB. Je m'intéresse aux mêmes principes dans les deux domaines : des limites de service claires, une conception asynchrone des tâches, et des systèmes qui restent corrects sous charge.",
-    ar: "تقنياتي الأساسية هي Node.js وNestJS وPostgreSQL وRabbitMQ وDocker. أما في جانب الذكاء الاصطناعي، فأعمل مع LangGraph وFastAPI وخطوط RAG باستخدام قواعد بيانات متجهية مثل pgvector وFAISS وChromaDB. أهتم بنفس المبادئ في المجالين: حدود خدمات واضحة، تصميم مهام غير متزامنة، وأنظمة تبقى صحيحة تحت الضغط.",
+    en: "I build primarily with Python and FastAPI, using LangGraph for agent orchestration and RAG pipelines backed by vector stores like pgvector, FAISS, and ChromaDB. My earlier backend work is in Node.js, PostgreSQL, and RabbitMQ. Across both, I care about the same things: clear service boundaries, async job design, and systems that stay correct under load — not just demos that work once.",
+    fr: "Je développe principalement avec Python et FastAPI, en utilisant LangGraph pour l'orchestration d'agents et des pipelines RAG appuyés sur des bases vectorielles comme pgvector, FAISS et ChromaDB. Mon expérience backend antérieure est en Node.js, PostgreSQL et RabbitMQ. Dans les deux cas, je m'intéresse aux mêmes principes : des limites de service claires, une conception asynchrone des tâches, et des systèmes qui restent corrects sous charge.",
+    ar: "أطوّر بشكل أساسي باستخدام Python وFastAPI، مستخدمًا LangGraph لتنظيم الوكلاء وخطوط RAG المدعومة بقواعد بيانات متجهية مثل pgvector وFAISS وChromaDB. خبرتي الخلفية السابقة هي في Node.js وPostgreSQL وRabbitMQ. في كلا المجالين، أهتم بنفس المبادئ: حدود خدمات واضحة، تصميم مهام غير متزامنة، وأنظمة تبقى صحيحة تحت الضغط.",
   },
   "about.education": {
     en: "Engineering Degree in Software Engineering, ISIMS Sfax (expected 2028)",

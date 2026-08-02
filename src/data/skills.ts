@@ -1,4 +1,4 @@
-import { Code, Server, Cloud, BrainCircuit, type LucideIcon } from "lucide-react"
+import { BrainCircuit, Cloud, Code, type LucideIcon, Server } from "lucide-react"
 
 export interface SkillCategory {
   id: string
@@ -29,6 +29,8 @@ export const skillCategories: SkillCategory[] = [
       "Drizzle ORM",
       "RabbitMQ",
       "BullMQ",
+      "SQLAlchemy",
+      "Alembic"
     ],
   },
   {
