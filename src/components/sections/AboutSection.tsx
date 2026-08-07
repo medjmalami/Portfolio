@@ -1,5 +1,5 @@
-import { SectionTransition } from "../section-transition"
 import { useTranslations } from "../../hooks/use-translations"
+import { SectionTransition } from "../section-transition"
 
 export function AboutSection() {
   const { t, language } = useTranslations()
@@ -24,12 +24,7 @@ export function AboutSection() {
           <SectionTransition delay={0.2}>
             <div className="space-y-6">
               <h3 className="text-2xl font-semibold">{t("about.journey")}</h3>
-              <p className="text-muted-foreground">{t("about.description1")}</p>
-              <p className="text-muted-foreground">{t("about.description2")}</p>
-              <div>
-                <h4 className="font-medium mb-2">{t("about.education")}</h4>
-              </div>
-
+              <p className="text-muted-foreground">{t("about.description")}</p>
             </div>
           </SectionTransition>
         </div>

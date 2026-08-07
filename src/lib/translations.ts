@@ -82,20 +82,10 @@ export const translations: Translations = {
     fr: "Mon parcours",
     ar: "مسيرتي",
   },
-  "about.description1": {
-    en: "I'm a backend engineer with three years of experience building APIs, queue-driven services, and data-heavy systems in Node.js, NestJS, and PostgreSQL. Over the past year I've moved into applied AI — integrating LLM agent pipelines, RAG systems, and vector search into production backend architectures rather than working on model research. ",
-    fr: "Je suis ingénieur backend avec trois ans d'expérience dans la création d'API, de services orientés files d'attente et de systèmes de données complexes en Node.js, NestJS et PostgreSQL. Au cours de la dernière année, je me suis orienté vers l'IA appliquée — intégrant des pipelines d'agents LLM, des systèmes RAG et la recherche vectorielle dans des architectures backend en production. Je suis actuellement stagiaire Ingénieur IA chez ZetaBox et je dirige le département Web de GDSC Enetcom.",
-    ar: "أنا مهندس Backend لدي ثلاث سنوات من الخبرة في بناء واجهات برمجة التطبيقات (APIs) والخدمات القائمة على قوائم الانتظار والأنظمة الغنية بالبيانات باستخدام Node.js وNestJS وPostgreSQL. خلال العام الماضي، انتقلت إلى الذكاء الاصطناعي التطبيقي — دمج خطوط عمل وكلاء LLM وأنظمة RAG والبحث المتجهي في بنى Backend الإنتاجية. أعمل حاليًا كمتدرب مهندس ذكاء اصطناعي في ZetaBox، وأقود قسم الويب في GDSC Enetcom.",
-  },
-  "about.description2": {
-    en: "I build primarily with Python and FastAPI, using LangGraph for agent orchestration and RAG pipelines backed by vector stores like pgvector, FAISS, and ChromaDB. My earlier backend work is in Node.js, PostgreSQL, and RabbitMQ. Across both, I care about the same things: clear service boundaries, async job design, and systems that stay correct under load — not just demos that work once.",
-    fr: "Je développe principalement avec Python et FastAPI, en utilisant LangGraph pour l'orchestration d'agents et des pipelines RAG appuyés sur des bases vectorielles comme pgvector, FAISS et ChromaDB. Mon expérience backend antérieure est en Node.js, PostgreSQL et RabbitMQ. Dans les deux cas, je m'intéresse aux mêmes principes : des limites de service claires, une conception asynchrone des tâches, et des systèmes qui restent corrects sous charge.",
-    ar: "أطوّر بشكل أساسي باستخدام Python وFastAPI، مستخدمًا LangGraph لتنظيم الوكلاء وخطوط RAG المدعومة بقواعد بيانات متجهية مثل pgvector وFAISS وChromaDB. خبرتي الخلفية السابقة هي في Node.js وPostgreSQL وRabbitMQ. في كلا المجالين، أهتم بنفس المبادئ: حدود خدمات واضحة، تصميم مهام غير متزامنة، وأنظمة تبقى صحيحة تحت الضغط.",
-  },
-  "about.education": {
-    en: "Engineering Degree in Software Engineering, ISIMS Sfax (expected 2028)",
-    fr: "Diplôme d'Ingénieur en Génie Logiciel, ISIMS Sfax (obtention prévue en 2028)",
-    ar: "شهادة هندسة في هندسة البرمجيات، ISIMS صفاقس (التخرج المتوقع 2028)",
+  "about.description": {
+    en: "I'm a backend engineer specializing in building scalable APIs, microservices, and data-intensive systems. With three years of experience in Node.js and PostgreSQL, I've worked on designing reliable backend architectures, asynchronous workflows, and services built for real-world usage. Recently, I've expanded into applied AI engineering, building LLM-powered systems, RAG pipelines, and agent workflows using Python, FastAPI, and LangGraph. I enjoy solving complex engineering problems by combining strong backend foundations with modern AI capabilities.",
+    fr: "Je suis ingénieur backend spécialisé dans la conception d'API évolutives, de microservices et de systèmes intensifs en données. Avec trois ans d'expérience en Node.js et PostgreSQL, j'ai travaillé sur la conception d'architectures backend fiables, de flux de travail asynchrones et de services conçus pour des usages réels. Récemment, j'ai élargi mes compétences vers l'ingénierie IA appliquée en développant des systèmes basés sur les LLM, des pipelines RAG et des workflows d'agents avec Python, FastAPI et LangGraph. J'aime résoudre des problèmes d'ingénierie complexes en combinant des bases solides en backend avec les capacités offertes par l'IA moderne.",
+    ar: "أنا مهندس Backend متخصص في بناء واجهات برمجة التطبيقات القابلة للتوسع، والخدمات المصغرة، والأنظمة المعتمدة على كميات كبيرة من البيانات. لدي ثلاث سنوات من الخبرة في Node.js وPostgreSQL، حيث عملت على تصميم بنى Backend موثوقة، وتدفقات عمل غير متزامنة، وخدمات موجهة للاستخدام الحقيقي. مؤخرًا، وسّعت خبرتي نحو هندسة الذكاء الاصطناعي التطبيقي من خلال بناء أنظمة مدعومة بـ LLM، وخطوط عمل RAG، وسير عمل الوكلاء باستخدام Python وFastAPI وLangGraph. أستمتع بحل المشكلات الهندسية المعقدة من خلال الجمع بين أساس قوي في Backend وقدرات الذكاء الاصطناعي الحديثة.",
   },
 
   // Skills Section
