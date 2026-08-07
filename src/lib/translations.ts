@@ -180,15 +180,24 @@ export const translations: Translations = {
     fr: "Plateforme de paie orientée backend gérant le calcul des salaires, la génération de bulletins de paie et le contrôle d'accès basé sur les rôles. Modèle de données conçu pour prendre en charge les cycles de paie récurrents et l'historique d'audit.",
     ar: "منصة رواتب قائمة على الخلفية تدير حساب الرواتب وإنشاء كشوف الرواتب والتحكم في الوصول حسب الأدوار. صممت نموذج البيانات لدعم دورات الدفع المتكررة وسجل التدقيق بدلاً من الحسابات لمرة واحدة.",
   },
-  "projects.chatapp.title": {
-    en: "Real-Time Chat Application",
-    fr: "Application de Chat en Temps Réel",
-    ar: "تطبيق الدردشة الفورية",
+  "projects.tenderapp.title": {
+
+    en: "TenderApp - AI Tender Management Platform",
+
+    fr: "TenderApp - Plateforme IA de Gestion des Appels d'Offres",
+
+    ar: "TenderApp - منصة إدارة المناقصات بالذكاء الاصطناعي",
+
   },
-  "projects.chatapp.description": {
-    en: "Real-time group chat application with Socket.io-based messaging, live notifications, and OAuth/JWT authentication. Handles connection state and message delivery across multiple concurrent rooms.",
-    fr: "Application de chat de groupe en temps réel avec messagerie basée sur Socket.io, notifications en direct et authentification OAuth/JWT. Gère l'état des connexions et la livraison des messages sur plusieurs salons simultanés.",
-    ar: "تطبيق دردشة جماعية فورية باستخدام Socket.io للمراسلة، مع إشعارات مباشرة ومصادقة OAuth/JWT. يدير حالة الاتصال وتسليم الرسائل عبر عدة غرف متزامنة.",
+
+  "projects.tenderapp.description": {
+
+    en: "AI-powered platform that automates tender discovery, analysis, and proposal generation. Fetches public tenders, classifies opportunities, extracts requirements, and generates tailored proposal drafts using AI workflows. Designed to help businesses reduce manual research time and improve their tender response process.",
+
+    fr: "Plateforme alimentée par l'IA qui automatise la recherche, l'analyse et la génération de propositions pour les appels d'offres. Récupère les appels d'offres publics, classe les opportunités, extrait les exigences et génère des brouillons de propositions personnalisés grâce à des workflows IA. Conçue pour aider les entreprises à réduire le temps de recherche manuel et à améliorer leur processus de réponse aux appels d'offres.",
+
+    ar: "منصة مدعومة بالذكاء الاصطناعي تعمل على أتمتة البحث عن المناقصات وتحليلها وإنشاء العروض. تقوم بجلب المناقصات العامة، وتصنيف الفرص، واستخراج المتطلبات، وإنشاء مسودات عروض مخصصة باستخدام سير عمل الذكاء الاصطناعي. صُممت لمساعدة الشركات على تقليل وقت البحث اليدوي وتحسين عملية الاستجابة للمناقصات.",
+
   },
   "projects.erp.title": {
     en: "Complete ERP Solution",

@@ -12,6 +12,17 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: "tender-app",
+    image: "/tenders.png",
+    alt: "Screenshot of a tender management application",
+    titleKey: "projects.tenderapp.title",
+    descriptionKey: "projects.tenderapp.description",
+    technologies: ["FastAPI", "PostgreSQL", "SQLAlchemy", "Alembic", "LangGraph", "LangChain", "Next.js"],
+    liveUrl: "",
+    codeUrl: "",
+    imagePosition: "object-[0%_center]",
+  },
+  {
     id: "erp",
     image: "/erp.jpg",
     alt: "Screenshot of a comprehensive ERP system dashboard showing multiple business management modules",
@@ -28,7 +39,7 @@ export const projects: Project[] = [
     alt: "Screenshot of employees payroll management system dashboard",
     titleKey: "projects.payroll.title",
     descriptionKey: "projects.payroll.description",
-    technologies: ["Next.js", "Hono", "PostgreSQL", "Drizzle ORM", "Zod","JWT"],
+    technologies: ["Next.js", "Hono", "PostgreSQL", "Drizzle ORM", "Zod", "JWT"],
     liveUrl: "",
     codeUrl: "",
   },
@@ -42,15 +53,5 @@ export const projects: Project[] = [
     liveUrl: "",
     codeUrl: "https://github.com/medjmalami/ecoShield",
   },
-  {
-    id: "chat-app",
-    image: "/chatApp.png",
-    alt: "Screenshot of a real-time group chat application with notifications",
-    titleKey: "projects.chatapp.title",
-    descriptionKey: "projects.chatapp.description",
-    technologies: ["Next.js", "Hono", "PostgreSQL", "Drizzle ORM", "Socket.io", "Zod", "OAuth", "JWT"],
-    liveUrl: "https://chat-front-a40y.onrender.com/",
-    codeUrl: "https://github.com/medjmalami/chat-notif-app/",
-    imagePosition: "object-[0%_center]",
-  },
+
 ]
