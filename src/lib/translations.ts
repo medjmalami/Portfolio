@@ -45,15 +45,15 @@ export const translations: Translations = {
     fr: "Bonjour, je suis",
     ar: "مرحبًا، أنا",
   },
-  "hero.description": {
-    en: "I design backend systems and AI pipelines — from FastAPI services and LangGraph-based agentic workflows to queue-driven Node.js architectures. Open to backend and AI engineering roles.",
-    fr: "Je conçois des systèmes backend et des pipelines IA — des services FastAPI et des workflows agentiques basés sur LangGraph aux architectures Node.js orientées files d'attente. Ouvert aux postes d'ingénieur backend et IA.",
-    ar: "أصمم أنظمة خلفية (Backend) وخطوط معالجة للذكاء الاصطناعي — من خدمات FastAPI وأنظمة العمل الوكيلية القائمة على LangGraph إلى بنى Node.js القائمة على قوائم الانتظار. متاح لوظائف هندسة الخلفية والذكاء الاصطناعي.",
-  },
   "hero.role": {
-    en: "Backend Engineer · Applied AI & Agentic Systems",
-    fr: "Ingénieur Backend · IA Appliquée & Systèmes Agentiques",
-    ar: "مهندس Backend · الذكاء الاصطناعي التطبيقي والأنظمة العاملة",
+    en: "Backend Engineer · AI Engineering",
+    fr: "Ingénieur Backend · Ingénierie IA",
+    ar: "مهندس Backend · هندسة الذكاء الاصطناعي",
+  },
+  "hero.description": {
+    en: "I build scalable backend systems and AI-powered applications, combining strong foundations in APIs, microservices, and distributed workflows with modern LLM technologies, RAG pipelines, and agentic systems. Open to backend and AI engineering opportunities.",
+    fr: "Je construis des systèmes backend évolutifs et des applications basées sur l'IA, en combinant une solide expertise en API, microservices et architectures distribuées avec les technologies modernes des LLM, les pipelines RAG et les systèmes agentiques. Ouvert aux opportunités en ingénierie backend et IA.",
+    ar: "أبني أنظمة Backend قابلة للتوسع وتطبيقات مدعومة بالذكاء الاصطناعي، من خلال الجمع بين خبرة قوية في واجهات البرمجة (APIs) والخدمات المصغرة والأنظمة الموزعة، مع تقنيات LLM الحديثة وخطوط عمل RAG والأنظمة الوكيلية. منفتح على فرص هندسة Backend وهندسة الذكاء الاصطناعي.",
   },
   "hero.location": {
     en: "Sfax, Tunisia | Available for Remote Work",
