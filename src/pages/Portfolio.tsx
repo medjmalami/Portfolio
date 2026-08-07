@@ -1,11 +1,12 @@
+import { AboutSection } from "../components/sections/AboutSection"
+import { CertificatesSection } from "../components/sections/CertificatesSection"
+import { ContactSection } from "../components/sections/ContactSection"
+import { ExperienceSection } from "../components/sections/ExperienceSection"
+import { Footer } from "../components/sections/Footer"
 import { Header } from "../components/sections/Header"
 import { HeroSection } from "../components/sections/HeroSection"
-import { AboutSection } from "../components/sections/AboutSection"
-import { SkillsSection } from "../components/sections/SkillsSection"
-import { CertificatesSection } from "../components/sections/CertificatesSection"
 import { ProjectsSection } from "../components/sections/ProjectsSection"
-import { ContactSection } from "../components/sections/ContactSection"
-import { Footer } from "../components/sections/Footer"
+import { SkillsSection } from "../components/sections/SkillsSection"
 import { useScroll } from "../hooks/use-scroll"
 
 export default function Portfolio() {
@@ -18,8 +19,9 @@ export default function Portfolio() {
         <HeroSection scrollToSection={scrollToSection} />
         <AboutSection />
         <SkillsSection />
-        <CertificatesSection />
+        <ExperienceSection />
         <ProjectsSection />
+        <CertificatesSection />
         <ContactSection />
       </main>
       <Footer />

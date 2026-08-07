@@ -1,7 +1,7 @@
-import { Button } from "../ui/button"
-import { ThemeSwitcher } from "../theme-switcher"
-import { LanguageSwitcher } from "../language-switcher"
 import { useTranslations } from "../../hooks/use-translations"
+import { LanguageSwitcher } from "../language-switcher"
+import { ThemeSwitcher } from "../theme-switcher"
+import { Button } from "../ui/button"
 
 interface HeaderProps {
   activeSection: string
@@ -11,8 +11,9 @@ interface HeaderProps {
 const navItems = [
   { id: "about", labelKey: "nav.about" },
   { id: "skills", labelKey: "nav.skills" },
-  { id: "certificates", labelKey: "nav.certificates" },
+  { id: "experience", labelKey: "nav.experience" },
   { id: "projects", labelKey: "nav.projects" },
+  { id: "certificates", labelKey: "nav.certificates" },
   { id: "contact", labelKey: "nav.contact" },
 ]
 
@@ -26,13 +27,13 @@ export function Header({ activeSection, scrollToSection }: HeaderProps) {
         <nav className="hidden md:flex gap-6">
           {navItems.map((item) => (
             <button
+              type="button"
               key={item.id}
               onClick={() => scrollToSection(item.id)}
-              className={`text-sm font-medium transition-colors ${
-                activeSection === item.id
-                  ? "text-foreground"
-                  : "text-muted-foreground hover:text-foreground"
-              }`}
+              className={`text-sm font-medium transition-colors ${activeSection === item.id
+                ? "text-foreground"
+                : "text-muted-foreground hover:text-foreground"
+                }`}
             >
               {t(item.labelKey)}
             </button>

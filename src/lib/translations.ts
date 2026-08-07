@@ -88,6 +88,60 @@ export const translations: Translations = {
     ar: "أنا مهندس Backend متخصص في بناء واجهات برمجة التطبيقات القابلة للتوسع، والخدمات المصغرة، والأنظمة المعتمدة على كميات كبيرة من البيانات. لدي ثلاث سنوات من الخبرة في Node.js وPostgreSQL، حيث عملت على تصميم بنى Backend موثوقة، وتدفقات عمل غير متزامنة، وخدمات موجهة للاستخدام الحقيقي. مؤخرًا، وسّعت خبرتي نحو هندسة الذكاء الاصطناعي التطبيقي من خلال بناء أنظمة مدعومة بـ LLM، وخطوط عمل RAG، وسير عمل الوكلاء باستخدام Python وFastAPI وLangGraph. أستمتع بحل المشكلات الهندسية المعقدة من خلال الجمع بين أساس قوي في Backend وقدرات الذكاء الاصطناعي الحديثة.",
   },
 
+  // Experience Section
+  "nav.experience": { en: "Experience", fr: "Expérience", ar: "الخبرة" },
+  "experience.title": { en: "Experience", fr: "Expérience", ar: "الخبرة" },
+
+  "experience.zetabox.role": {
+    en: "AI Engineer Intern",
+    fr: "Stagiaire Ingénieur IA",
+    ar: "متدرب مهندس ذكاء اصطناعي",
+  },
+  "experience.zetabox.org": { en: "ZetaBox", fr: "ZetaBox", ar: "ZetaBox" },
+  "experience.zetabox.period": {
+    en: "June 2026 – August 2026",
+    fr: "Juin 2026 – Août 2026",
+    ar: "يونيو 2026 – أغسطس 2026",
+  },
+  "experience.zetabox.bullet1": {
+    en: "Built a tender processing pipeline on a FastAPI backend, using LangGraph to orchestrate scraping, LLM-based ranking and analysis with Gemini, and proposal drafting.",
+    fr: "Développement d'un pipeline de traitement d'appels d'offres sur un backend FastAPI, utilisant LangGraph pour orchestrer le scraping, l'analyse et le classement par LLM avec Gemini, et la rédaction de propositions.",
+    ar: "بناء خط معالجة لعروض المناقصات على خلفية FastAPI، باستخدام LangGraph لتنظيم عملية الكشط، والتحليل والترتيب بواسطة نموذج Gemini، وصياغة العروض.",
+  },
+  "experience.zetabox.bullet2": {
+    en: "Implemented scheduling with APScheduler integrated into FastAPI's lifespan, and persistence with async SQLAlchemy and PostgreSQL, including async Alembic migrations.",
+    fr: "Mise en œuvre de la planification avec APScheduler intégré au cycle de vie de FastAPI, et de la persistance avec SQLAlchemy asynchrone et PostgreSQL, incluant des migrations Alembic asynchrones.",
+    ar: "تنفيذ الجدولة باستخدام APScheduler المدمج في دورة حياة FastAPI، والتخزين الدائم باستخدام SQLAlchemy غير المتزامن وPostgreSQL، بما في ذلك ترحيلات Alembic غير المتزامنة.",
+  },
+
+  "experience.gdsc.role": { en: "Software Engineering Department Lead", fr: "Responsable Département Génie Logiciel", ar: "قائد قسم هندسة البرمجيات" },
+  "experience.gdsc.org": { en: "GDSC Enetcom", fr: "GDSC Enetcom", ar: "GDSC Enetcom" },
+  "experience.gdsc.period": { en: "2026 – Present", fr: "2026 – Présent", ar: "2026 – حاليًا" },
+  "experience.gdsc.bullet1": {
+    en: "Independently design and teach the Software Engineering curriculum for GDSC Enetcom's Software Engineering track.",
+    fr: "Conception et enseignement indépendants du programme Génie Logiciel pour la filière Génie Logiciel de GDSC Enetcom.",
+    ar: "أصمم وأدرّس بشكل مستقل منهج هندسة البرمجيات لمسار هندسة البرمجيات في GDSC Enetcom.",
+  },
+
+  "experience.freelance.role": {
+    en: "Software Engineer",
+    fr: "Ingénieur logiciel",
+    ar: "مهندس برمجيات",
+  },
+  "experience.freelance.org": { en: "Freelance", fr: "Freelance", ar: "Freelance" },
+  "experience.freelance.period": { en: "2025 – Present", fr: "2025 – Présent", ar: "2025 – حاليًا" },
+  "experience.freelance.bullet1": {
+    en: "Deliver backend and full-stack systems for industrial-sector clients, owning requirements gathering, architecture, and deployment end to end.",
+    fr: "Développement de systèmes backend et full-stack pour des clients du secteur industriel, avec prise en charge de la collecte des besoins, de l'architecture et du déploiement de bout en bout.",
+    ar: "تطوير أنظمة خلفية وأنظمة متكاملة لعملاء في القطاع الصناعي، مع تولّي جمع المتطلبات وتصميم البنية المعمارية والنشر من البداية إلى النهاية.",
+  },
+
+  "experience.freelance.bullet2": {
+    en: "Built an ERP system (admin, inventory, sales, HR, finance, commercial, marketing) and a payroll automation system for a live industrial client, currently in production use.",
+    fr: "Conception d'un système ERP (administration, stock, ventes, RH, finance, commercial, marketing) et d'un système d'automatisation de la paie pour un client industriel réel, actuellement utilisés en production.",
+    ar: "بناء نظام ERP (الإدارة، المخزون، المبيعات، الموارد البشرية، المالية، التجارة، التسويق) ونظام لأتمتة الرواتب لعميل صناعي حقيقي، وهما مستخدمان حاليًا في بيئة الإنتاج.",
+  },
+
   // Skills Section
   "skills.title": {
     en: "My Skills",

@@ -23,7 +23,7 @@ export function useScroll() {
   useEffect(() => {
     const handleScroll = () => {
       // Add "certificates" to the sections array between "skills" and "projects"
-      const sections = ["about", "skills", "certificates", "projects", "testimonials", "contact"]
+      const sections = ["about", "skills", "experience", "projects", "certificates", "contact"]
       const scrollPosition = window.scrollY + 100 // Offset for better detection
 
       for (const section of sections) {

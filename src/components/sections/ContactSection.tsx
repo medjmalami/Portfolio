@@ -1,11 +1,11 @@
 "use client"
 
+import { AlertCircle, CheckCircle, Github, Linkedin, Mail, MapPin } from "lucide-react"
 import type React from "react"
-import { useState, type FormEvent } from "react"
-import { Github, Linkedin, Mail, MapPin, CheckCircle, AlertCircle } from "lucide-react"
-import { Button } from "../ui/button"
-import { SectionTransition } from "../section-transition"
+import { type FormEvent, useState } from "react"
 import { useTranslations } from "../../hooks/use-translations"
+import { SectionTransition } from "../section-transition"
+import { Button } from "../ui/button"
 
 export function ContactSection() {
   const { t, language } = useTranslations()
@@ -84,7 +84,7 @@ export function ContactSection() {
   }
 
   return (
-    <section id="contact" className="py-20 bg-muted/50">
+    <section id="contact" className="py-20 ">
       <div className="container mx-auto px-4">
         <SectionTransition>
           <h2 className="text-3xl font-bold mb-12 text-center">{t("contact.title")}</h2>
