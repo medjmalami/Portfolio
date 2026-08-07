@@ -1,8 +1,8 @@
-import { Card, CardContent } from "../ui/card"
-import { Badge } from "../ui/badge"
-import { SectionTransition } from "../section-transition"
-import { useTranslations } from "../../hooks/use-translations"
 import { skillCategories } from "../../data/skills"
+import { useTranslations } from "../../hooks/use-translations"
+import { SectionTransition } from "../section-transition"
+import { Badge } from "../ui/badge"
+import { Card, CardContent } from "../ui/card"
 
 export function SkillsSection() {
   const { t } = useTranslations()
