@@ -6,7 +6,7 @@ import { Button } from "../components/ui/button"
 import { LanguageSwitcher } from "../components/language-switcher"
 import { ThemeSwitcher } from "../components/theme-switcher"
 import { useTranslations } from "../hooks/use-translations"
-import { getProjectCaseStudy } from "../data/project-case-studies"
+import { getLocalized, getProjectCaseStudy } from "../data/project-case-studies"
 import { projects } from "../data/projects"
 
 export default function ProjectDetail() {
@@ -53,17 +53,17 @@ export default function ProjectDetail() {
 
           <section className="grid gap-4 border-t pt-10 md:grid-cols-[0.28fr_1fr]">
             <h2 className="text-sm font-semibold uppercase tracking-[0.16em] text-muted-foreground">{t("projects.problem")}</h2>
-            <p className="max-w-3xl text-lg leading-relaxed">{t(study.problem)}</p>
+            <p className="max-w-3xl text-lg leading-relaxed">{getLocalized(study.problem, language)}</p>
           </section>
 
           <section className="grid gap-8 border-t pt-10 md:grid-cols-[0.28fr_1fr]">
             <h2 className="text-sm font-semibold uppercase tracking-[0.16em] text-muted-foreground">{t("projects.architecture")}</h2>
-            <div className="flex flex-col gap-8">{study.architecture.map((stage, index) => <div key={index} className="grid gap-2 md:grid-cols-[auto_1fr]"><div className="flex items-center gap-3"><span className="font-mono text-sm text-muted-foreground">{String(index + 1).padStart(2, "0")}</span><h3 className="font-semibold">{t(stage.stage)}</h3></div><p className="leading-relaxed text-muted-foreground md:col-start-2">{t(stage.reason)}</p></div>)}</div>
+            <div className="flex flex-col gap-8">{study.architecture.map((stage, index) => <div key={index} className="grid gap-2 md:grid-cols-[auto_1fr]"><div className="flex items-center gap-3"><span className="font-mono text-sm text-muted-foreground">{String(index + 1).padStart(2, "0")}</span><h3 className="font-semibold">{getLocalized(stage.stage, language)}</h3></div><p className="leading-relaxed text-muted-foreground md:col-start-2">{getLocalized(stage.reason, language)}</p></div>)}</div>
           </section>
 
           <section className="grid gap-8 border-t pt-10 md:grid-cols-[0.28fr_1fr]">
             <h2 className="text-sm font-semibold uppercase tracking-[0.16em] text-muted-foreground">{t("projects.tradeoffs")}</h2>
-            <ul className="flex list-disc flex-col gap-4 ps-5">{study.tradeoffs.map((item, index) => <li key={index} className="leading-relaxed">{t(item)}</li>)}</ul>
+            <ul className="flex list-disc flex-col gap-4 ps-5">{study.tradeoffs.map((item, index) => <li key={index} className="leading-relaxed">{getLocalized(item, language)}</li>)}</ul>
           </section>
 
           <section className="grid gap-8 border-t pt-10 md:grid-cols-[0.28fr_1fr]">
@@ -73,12 +73,12 @@ export default function ProjectDetail() {
 
           <section className="grid gap-8 border-t pt-10 md:grid-cols-[0.28fr_1fr]">
             <h2 className="text-sm font-semibold uppercase tracking-[0.16em] text-muted-foreground">{t("projects.numbers")}</h2>
-            <ul className="flex list-disc flex-col gap-3 ps-5">{study.numbers.map((item, index) => <li key={index} className="leading-relaxed text-muted-foreground">{t(item)}</li>)}</ul>
+            <ul className="flex list-disc flex-col gap-3 ps-5">{study.numbers.map((item, index) => <li key={index} className="leading-relaxed text-muted-foreground">{getLocalized(item, language)}</li>)}</ul>
           </section>
 
           <section className="grid gap-8 border-t pt-10 md:grid-cols-[0.28fr_1fr]">
             <h2 className="text-sm font-semibold uppercase tracking-[0.16em] text-muted-foreground">{t("projects.future")}</h2>
-            <ul className="flex list-disc flex-col gap-3 ps-5">{study.future.map((item, index) => <li key={index} className="leading-relaxed">{t(item)}</li>)}</ul>
+            <ul className="flex list-disc flex-col gap-3 ps-5">{study.future.map((item, index) => <li key={index} className="leading-relaxed">{getLocalized(item, language)}</li>)}</ul>
           </section>
 
           <section className="grid gap-8 border-t pt-10 md:grid-cols-[0.28fr_1fr]">
