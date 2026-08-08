@@ -1,11 +1,11 @@
 "use client"
 
-import { useEffect, useState } from "react"
+import { useEffect, useState, useCallback } from "react"
 
 export function useScroll() {
   const [activeSection, setActiveSection] = useState("")
 
-  const scrollToSection = (sectionId: string) => {
+  const scrollToSection = useCallback((sectionId: string) => {
     const section = document.getElementById(sectionId)
     if (section) {
       // Update state to track active section
@@ -17,7 +17,7 @@ export function useScroll() {
         behavior: "smooth",
       })
     }
-  }
+  }, []);
 
   // Update active section based on scroll position
   useEffect(() => {
@@ -44,7 +44,7 @@ export function useScroll() {
     // Initial check on mount
     handleScroll()
     return () => window.removeEventListener("scroll", handleScroll)
-  }, [activeSection])
+  }, []);
 
   return { activeSection, scrollToSection }
 }

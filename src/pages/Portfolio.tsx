@@ -17,7 +17,7 @@ export default function Portfolio() {
     if (window.location.hash === "#projects") {
       requestAnimationFrame(() => scrollToSection("projects"))
     }
-  }, [scrollToSection])
+  }, []);
 
   return (
     <div className="min-h-screen bg-background text-foreground">
