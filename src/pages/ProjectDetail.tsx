@@ -1,5 +1,6 @@
 import { ArrowLeft, ExternalLink, Github, Lock } from "lucide-react"
-import { Link, Navigate, useParams } from "react-router-dom"
+import { Link, Navigate, useLocation, useParams } from "react-router-dom"
+import { useEffect } from "react"
 import { Badge } from "../components/ui/badge"
 import { Button } from "../components/ui/button"
 import { LanguageSwitcher } from "../components/language-switcher"
@@ -10,7 +11,12 @@ import { projects } from "../data/projects"
 
 export default function ProjectDetail() {
   const { projectId } = useParams<{ projectId: string }>()
+  const location = useLocation()
   const { language, t } = useTranslations()
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "auto" })
+  }, [location.pathname])
   const project = projects.find((item) => item.id === projectId)
   const study = projectId ? getProjectCaseStudy(projectId) : undefined
 
