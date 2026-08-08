@@ -51,9 +51,12 @@ export function ProjectsSection() {
                   </div>
                   <div className="flex flex-wrap gap-3">
                     <Button asChild size="sm">
-                      <Link to={`/${language}/projects/${project.id}`}>
+                      <Link
+                        to={`/${language}/projects/${project.id}`}
+                        className="inline-flex items-center gap-2"
+                      >
                         {t("projects.viewDetails")}
-                        <ArrowRight data-icon="inline-end" />
+                        <ArrowRight data-icon="inline-end" className="h-4 w-4" />
                       </Link>
                     </Button>
                     {isClientProject(project) ? (

@@ -1,6 +1,5 @@
 "use client"
-
-import { useEffect, useState, useCallback } from "react"
+import { useCallback, useEffect, useState } from "react"
 
 export function useScroll() {
   const [activeSection, setActiveSection] = useState("")
@@ -8,43 +7,33 @@ export function useScroll() {
   const scrollToSection = useCallback((sectionId: string) => {
     const section = document.getElementById(sectionId)
     if (section) {
-      // Update state to track active section
       setActiveSection(sectionId)
-
-      // Scroll to section without changing URL
       window.scrollTo({
-        top: section.offsetTop - 80, // Adjust for header height
+        top: section.offsetTop - 80,
         behavior: "smooth",
       })
     }
-  }, []);
+  }, [])
 
-  // Update active section based on scroll position
   useEffect(() => {
     const handleScroll = () => {
-      // Add "certificates" to the sections array between "skills" and "projects"
-      const sections = ["about", "skills", "experience", "projects", "certificates", "contact"]
-      const scrollPosition = window.scrollY + 100 // Offset for better detection
-
+      const sections = ["about", "skills", "certificates", "experience", "projects", "contact"]
+      const scrollPosition = window.scrollY + 100
       for (const section of sections) {
         const element = document.getElementById(section)
         if (element) {
           const { offsetTop, offsetHeight } = element
           if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
-            if (activeSection !== section) {
-              setActiveSection(section)
-            }
+            setActiveSection(section) // no need to read activeSection first
             break
           }
         }
       }
     }
-
     window.addEventListener("scroll", handleScroll)
-    // Initial check on mount
     handleScroll()
     return () => window.removeEventListener("scroll", handleScroll)
-  }, []);
+  }, [])
 
   return { activeSection, scrollToSection }
 }

@@ -1,13 +1,13 @@
 import { ArrowLeft, ExternalLink, Github, Lock } from "lucide-react"
-import { Link, Navigate, useLocation, useParams } from "react-router-dom"
 import { useEffect } from "react"
-import { Badge } from "../components/ui/badge"
-import { Button } from "../components/ui/button"
+import { Link, Navigate, useLocation, useParams } from "react-router-dom"
 import { LanguageSwitcher } from "../components/language-switcher"
 import { ThemeSwitcher } from "../components/theme-switcher"
-import { useTranslations } from "../hooks/use-translations"
+import { Badge } from "../components/ui/badge"
+import { Button } from "../components/ui/button"
 import { getLocalized, getProjectCaseStudy } from "../data/project-case-studies"
 import { projects } from "../data/projects"
+import { useTranslations } from "../hooks/use-translations"
 
 export default function ProjectDetail() {
   const { projectId } = useParams<{ projectId: string }>()
@@ -27,8 +27,11 @@ export default function ProjectDetail() {
       <header className="sticky top-0 z-40 border-b bg-background/85 backdrop-blur-sm">
         <div className="container mx-auto flex items-center justify-between gap-4 px-4 py-4">
           <Button asChild variant="ghost" size="sm">
-            <Link to={`/${language}#projects`}>
-              <ArrowLeft data-icon="inline-start" />
+            <Link
+              to={`/${language}#projects`}
+              className="inline-flex items-center gap-2"
+            >
+              <ArrowLeft data-icon="inline-start" className="h-4 w-4 shrink-0" />
               {t("projects.back")}
             </Link>
           </Button>
