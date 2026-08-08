@@ -5,7 +5,7 @@ import { defineConfig } from "vite"
 // https://vitejs.dev/config/
 export default defineConfig({
   server: {
-    allowedHosts: ["sb-58ch088vvg7h.vercel.run"],
+    allowedHosts: [".vercel.run"],
   },
   plugins: [react()],
   resolve: {
