@@ -80,10 +80,21 @@ export default function ProjectDetail() {
               <h2 className="text-sm font-semibold uppercase tracking-[0.16em] text-muted-foreground">{t("projects.screenshots")}</h2>
               <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{t("projects.screenshotsDescription")}</p>
             </div>
-            <figure className="overflow-hidden rounded-xl border bg-muted/20 shadow-sm">
-              <img src={project.image} alt={project.alt} className="aspect-video w-full object-cover" />
-              <figcaption className="border-t px-4 py-3 text-sm text-muted-foreground">{project.alt}</figcaption>
-            </figure>
+            <div className="grid gap-6 sm:grid-cols-2">
+              {project.media.map((item, index) => item.type === "screenshot" ? (
+                <figure key={`${item.type}-${item.src}-${index}`} className="overflow-hidden rounded-xl border bg-muted/20 shadow-sm sm:col-span-2">
+                  <img src={item.src} alt={item.alt} className="aspect-video w-full object-cover" />
+                  <figcaption className="border-t px-4 py-3 text-sm text-muted-foreground">{item.label ?? item.alt}</figcaption>
+                </figure>
+              ) : (
+                <figure key={`${item.type}-${item.src}-${index}`} className="overflow-hidden rounded-xl border bg-muted/20 shadow-sm sm:col-span-2">
+                  <video className="aspect-video w-full bg-muted object-cover" controls preload="metadata" aria-label={item.title}>
+                    <source src={item.src} />
+                  </video>
+                  <figcaption className="border-t px-4 py-3 text-sm text-muted-foreground">{item.title}{item.description ? ` — ${item.description}` : ""}</figcaption>
+                </figure>
+              ))}
+            </div>
           </section>
         </article>
       </div>
