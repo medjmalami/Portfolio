@@ -74,6 +74,17 @@ export default function ProjectDetail() {
             <h2 className="text-sm font-semibold uppercase tracking-[0.16em] text-muted-foreground">{t("projects.future")}</h2>
             <ul className="flex list-disc flex-col gap-3 ps-5">{study.future.map((item, index) => <li key={index} className="leading-relaxed">{getLocalized(item, language)}</li>)}</ul>
           </section>
+
+          <section className="grid gap-8 border-t pt-10 md:grid-cols-[0.28fr_1fr]">
+            <div>
+              <h2 className="text-sm font-semibold uppercase tracking-[0.16em] text-muted-foreground">{t("projects.screenshots")}</h2>
+              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{t("projects.screenshotsDescription")}</p>
+            </div>
+            <figure className="overflow-hidden rounded-xl border bg-muted/20 shadow-sm">
+              <img src={project.image} alt={project.alt} className="aspect-video w-full object-cover" />
+              <figcaption className="border-t px-4 py-3 text-sm text-muted-foreground">{project.alt}</figcaption>
+            </figure>
+          </section>
         </article>
       </div>
     </main>

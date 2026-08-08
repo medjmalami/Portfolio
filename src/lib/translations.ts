@@ -301,6 +301,8 @@ export const translations: Translations = {
   "projects.debugging": { en: "Failure / debugging story", fr: "Incident / débogage", ar: "قصة الفشل والتصحيح" },
   "projects.numbers": { en: "Real numbers", fr: "Chiffres réels", ar: "أرقام حقيقية" },
   "projects.future": { en: "What I'd change with more time", fr: "Ce que je changerais avec plus de temps", ar: "ما سأغيره بوقت إضافي" },
+  "projects.screenshots": { en: "Screenshots / demo", fr: "Captures / démo", ar: "لقطات الشاشة / العرض" },
+  "projects.screenshotsDescription": { en: "A view from the actual system, when an image is available in the portfolio assets.", fr: "Une vue du système réel, lorsqu'une image est disponible dans les ressources du portfolio.", ar: "لقطة من النظام الفعلي عندما تكون صورة متاحة ضمن أصول معرض الأعمال." },
 
   // Contact Section
   "contact.title": {
