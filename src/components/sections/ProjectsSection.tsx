@@ -1,4 +1,5 @@
-import { Github, ExternalLink, Lock } from "lucide-react"
+import { ArrowRight, Github, ExternalLink, Lock } from "lucide-react"
+import { Link } from "react-router-dom"
 import { Button } from "../ui/button"
 import { Card, CardContent } from "../ui/card"
 import { Badge } from "../ui/badge"
@@ -7,7 +8,7 @@ import { useTranslations } from "../../hooks/use-translations"
 import { projects } from "../../data/projects"
 
 export function ProjectsSection() {
-  const { t } = useTranslations()
+  const { t, language } = useTranslations()
 
   const isClientProject = (project: typeof projects[0]) => !project.liveUrl && !project.codeUrl
 
@@ -41,7 +42,13 @@ export function ProjectsSection() {
                       </Badge>
                     ))}
                   </div>
-                  <div className="flex gap-4">
+                  <div className="flex flex-wrap gap-3">
+                    <Button asChild size="sm">
+                      <Link to={`/${language}/projects/${project.id}`}>
+                        {t("projects.viewDetails")}
+                        <ArrowRight data-icon="inline-end" />
+                      </Link>
+                    </Button>
                     {isClientProject(project) ? (
                       <Badge variant="secondary" className="flex items-center gap-1 py-1.5 px-3">
                         <Lock className="h-3 w-3" />
