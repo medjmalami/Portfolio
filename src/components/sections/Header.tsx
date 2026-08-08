@@ -42,9 +42,6 @@ export function Header({ activeSection, scrollToSection }: HeaderProps) {
         <div className="flex items-center gap-1 sm:gap-2">
           <ThemeSwitcher />
           <LanguageSwitcher />
-          <Button onClick={() => scrollToSection("contact")} size="sm" className="px-2 sm:px-3">
-            {t("nav.hireMe")}
-          </Button>
         </div>
       </div>
     </header>
