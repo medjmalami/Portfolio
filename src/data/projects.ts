@@ -25,7 +25,7 @@ export const projects: Project[] = [
     descriptionKey: "projects.tenderapp.description",
     technologies: ["FastAPI", "PostgreSQL", "SQLAlchemy", "Alembic", "LangGraph", "LangChain", "Next.js"],
     liveUrl: "",
-    codeUrl: "",
+    codeUrl: "https://github.com/medjmalami/tenders",
     imagePosition: "object-[0%_center]",
   },
   {
@@ -37,7 +37,7 @@ export const projects: Project[] = [
     descriptionKey: "projects.erp.description",
     technologies: ["Next.js", "Node.js", "Hono", "PostgreSQL", "Drizzle ORM", "S3"],
     liveUrl: "",
-    codeUrl: "",
+    codeUrl: "https://github.com/medjmalami/EMM-ERP",
     imagePosition: "object-[0%_10%]",
   },
   {
@@ -49,7 +49,7 @@ export const projects: Project[] = [
     descriptionKey: "projects.payroll.description",
     technologies: ["Next.js", "Hono", "PostgreSQL", "Drizzle ORM", "Zod", "JWT"],
     liveUrl: "",
-    codeUrl: "",
+    codeUrl: "https://github.com/medjmalami/trackEmployees",
   },
   {
     id: "ecoshield",

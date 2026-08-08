@@ -50,12 +50,12 @@ export function ProjectsSection() {
                     ))}
                   </div>
                   <div className="flex flex-wrap gap-3">
-                    {/*<Button asChild size="sm">
+                    <Button asChild size="sm">
                       <Link to={`/${language}/projects/${project.id}`}>
                         {t("projects.viewDetails")}
                         <ArrowRight data-icon="inline-end" />
                       </Link>
-                    </Button>*/}
+                    </Button>
                     {isClientProject(project) ? (
                       <Badge
                         variant="secondary"

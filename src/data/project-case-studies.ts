@@ -44,7 +44,78 @@ export const projectCaseStudies: Record<string, ProjectCaseStudy> = {
       { en: "Add replayable fixtures for scraper failures and LLM extraction regressions.", fr: "Ajouter des fixtures rejouables pour les échecs du scraper et les régressions d'extraction LLM.", ar: "إضافة بيانات قابلة لإعادة التشغيل لفشل الكاشط وتراجعات استخراج LLM." },
     ],
   },
+  "erp": {
+    projectId: "erp",
+    problem: {
+      en: "Businesses often struggle with fragmented ERP modules, leading to manual data entry, inconsistent reporting, and difficulty scaling operations.",
+      fr: "Les entreprises rencontrent souvent des modules ERP fragmentés, entraînant une saisie manuelle des données, des rapports incohérents et des difficultés à faire évoluer les opérations.",
+      ar: "غالبًا ما تواجه الشركات وحدات ERP متفرقة، مما يؤدي إلى إدخال بيانات يدوي، وتقارير غير متسقة، وصعوبة توسيع العمليات."
+    },
+    architecture: [
+      { stage: { en: "Backend API with Hono & Bun", fr: "API backend avec Hono & Bun", ar: "API الخلفية باستخدام Hono وBun" }, reason: { en: "Fast, lightweight server for handling CRUD operations and JWT auth.", fr: "Serveur rapide et léger pour gérer les opérations CRUD et l'authentification JWT.", ar: "خادم سريع وخفيف للتعامل مع عمليات CRUD ومصادقة JWT." } },
+      { stage: { en: "PostgreSQL + Drizzle ORM", fr: "PostgreSQL + Drizzle ORM", ar: "PostgreSQL + Drizzle ORM" }, reason: { en: "Strong type‑safety and migrations for relational data.", fr: "Sécurité typée forte et migrations pour les données relationnelles.", ar: "أمان قوي للأنواع والهجرات للبيانات العلائقية." } },
+      { stage: { en: "Next.js Frontend", fr: "Frontend Next.js", ar: "واجهة Next.js" }, reason: { en: "React‑based UI with server‑side rendering for fast dashboards.", fr: "Interface React avec rendu côté serveur pour des tableaux de bord rapides.", ar: "واجهة React مع عرض جانب الخادم للوحات تحكم سريعة." } }
+    ],
+    tradeoffs: [
+      { en: "Choosing Bun over Node brings performance gains but a smaller ecosystem.", fr: "Choisir Bun plutôt que Node offre des gains de performance mais un écosystème plus restreint.", ar: "اختيار Bun بدلاً من Node يحقق تحسينات في الأداء لكن بيئة أصغر." },
+      { en: "Using Drizzle instead of more mature ORMs reduces boilerplate but less community support.", fr: "Utiliser Drizzle plutôt que des ORM plus matures réduit le code répétitif mais le support communautaire est moindre.", ar: "استخدام Drizzle بدلاً من ORMs الناضجة يقلل الشيفرة المتكررة لكن الدعم المجتمعي أقل." }
+    ],
+    debugging: { en: "Debugging focused on ensuring JWT verification at each endpoint and consistent schema migrations.", fr: "Débogage axé sur la vérification JWT à chaque point d'extrémité et des migrations de schéma cohérentes.", ar: "التحقق من JWT في كل نقطة نهاية وضمان هجرات مخطط متسقة." },
+    numbers: [unavailable],
+    future: [
+      { en: "Add role‑based access controls and audit logging.", fr: "Ajouter des contrôles d'accès basés sur les rôles et des journaux d'audit.", ar: "إضافة تحكم بالوصول بناءً على الأدوار وتسجيل تدقيق." },
+      { en: "Migrate static assets to cloud storage with S3 integration.", fr: "Migrer les actifs statiques vers le stockage cloud avec intégration S3.", ar: "نقل الأصول الثابتة إلى تخزين سحابي مع تكامل S3." }
+    ]
+  },
+  "employees-payroll": {
+    projectId: "employees-payroll",
+    problem: {
+      en: "Payroll processing is error‑prone and often disconnected from HR data, leading to delays and compliance issues.",
+      fr: "Le traitement de la paie est source d'erreurs et souvent déconnecté des données RH, entraînant des retards et des problèmes de conformité.",
+      ar: "معالجة الرواتب مليئة بالأخطاء وغالبًا ما تكون منفصلة عن بيانات الموارد البشرية، مما يؤدي إلى تأخيرات ومشكلات الامتثال."
+    },
+    architecture: [
+      { stage: { en: "Auth with JWT (Hono)", fr: "Authentification avec JWT (Hono)", ar: "المصادقة باستخدام JWT (Hono)" }, reason: { en: "Stateless, scalable authentication for payroll users.", fr: "Authentification sans état, évolutive pour les utilisateurs de la paie.", ar: "مصادقة بلا حالة وقابلة للتوسع لمستخدمي الرواتب." } },
+      { stage: { en: "PostgreSQL + Drizzle ORM", fr: "PostgreSQL + Drizzle ORM", ar: "PostgreSQL + Drizzle ORM" }, reason: { en: "Reliable relational storage for employee and payslip data.", fr: "Stockage relationnel fiable pour les données des employés et des bulletins de paie.", ar: "تخزين علائقي موثوق لبيانات الموظفين وكشوف الرواتب." } },
+      { stage: { en: "Next.js UI", fr: "Interface Next.js", ar: "واجهة Next.js" }, reason: { en: "Provides interactive dashboards for HR and finance teams.", fr: "Fournit des tableaux de bord interactifs pour les équipes RH et finance.", ar: "يوفر لوحات تفاعلية لفرق الموارد البشرية والمالية." } }
+    ],
+    tradeoffs: [
+      { en: "Using JWT simplifies auth but revocation requires token blacklist.", fr: "L'utilisation de JWT simplifie l'authentification mais la révocation nécessite une blacklist de tokens.", ar: "استخدام JWT يبسط المصادقة لكن إلغاء التوثيق يتطلب قائمة سوداء للرموز." },
+      { en: "Choosing a modular monolith reduces inter‑service latency but limits independent scaling.", fr: "Choisir un monolithe modulaire réduit la latence inter‑services mais limite le scaling indépendant.", ar: "اختيار مونوليثي موحد يقلل من الكمون بين الخدمات لكنه يحد من إمكانية التوسع المستقل." }
+    ],
+    debugging: { en: "Focused on ensuring payroll calculations respect tax rules and handling edge‑case contracts.", fr: "Concentré sur le respect des règles fiscales et la gestion des contrats extrêmes.", ar: "التركيز على ضمان حساب الرواتب وفق القواعد الضريبية ومعالجة العقود ذات الحواف." },
+    numbers: [unavailable],
+    future: [
+      { en: "Integrate real‑time tax rate updates via external APIs.", fr: "Intégrer des mises à jour en temps réel des taux d'imposition via des API externes.", ar: "دمج تحديثات معدلات الضرائب في الوقت الفعلي عبر واجهات برمجة التطبيقات الخارجية." },
+      { en: "Add self‑service portal for employees to view payslips.", fr: "Ajouter un portail en libre-service pour que les employés consultent leurs bulletins.", ar: "إضافة بوابة ذاتية الخدمة لتمكين الموظفين من مشاهدة كشوف الرواتب." }
+    ]
+  },
+  "ecoshield": {
+    projectId: "ecoshield",
+    problem: {
+      en: "Smart water infrastructure faces false data injection attacks and inefficient pump usage, risking service quality and energy waste.",
+      fr: "Les infrastructures d'eau intelligentes font face à des attaques d'injection de données falsifiées et à une utilisation inefficace des pompes, mettant en danger la qualité du service et le gaspillage d'énergie.",
+      ar: "تواجه بنية المياه الذكية هجمات إدخال بيانات زائفة واستخدام غير فعال للمضخات، مما يعرض جودة الخدمة وإهدار الطاقة للخطر."
+    },
+    architecture: [
+      { stage: { en: "Sensor Server (Node.js)", fr: "Serveur de capteurs (Node.js)", ar: "خادم المستشعرات (Node.js)" }, reason: { en: "Simulates sensors and injects FDI attacks, publishing via RabbitMQ.", fr: "Simule les capteurs et injecte des attaques FDI, publiant via RabbitMQ.", ar: "محاكاة المستشعرات وإدخال هجمات FDI، النشر عبر RabbitMQ." } },
+      { stage: { en: "Backend (Express.js) with FastAPI services", fr: "Backend (Express.js) avec services FastAPI", ar: "الخلفية (Express.js) مع خدمات FastAPI" }, reason: { en: "Express handles JWT auth and real‑time SSE; FastAPI hosts LSTM models for detection/optimization.", fr: "Express gère l'auth JWT et SSE en temps réel; FastAPI héberge les modèles LSTM pour la détection/optimisation.", ar: "Express يتعامل مع JWT وSSE في الوقت الفعلي؛ FastAPI يستضيف نماذج LSTM للكشف/التحسين." } },
+      { stage: { en: "MongoDB + Redis", fr: "MongoDB + Redis", ar: "MongoDB + Redis" }, reason: { en: "Mongo stores flagged anomalies; Redis buffers sensor streams.", fr: "Mongo stocke les anomalies détectées; Redis tamponne les flux de capteurs.", ar: "Mongo يخزن الشذوذ المكتشف؛ Redis يجمع تدفقات المستشعرات." } },
+      { stage: { en: "Next.js Dashboard", fr: "Tableau de bord Next.js", ar: "لوحة التحكم Next.js" }, reason: { en: "Provides real‑time visualization of attacks and pump optimization.", fr: "Fournit une visualisation en temps réel des attaques et de l'optimisation des pompes.", ar: "يوفر تصورًا في الوقت الفعلي للهجمات وتحسين المضخات." } }
+    ],
+    tradeoffs: [
+      { en: "Mixing Node.js and Python services adds operational complexity but leverages best‑fit libraries.", fr: "Mélanger Node.js et Python ajoute de la complexité opérationnelle mais exploite les bibliothèques les plus adaptées.", ar: "مزج Node.js وPython يضيف تعقيدًا تشغيليًا لكنه يستفيد من المكتبات الأنسب." },
+      { en: "Using Redis for buffering provides speed but requires careful TTL management.", fr: "Utiliser Redis pour le buffering offre de la rapidité mais nécessite une gestion attentive du TTL.", ar: "استخدام Redis للتخزين المؤقت يوفر السرعة لكنه يتطلب إدارة دقيقة للـ TTL." }
+    ],
+    debugging: { en: "Ensured end‑to‑end JWT verification and synchronized sensor timestamps with Redis pipelines.", fr: "Assuré la vérification JWT de bout en bout et synchronisé les timestamps des capteurs avec les pipelines Redis.", ar: "ضمان التحقق من JWT من الطرف إلى الطرف ومزامنة طوابع الوقت للمستشعرات مع خطوط أنابيب Redis." },
+    numbers: [unavailable],
+    future: [
+      { en: "Deploy to cloud with Kubernetes for scaling sensor ingestion.", fr: "Déployer sur le cloud avec Kubernetes pour scaler l'ingestion de capteurs.", ar: "نشر على السحابة باستخدام Kubernetes لتوسيع استيعاب المستشعرات." },
+      { en: "Add model retraining pipeline to adapt to evolving attack patterns.", fr: "Ajouter une pipeline de ré‑entraînement de modèle pour s'adapter aux nouveaux schémas d'attaque.", ar: "إضافة خط أنابيب لإعادة تدريب النماذج للتكيف مع أنماط الهجوم المتطورة." }
+    ]
+  }
 }
+
 
 const genericCaseStudy = (projectId: string): ProjectCaseStudy => ({
   projectId,
