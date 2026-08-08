@@ -1,3 +1,4 @@
+import { useEffect } from "react"
 import { AboutSection } from "../components/sections/AboutSection"
 import { CertificatesSection } from "../components/sections/CertificatesSection"
 import { ContactSection } from "../components/sections/ContactSection"
@@ -11,6 +12,12 @@ import { useScroll } from "../hooks/use-scroll"
 
 export default function Portfolio() {
   const { activeSection, scrollToSection } = useScroll()
+
+  useEffect(() => {
+    if (window.location.hash === "#projects") {
+      requestAnimationFrame(() => scrollToSection("projects"))
+    }
+  }, [scrollToSection])
 
   return (
     <div className="min-h-screen bg-background text-foreground">
