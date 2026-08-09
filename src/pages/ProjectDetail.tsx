@@ -57,43 +57,43 @@ export default function ProjectDetail() {
                 <div className="flex flex-wrap gap-2">{project.technologies.map((tech) => <Badge key={tech} variant="secondary" className="font-normal">{tech}</Badge>)}</div>
               </div>
             </div>
-            <div className="flex flex-wrap items-center gap-3">
+            <div className="mt-8 grid gap-3 sm:grid-cols-2 sm:max-w-md">
               {project.liveUrl ? (
-                <Button asChild variant="outline" size="sm">
+                <Button asChild variant="outline" className="w-full justify-center">
                   <a
                     href={project.liveUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2"
+                    className="inline-flex items-center justify-center gap-2"
                   >
-                    <ExternalLink data-icon="inline-start" className="h-4 w-4 shrink-0" />
+                    <ExternalLink className="h-4 w-4 shrink-0" />
                     {t("projects.liveDemo")}
                   </a>
                 </Button>
               ) : (
-                <Badge variant="outline" className="inline-flex items-center gap-2">
-                  <Lock data-icon="inline-start" className="h-4 w-4 shrink-0" />
+                <div className="flex min-h-10 w-full items-center justify-center rounded-md border border-border px-3 text-sm text-muted-foreground">
+                  <Lock className="mr-2 h-4 w-4 shrink-0" />
                   {t("projects.noLiveDemo")}
-                </Badge>
+                </div>
               )}
 
               {project.codeUrl ? (
-                <Button asChild variant="outline" size="sm">
+                <Button asChild variant="outline" className="w-full justify-center">
                   <a
                     href={project.codeUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2"
+                    className="inline-flex items-center justify-center gap-2"
                   >
-                    <Github data-icon="inline-start" className="h-4 w-4 shrink-0" />
+                    <Github className="h-4 w-4 shrink-0" />
                     {t("projects.code")}
                   </a>
                 </Button>
               ) : (
-                <Badge variant="outline" className="inline-flex items-center gap-2">
-                  <Lock data-icon="inline-start" className="h-4 w-4 shrink-0" />
+                <div className="flex min-h-10 w-full items-center justify-center rounded-md border border-border px-3 text-sm text-muted-foreground">
+                  <Lock className="mr-2 h-4 w-4 shrink-0" />
                   {t("projects.privateRepo")}
-                </Badge>
+                </div>
               )}
             </div>
           </header>
