@@ -26,8 +26,14 @@ export default function ProjectDetail() {
     <main className="case-study-page min-h-screen bg-background text-foreground">
       <header className="case-study-nav">
         <div className="container mx-auto flex items-center justify-between gap-4 px-5 py-4 lg:px-8">
-          <Button asChild variant="ghost" size="sm" className="-ml-3 gap-2 text-muted-foreground hover:text-foreground">
-            <Link to={`/${language}#projects`}><ArrowLeft data-icon="inline-start" />{t("projects.back")}</Link>
+          <Button asChild variant="ghost" size="sm">
+            <Link
+              to={`/${language}#projects`}
+              className="inline-flex items-center gap-2"
+            >
+              <ArrowLeft data-icon="inline-start" className="h-4 w-4 shrink-0" />
+              {t("projects.back")}
+            </Link>
           </Button>
           <div className="flex items-center gap-2"><ThemeSwitcher /><LanguageSwitcher /></div>
         </div>
@@ -51,9 +57,44 @@ export default function ProjectDetail() {
                 <div className="flex flex-wrap gap-2">{project.technologies.map((tech) => <Badge key={tech} variant="secondary" className="font-normal">{tech}</Badge>)}</div>
               </div>
             </div>
-            <div className="mt-9 flex flex-wrap gap-3">
-              {project.liveUrl ? <Button asChild><a href={project.liveUrl} target="_blank" rel="noopener noreferrer">{t("projects.liveDemo")}<ExternalLink data-icon="inline-end" /></a></Button> : <Badge variant="outline" className="h-9 gap-2 px-3"><Lock data-icon="inline-start" />{t("projects.noLiveDemo")}</Badge>}
-              {project.codeUrl ? <Button asChild variant="outline"><a href={project.codeUrl} target="_blank" rel="noopener noreferrer"><Github data-icon="inline-start" />{t("projects.code")}</a></Button> : <Badge variant="outline" className="h-9 gap-2 px-3"><Lock data-icon="inline-start" />{t("projects.privateRepo")}</Badge>}
+            <div className="flex flex-wrap items-center gap-3">
+              {project.liveUrl ? (
+                <Button asChild variant="outline" size="sm">
+                  <a
+                    href={project.liveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2"
+                  >
+                    <ExternalLink data-icon="inline-start" className="h-4 w-4 shrink-0" />
+                    {t("projects.liveDemo")}
+                  </a>
+                </Button>
+              ) : (
+                <Badge variant="outline" className="inline-flex items-center gap-2">
+                  <Lock data-icon="inline-start" className="h-4 w-4 shrink-0" />
+                  {t("projects.noLiveDemo")}
+                </Badge>
+              )}
+
+              {project.codeUrl ? (
+                <Button asChild variant="outline" size="sm">
+                  <a
+                    href={project.codeUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2"
+                  >
+                    <Github data-icon="inline-start" className="h-4 w-4 shrink-0" />
+                    {t("projects.code")}
+                  </a>
+                </Button>
+              ) : (
+                <Badge variant="outline" className="inline-flex items-center gap-2">
+                  <Lock data-icon="inline-start" className="h-4 w-4 shrink-0" />
+                  {t("projects.privateRepo")}
+                </Badge>
+              )}
             </div>
           </header>
 
