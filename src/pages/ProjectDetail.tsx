@@ -1,5 +1,5 @@
 import { ArrowLeft, ExternalLink, Github, Lock } from "lucide-react"
-import { useEffect, type ReactNode } from "react"
+import { useEffect } from "react"
 import { Link, Navigate, useLocation, useParams } from "react-router-dom"
 import { LanguageSwitcher } from "../components/language-switcher"
 import { ThemeSwitcher } from "../components/theme-switcher"
@@ -8,10 +8,6 @@ import { Button } from "../components/ui/button"
 import { getLocalized, getProjectCaseStudy } from "../data/project-case-studies"
 import { projects } from "../data/projects"
 import { useTranslations } from "../hooks/use-translations"
-
-function SectionLabel({ children }: { children: ReactNode }) {
-  return <p className="case-study-label">{children}</p>
-}
 
 export default function ProjectDetail() {
   const { projectId } = useParams<{ projectId: string }>()
@@ -68,17 +64,17 @@ export default function ProjectDetail() {
             </div>
           </section>
 
-          <div className="case-study-body mt-16 grid gap-14 lg:grid-cols-[13rem_minmax(0,1fr)] lg:gap-16">
-            <aside className="hidden lg:block"><div className="sticky top-24 flex flex-col gap-5"><SectionLabel>{t("projects.caseStudy")}</SectionLabel><nav className="flex flex-col gap-3 text-sm text-muted-foreground"><a href="#problem">{t("projects.problem")}</a><a href="#architecture">{t("projects.architecture")}</a><a href="#tradeoffs">{t("projects.tradeoffs")}</a><a href="#debugging">{t("projects.debugging")}</a><a href="#future">{t("projects.future")}</a></nav></div></aside>
-            <div className="flex min-w-0 flex-col gap-16">
-              <section id="problem" className="case-study-section"><SectionLabel>{t("projects.problem")}</SectionLabel><div><h2 className="case-study-heading">The constraint behind the interface.</h2><p className="case-study-copy">{getLocalized(study.problem, language)}</p></div></section>
-              <section id="architecture" className="case-study-section"><SectionLabel>{t("projects.architecture")}</SectionLabel><div><h2 className="case-study-heading">A system designed to stay understandable.</h2><div className="mt-8 flex flex-col">{study.architecture.map((stage, index) => <div key={index} className="case-study-step"><span className="case-study-index">{String(index + 1).padStart(2, "0")}</span><div><h3 className="text-lg font-medium">{getLocalized(stage.stage, language)}</h3><p className="mt-2 leading-7 text-muted-foreground">{getLocalized(stage.reason, language)}</p></div></div>)}</div></div></section>
-              <section id="tradeoffs" className="case-study-section"><SectionLabel>{t("projects.tradeoffs")}</SectionLabel><div><h2 className="case-study-heading">The decisions were part of the product.</h2><div className="mt-7 grid gap-4">{study.tradeoffs.map((item, index) => <div key={index} className="case-study-note"><span className="font-mono text-xs text-muted-foreground">{String(index + 1).padStart(2, "0")}</span><p className="leading-7">{getLocalized(item, language)}</p></div>)}</div></div></section>
-              <section id="debugging" className="case-study-section"><SectionLabel>{t("projects.debugging")}</SectionLabel><div><h2 className="case-study-heading">Make the failure inspectable.</h2><p className="case-study-copy">{getLocalized(study.debugging, language)}</p></div></section>
-              <section className="case-study-section"><SectionLabel>{t("projects.numbers")}</SectionLabel><div><h2 className="case-study-heading">Evidence, not decoration.</h2><ul className="mt-7 flex flex-col gap-3">{study.numbers.map((item, index) => <li key={index} className="border-l-2 border-primary/40 pl-5 leading-7 text-muted-foreground">{getLocalized(item, language)}</li>)}</ul></div></section>
-              <section id="future" className="case-study-section"><SectionLabel>{t("projects.future")}</SectionLabel><div><h2 className="case-study-heading">Where I would take it next.</h2><ul className="mt-7 flex flex-col gap-4">{study.future.map((item, index) => <li key={index} className="flex gap-4 leading-7"><span className="font-mono text-xs text-muted-foreground">{String(index + 1).padStart(2, "0")}</span><span>{getLocalized(item, language)}</span></li>)}</ul></div></section>
-            </div>
-          </div>
+          <section className="case-study-body mt-16 border-t border-border pt-10 lg:mt-24 lg:pt-14">
+            <h2 className="max-w-3xl text-balance text-3xl font-medium tracking-[-0.04em] md:text-5xl">{t("projects.caseStudy")}</h2>
+            <p className="mt-8 max-w-4xl text-pretty text-lg leading-9 text-muted-foreground md:text-xl md:leading-10">
+              {getLocalized(study.problem, language)}{" "}
+              {study.architecture.map((stage) => `${getLocalized(stage.stage, language)}: ${getLocalized(stage.reason, language)}`).join(" ")}{" "}
+              {study.tradeoffs.map((item) => getLocalized(item, language)).join(" ")}{" "}
+              {getLocalized(study.debugging, language)}{" "}
+              {study.numbers.map((item) => getLocalized(item, language)).join(" ")}{" "}
+              {study.future.map((item) => getLocalized(item, language)).join(" ")}
+            </p>
+          </section>
 
         </article>
       </div>
