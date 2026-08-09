@@ -10,6 +10,89 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+
+  .case-study-nav {
+    border-bottom: 1px solid hsl(var(--border));
+    background: hsl(var(--background) / 0.86);
+    backdrop-filter: blur(16px);
+  }
+
+  .case-study-kicker,
+  .case-study-label {
+    color: hsl(var(--primary));
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    line-height: 1.4;
+    text-transform: uppercase;
+  }
+
+  .case-study-hero {
+    border-top: 1px solid hsl(var(--border));
+    padding-top: 1.5rem;
+  }
+
+  .case-study-cover {
+    overflow: hidden;
+    border: 1px solid hsl(var(--border));
+    background: hsl(var(--muted));
+    box-shadow: 0 24px 70px hsl(var(--foreground) / 0.08);
+  }
+
+  .case-study-cover img {
+    display: block;
+    filter: saturate(0.92);
+  }
+
+  .case-study-section {
+    display: grid;
+    gap: 2rem;
+    border-top: 1px solid hsl(var(--border));
+    padding-top: 2rem;
+  }
+
+  .case-study-heading {
+    max-width: 34rem;
+    font-size: clamp(1.6rem, 3vw, 2.35rem);
+    font-weight: 500;
+    letter-spacing: -0.04em;
+    line-height: 1.08;
+  }
+
+  .case-study-copy {
+    max-width: 42rem;
+    margin-top: 1.5rem;
+    font-size: 1.08rem;
+    line-height: 1.9;
+  }
+
+  .case-study-step {
+    display: grid;
+    grid-template-columns: 3rem minmax(0, 1fr);
+    gap: 1rem;
+    border-top: 1px solid hsl(var(--border));
+    padding: 1.25rem 0;
+  }
+
+  .case-study-step:last-child { border-bottom: 1px solid hsl(var(--border)); }
+  .case-study-index { color: hsl(var(--primary)); font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.75rem; padding-top: 0.25rem; }
+
+  .case-study-note {
+    display: grid;
+    grid-template-columns: 2rem minmax(0, 1fr);
+    gap: 1rem;
+    border: 1px solid hsl(var(--border));
+    padding: 1.25rem;
+    background: hsl(var(--muted) / 0.35);
+  }
+
+  .case-study-media { overflow: hidden; border: 1px solid hsl(var(--border)); background: hsl(var(--muted) / 0.35); }
+  .case-study-media img { display: block; }
+  .case-study-media figcaption { border-top: 1px solid hsl(var(--border)); padding: 0.85rem 1rem; color: hsl(var(--muted-foreground)); font-size: 0.8rem; line-height: 1.5; }
+
+  @media (min-width: 1024px) {
+    .case-study-section { grid-template-columns: 13rem minmax(0, 1fr); }
+  }
 }
 
 @layer base {
