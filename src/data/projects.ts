@@ -35,7 +35,7 @@ export const projects: Project[] = [
     media: [{ type: "screenshot", src: "/ecoShield.png", alt: "EcoShield AI dashboard showing real-time FDI attack detection and pump power optimization for smart water infrastructure" }],
     titleKey: "projects.ecoshield.title",
     descriptionKey: "projects.ecoshield.description",
-    technologies: ["Node.js", "Express.js", "RabbitMQ", "JWT", "Docker", "LSTM", "FastAPI", "MongoDB", "Redis", "SSE", "Next.js",],
+    technologies: ["FastAPI", "Node.js", "Express.js", "RabbitMQ", "JWT", "Docker", "LSTM", "MongoDB", "Redis", "SSE", "Next.js",],
     liveUrl: "",
     codeUrl: "https://github.com/medjmalami/ecoShield",
   },
