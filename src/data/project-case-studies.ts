@@ -43,7 +43,7 @@ export const projectCaseStudies: Record<string, ProjectCaseStudy> = {
       },
       {
         stage: { en: "Tool-bounded drafter agent instead of a free-form prompt", fr: "Agent rédacteur limité à des outils plutôt qu'un prompt libre", ar: "وكيل صياغة مقيّد بالأدوات بدل موجّه حر" },
-        reason: { en: "The proposal drafter is a ToolNode agent that can call list_employees, list_projects, and web-search tools, but the system prompt explicitly forbids calling the same tool twice with the same arguments and requires a placeholder for company data it doesn't have — the goal is a proposal that's honest about gaps instead of one that fabricates convincing-looking certifications or financials.", fr: "Le rédacteur de propositions est un agent ToolNode qui peut appeler list_employees, list_projects et des outils de recherche web, mais le prompt système interdit explicitement d'appeler deux fois le même outil avec les mêmes arguments et impose un espace réservé pour les données d'entreprise manquantes — l'objectif est une proposition honnête sur ses lacunes plutôt qu'une proposition qui invente des certifications ou des données financières convaincantes.", ar: "وكيل صياغة العروض هو وكيل من نوع ToolNode يمكنه استدعاء list_employees وlist_projects وأدوات بحث الويب، لكن موجّه النظام يمنع صراحةً استدعاء نفس الأداة مرتين بنفس المعطيات ويفرض عنصرًا نائبًا لبيانات الشركة غير المتوفرة — الهدف هو عرض صادق بشأن الثغرات بدل عرض يختلق شهادات أو بيانات مالية تبدو مقنعة." },
+        reason: { en: "The proposal drafter is a ToolNode agent that can call list_employees, list_projects, and web-search tools, but the system prompt explicitly forbids calling the same tool twice with the same arguments and requires a placeholder for company data it doesn't have — the goal is a proposal that's honest about gaps instead of one that fabricates convincing-looking certifications or financials.", fr: "Le rédacteur de propositions est un agent ToolNode qui peut appeler list_employees, list_projects et des outils de recherche web, mais le prompt système interdit explicitement d'appeler deux fois le même outil avec les mêmes arguments et impose un espace réservé pour les données d'entreprise manquantes — l'objectif est une proposition honnête sur ses lacunes plutôt qu'une proposition qui invente des certifications ou des données financières convaincantes.", ar: "وكيل صياغة العروض هو وكيل من نوع ToolNode يمكنه ��ستدعاء list_employees وlist_projects وأدوات بحث الويب، لكن موجّه النظام يمنع صراحةً استدعاء نفس الأداة مرتين بنفس المعطيات ويفرض عنصرًا نائبًا لبيانات الشركة غير المتوفرة — الهدف هو عرض صادق بشأن الثغرات بدل عرض يختلق شهادات أو بيانات مالية تبدو مقنعة." },
       },
     ],
     tradeoffs: [
@@ -100,7 +100,7 @@ export const projectCaseStudies: Record<string, ProjectCaseStudy> = {
       ar: "لم يُتوقع خصم المخزون المتزامن أثناء التصميم — يُظهر سجل الالتزامات أنه اكتُشف وأُصلح لاحقًا: chore: fixed race condition for both in and out stock controllers. كان بإمكان عمليتي بيع متزامنتين قراءة currentStock واجتياز شرط >= quantity كلتاهما، ثم كتابة رصيد جديد لكل منهما، مما يؤدي إلى بيع زائد بصمت. يجمع الإصلاح التحقق والخصم وصف stock_movements وتحديث حالة الطلب وصف التدقيق ضمن معاملة واحدة تقفل صف المنتج باستخدام SELECT ... FOR UPDATE. كما نقلت حسابات المخزون بعيدًا عن الأعداد العشرية في JS: أصبحت currentStock/freezedStock من نوع DECIMAL(15,3) ويُنفَّذ الخصم عبر SQL باستخدام ROUND((... - quantity)::NUMERIC, 3) مع تقييد GREATEST(0, ...)، لأن الحساب العشري بلغة JS غير آمن للكميات المرتبطة بالمال.",
     },
     numbers: [
-      { en: "120 commits across roughly 3.5 months (Oct 2025 – Feb 2026), covering schema design for 7 role-based modules, 12 Drizzle migrations, and a 3-service Docker Compose deployment (API, Postgres, Nginx).", fr: "120 commits sur environ 3,5 mois (oct. 2025 – fév. 2026), couvrant la conception du schéma pour 7 modules organisés par rôle, 12 migrations Drizzle, et un déploiement Docker Compose à 3 services (API, Postgres, Nginx).", ar: "120 التزامًا على مدى حوالي 3.5 أشهر (أكتوبر 2025 – فبراير 2026)، شملت تصميم المخطط لسبع وحدات منظمة حسب الأدوار، و12 ترحيلًا عبر Drizzle، ونشرًا بثلاث خدمات عبر Docker Compose (API، Postgres، Nginx)." },
+      { en: "120 commits across roughly 3.5 months (Oct 2025 – Feb 2026), covering schema design for 7 role-based modules, 12 Drizzle migrations, and a 3-service Docker Compose deployment (API, Postgres, Nginx).", fr: "120 commits sur environ 3,5 mois (oct. 2025 – fév. 2026), couvrant la conception du schéma pour 7 modules organisés par rôle, 12 migrations Drizzle, et un déploiement Docker Compose à 3 services (API, Postgres, Nginx).", ar: "120 التزامًا على مدى حوالي 3.5 أشهر (أكتوبر 2025 – فبرا��ر 2026)، شملت تصميم المخطط لسبع وحدات منظمة حسب الأدوار، و12 ترحيلًا عبر Drizzle، ونشرًا بثلاث خدمات عبر Docker Compose (API، Postgres، Nginx)." },
       unavailable,
     ],
     future: [
@@ -223,6 +223,17 @@ for (const project of projects) {
 
 export function getProjectCaseStudy(id: string) {
   return projectCaseStudies[id]
+}
+
+export function getCaseStudyNarrative(study: ProjectCaseStudy, language: Language) {
+  return [
+    getLocalized(study.problem, language),
+    ...study.architecture.map((stage) => `${getLocalized(stage.stage, language)}: ${getLocalized(stage.reason, language)}`),
+    ...study.tradeoffs.map((item) => getLocalized(item, language)),
+    getLocalized(study.debugging, language),
+    ...study.numbers.map((item) => getLocalized(item, language)),
+    ...study.future.map((item) => getLocalized(item, language)),
+  ].join(" ")
 }
 
 export function getLocalized(value: Localized, language: Language) {

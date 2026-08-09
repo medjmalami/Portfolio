@@ -5,7 +5,7 @@ import { LanguageSwitcher } from "../components/language-switcher"
 import { ThemeSwitcher } from "../components/theme-switcher"
 import { Badge } from "../components/ui/badge"
 import { Button } from "../components/ui/button"
-import { getLocalized, getProjectCaseStudy } from "../data/project-case-studies"
+import { getCaseStudyNarrative, getProjectCaseStudy } from "../data/project-case-studies"
 import { projects } from "../data/projects"
 import { useTranslations } from "../hooks/use-translations"
 
@@ -67,12 +67,7 @@ export default function ProjectDetail() {
           <section className="case-study-body mt-16 border-t border-border pt-10 lg:mt-24 lg:pt-14">
             <h2 className="max-w-3xl text-balance text-3xl font-medium tracking-[-0.04em] md:text-5xl">{t("projects.caseStudy")}</h2>
             <p className="mt-8 max-w-4xl text-pretty text-lg leading-9 text-muted-foreground md:text-xl md:leading-10">
-              {getLocalized(study.problem, language)}{" "}
-              {study.architecture.map((stage) => `${getLocalized(stage.stage, language)}: ${getLocalized(stage.reason, language)}`).join(" ")}{" "}
-              {study.tradeoffs.map((item) => getLocalized(item, language)).join(" ")}{" "}
-              {getLocalized(study.debugging, language)}{" "}
-              {study.numbers.map((item) => getLocalized(item, language)).join(" ")}{" "}
-              {study.future.map((item) => getLocalized(item, language)).join(" ")}
+              {getCaseStudyNarrative(study, language)}
             </p>
           </section>
 
