@@ -58,7 +58,7 @@ export default function ProjectDetail() {
               </div>
             </div>
             <div className="mt-8 grid gap-3 sm:grid-cols-2 sm:max-w-md">
-              {project.liveUrl ? (
+              {/*project.liveUrl ? (
                 <Button asChild variant="outline" className="w-full justify-center">
                   <a
                     href={project.liveUrl}
@@ -75,7 +75,7 @@ export default function ProjectDetail() {
                   <Lock className="mr-2 h-4 w-4 shrink-0" />
                   {t("projects.noLiveDemo")}
                 </div>
-              )}
+                )*/}
 
               {project.codeUrl ? (
                 <Button asChild variant="outline" className="w-full justify-center">
