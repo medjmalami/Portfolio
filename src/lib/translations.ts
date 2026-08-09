@@ -250,7 +250,7 @@ export const translations: Translations = {
 
     fr: "Plateforme alimentée par l'IA qui automatise la recherche, l'analyse et la génération de propositions pour les appels d'offres. Récupère les appels d'offres publics, classe les opportunités, extrait les exigences et génère des brouillons de propositions personnalisés grâce à des workflows IA. Conçue pour aider les entreprises à réduire le temps de recherche manuel et à améliorer leur processus de réponse aux appels d'offres.",
 
-    ar: "منصة مدعومة بالذكاء الاصطناعي تعمل على أتمتة البحث عن المناقصات وتحليلها وإنشاء العروض. تقوم بجلب المناقصات العامة، وتصنيف الفرص، واستخراج المتطلبات، وإنشاء مسودات عروض مخصصة باستخدام سير عمل الذكاء الاصطناعي. صُممت لمساعدة الشركات على تقليل وقت البحث اليدوي وتحسين عملية الاستجابة للمناقصات.",
+    ar: "منصة مدعومة بالذكاء الاصطناعي تعمل على أتمتة البحث عن المناقصات وتحليلها وإنشاء الع��وض. تقوم بجلب المناقصات العامة، وتصنيف الفرص، واستخراج المتطلبات، وإنشاء مسودات عروض مخصصة باستخدام سير عمل الذكاء الاصطناعي. صُممت لمساعدة الشركات على تقليل وقت البحث اليدوي وتحسين عملية الاستجابة للمناقصات.",
 
   },
   "projects.erp.title": {
@@ -288,6 +288,21 @@ export const translations: Translations = {
     fr: "Projet Client",
     ar: "مشروع لعميل",
   },
+
+  // Project detail pages
+  "projects.caseStudy": { en: "Engineering case study", fr: "Étude de cas technique", ar: "دراسة حالة هندسية" },
+  "projects.back": { en: "Back to projects", fr: "Retour aux projets", ar: "العودة إلى المشاريع" },
+  "projects.viewDetails": { en: "View case study", fr: "Voir l'étude de cas", ar: "عرض دراسة الحالة" },
+  "projects.noLiveDemo": { en: "No verified live demo", fr: "Aucune démo en ligne vérifiée", ar: "لا يوجد عرض حي موثق" },
+  "projects.privateRepo": { en: "Private or unavailable repository", fr: "Dépôt privé ou indisponible", ar: "مستودع خاص أو غير متاح" },
+  "projects.problem": { en: "The problem", fr: "Le problème", ar: "المشكلة" },
+  "projects.architecture": { en: "Architecture", fr: "Architecture", ar: "البنية المعمارية" },
+  "projects.tradeoffs": { en: "Trade-offs", fr: "Compromis", ar: "المفاضلات" },
+  "projects.debugging": { en: "Failure / debugging story", fr: "Incident / débogage", ar: "قصة الفشل والتصحيح" },
+  "projects.numbers": { en: "Real numbers", fr: "Chiffres réels", ar: "أرقام حقيقية" },
+  "projects.future": { en: "What I'd change with more time", fr: "Ce que je changerais avec plus de temps", ar: "ما سأغيره بوقت إضافي" },
+  "projects.screenshots": { en: "Screenshots / demo", fr: "Captures / démo", ar: "لقطات الشاشة / العرض" },
+  "projects.screenshotsDescription": { en: "A view from the actual system, when an image is available in the portfolio assets.", fr: "Une vue du système réel, lorsqu'une image est disponible dans les ressources du portfolio.", ar: "لقطة من النظام الفعلي عندما تكون صورة متاحة ضمن أصول معرض الأعمال." },
 
   // Contact Section
   "contact.title": {
