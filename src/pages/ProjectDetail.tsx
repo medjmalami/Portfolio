@@ -1,4 +1,4 @@
-import { ArrowLeft, ArrowUpRight, ExternalLink, Github, Lock } from "lucide-react"
+import { ArrowLeft, ExternalLink, Github, Lock } from "lucide-react"
 import { useEffect, type ReactNode } from "react"
 import { Link, Navigate, useLocation, useParams } from "react-router-dom"
 import { LanguageSwitcher } from "../components/language-switcher"
@@ -63,12 +63,8 @@ export default function ProjectDetail() {
 
           <section className="mt-12 lg:mt-16" aria-labelledby="project-media-heading">
             <div className="sr-only"><h2 id="project-media-heading">{t("projects.screenshots")}</h2></div>
-            <div className="case-study-cover">
-              <img src={project.image} alt={project.alt} className={`aspect-[16/8] w-full object-cover ${project.imagePosition ?? ""}`} />
-              <div className="flex items-center justify-between border-t border-border px-5 py-4 text-xs uppercase tracking-[0.14em] text-muted-foreground"><span>{project.alt}</span><ArrowUpRight className="size-4" /></div>
-            </div>
             <div className="mt-6 grid gap-6 md:grid-cols-2">
-              {project.media.map((item, index) => item.type === "screenshot" ? <figure key={`${item.src}-${index}`} className="case-study-media md:col-span-2"><img src={item.src} alt={item.alt} className="aspect-video w-full object-cover" /><figcaption>{item.label ?? item.alt}</figcaption></figure> : <figure key={`${item.src}-${index}`} className="case-study-media md:col-span-2"><video className="aspect-video w-full bg-muted object-cover" controls preload="metadata" aria-label={item.title}><source src={item.src} /></video><figcaption>{item.title}{item.description ? ` — ${item.description}` : ""}</figcaption></figure>)}
+              {(project.media.length > 0 ? project.media : [{ type: "screenshot" as const, src: project.image, alt: project.alt }]).map((item, index) => item.type === "screenshot" ? <figure key={`${item.src}-${index}`} className="case-study-media md:col-span-2"><img src={item.src} alt={item.alt} className={`aspect-[16/8] w-full object-cover ${project.imagePosition ?? ""}`} /><figcaption>{item.label ?? item.alt}</figcaption></figure> : <figure key={`${item.src}-${index}`} className="case-study-media md:col-span-2"><video className="aspect-video w-full bg-muted object-cover" controls preload="metadata" aria-label={item.title}><source src={item.src} /></video><figcaption>{item.title}{item.description ? ` — ${item.description}` : ""}</figcaption></figure>)}
             </div>
           </section>
 
