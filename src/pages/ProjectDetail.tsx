@@ -61,10 +61,16 @@ export default function ProjectDetail() {
             </div>
           </header>
 
-          <div className="case-study-cover mt-12 lg:mt-16">
-            <img src={project.image} alt={project.alt} className={`aspect-[16/8] w-full object-cover ${project.imagePosition ?? ""}`} />
-            <div className="flex items-center justify-between border-t border-border px-5 py-4 text-xs uppercase tracking-[0.14em] text-muted-foreground"><span>{project.alt}</span><ArrowUpRight className="size-4" /></div>
-          </div>
+          <section className="mt-12 lg:mt-16" aria-labelledby="project-media-heading">
+            <div className="sr-only"><h2 id="project-media-heading">{t("projects.screenshots")}</h2></div>
+            <div className="case-study-cover">
+              <img src={project.image} alt={project.alt} className={`aspect-[16/8] w-full object-cover ${project.imagePosition ?? ""}`} />
+              <div className="flex items-center justify-between border-t border-border px-5 py-4 text-xs uppercase tracking-[0.14em] text-muted-foreground"><span>{project.alt}</span><ArrowUpRight className="size-4" /></div>
+            </div>
+            <div className="mt-6 grid gap-6 md:grid-cols-2">
+              {project.media.map((item, index) => item.type === "screenshot" ? <figure key={`${item.src}-${index}`} className="case-study-media md:col-span-2"><img src={item.src} alt={item.alt} className="aspect-video w-full object-cover" /><figcaption>{item.label ?? item.alt}</figcaption></figure> : <figure key={`${item.src}-${index}`} className="case-study-media md:col-span-2"><video className="aspect-video w-full bg-muted object-cover" controls preload="metadata" aria-label={item.title}><source src={item.src} /></video><figcaption>{item.title}{item.description ? ` — ${item.description}` : ""}</figcaption></figure>)}
+            </div>
+          </section>
 
           <div className="case-study-body mt-16 grid gap-14 lg:grid-cols-[13rem_minmax(0,1fr)] lg:gap-16">
             <aside className="hidden lg:block"><div className="sticky top-24 flex flex-col gap-5"><SectionLabel>{t("projects.caseStudy")}</SectionLabel><nav className="flex flex-col gap-3 text-sm text-muted-foreground"><a href="#problem">{t("projects.problem")}</a><a href="#architecture">{t("projects.architecture")}</a><a href="#tradeoffs">{t("projects.tradeoffs")}</a><a href="#debugging">{t("projects.debugging")}</a><a href="#future">{t("projects.future")}</a></nav></div></aside>
@@ -78,7 +84,6 @@ export default function ProjectDetail() {
             </div>
           </div>
 
-          <section className="mt-20 border-t border-border pt-10"><div className="grid gap-8 lg:grid-cols-[13rem_minmax(0,1fr)] lg:gap-16"><SectionLabel>{t("projects.screenshots")}</SectionLabel><div><p className="max-w-xl leading-7 text-muted-foreground">{t("projects.screenshotsDescription")}</p><div className="mt-8 grid gap-6 md:grid-cols-2">{project.media.map((item, index) => item.type === "screenshot" ? <figure key={`${item.src}-${index}`} className="case-study-media md:col-span-2"><img src={item.src} alt={item.alt} className="aspect-video w-full object-cover" /><figcaption>{item.label ?? item.alt}</figcaption></figure> : <figure key={`${item.src}-${index}`} className="case-study-media md:col-span-2"><video className="aspect-video w-full bg-muted object-cover" controls preload="metadata" aria-label={item.title}><source src={item.src} /></video><figcaption>{item.title}{item.description ? ` — ${item.description}` : ""}</figcaption></figure>)}</div></div></div></section>
         </article>
       </div>
     </main>
