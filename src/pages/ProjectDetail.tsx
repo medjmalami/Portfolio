@@ -8,17 +8,33 @@ import { Button } from "../components/ui/button"
 import { getCaseStudyNarrative, getProjectCaseStudy } from "../data/project-case-studies"
 import { projects } from "../data/projects"
 import { useTranslations } from "../hooks/use-translations"
+import { useSEO } from "../lib/seo"
+
+function truncateDescription(text: string, maxLength = 155): string {
+  if (text.length <= maxLength) return text
+  const trimmed = text.slice(0, maxLength)
+  const lastSpace = trimmed.lastIndexOf(" ")
+  const safe = lastSpace > 80 ? trimmed.slice(0, lastSpace) : trimmed
+  return `${safe.trimEnd()}…`
+}
 
 export default function ProjectDetail() {
-  const { projectId } = useParams<{ projectId: string }>()
+  const { projectId, language: langParam } = useParams<{ projectId: string; language?: string }>()
   const location = useLocation()
   const { language, t } = useTranslations()
   const project = projects.find((item) => item.id === projectId)
   const study = projectId ? getProjectCaseStudy(projectId) : undefined
 
+  const lang = langParam === "fr" || langParam === "ar" ? langParam : "en"
+
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "auto" })
   }, [location.pathname])
+
+  useSEO({
+    title: project ? `${t(project.titleKey)} | Mohamed Amine Jmal` : "Project | Mohamed Amine Jmal",
+    description: project ? truncateDescription(t(project.descriptionKey)) : "",
+  })
 
   if (!project || !study) return <Navigate to={`/${language}`} replace />
 

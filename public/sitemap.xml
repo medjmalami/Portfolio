@@ -3,7 +3,7 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://portfolio-jmal.vercel.app/en</loc>
-    <lastmod>2025-12-20</lastmod>
+    <lastmod>2026-08-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://portfolio-jmal.vercel.app/en"/>
@@ -13,7 +13,7 @@
   </url>
   <url>
     <loc>https://portfolio-jmal.vercel.app/fr</loc>
-    <lastmod>2025-12-20</lastmod>
+    <lastmod>2026-08-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://portfolio-jmal.vercel.app/en"/>
@@ -23,12 +23,132 @@
   </url>
   <url>
     <loc>https://portfolio-jmal.vercel.app/ar</loc>
-    <lastmod>2025-12-20</lastmod>
+    <lastmod>2026-08-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://portfolio-jmal.vercel.app/en"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://portfolio-jmal.vercel.app/fr"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://portfolio-jmal.vercel.app/ar"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://portfolio-jmal.vercel.app/"/>
+  </url>
+  <url>
+    <loc>https://portfolio-jmal.vercel.app/en/projects/tender-app</loc>
+    <lastmod>2026-08-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://portfolio-jmal.vercel.app/en/projects/tender-app"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://portfolio-jmal.vercel.app/fr/projects/tender-app"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://portfolio-jmal.vercel.app/ar/projects/tender-app"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://portfolio-jmal.vercel.app/"/>
+  </url>
+  <url>
+    <loc>https://portfolio-jmal.vercel.app/fr/projects/tender-app</loc>
+    <lastmod>2026-08-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://portfolio-jmal.vercel.app/en/projects/tender-app"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://portfolio-jmal.vercel.app/fr/projects/tender-app"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://portfolio-jmal.vercel.app/ar/projects/tender-app"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://portfolio-jmal.vercel.app/"/>
+  </url>
+  <url>
+    <loc>https://portfolio-jmal.vercel.app/ar/projects/tender-app</loc>
+    <lastmod>2026-08-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://portfolio-jmal.vercel.app/en/projects/tender-app"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://portfolio-jmal.vercel.app/fr/projects/tender-app"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://portfolio-jmal.vercel.app/ar/projects/tender-app"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://portfolio-jmal.vercel.app/"/>
+  </url>
+  <url>
+    <loc>https://portfolio-jmal.vercel.app/en/projects/ecoshield</loc>
+    <lastmod>2026-08-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://portfolio-jmal.vercel.app/en/projects/ecoshield"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://portfolio-jmal.vercel.app/fr/projects/ecoshield"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://portfolio-jmal.vercel.app/ar/projects/ecoshield"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://portfolio-jmal.vercel.app/"/>
+  </url>
+  <url>
+    <loc>https://portfolio-jmal.vercel.app/fr/projects/ecoshield</loc>
+    <lastmod>2026-08-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://portfolio-jmal.vercel.app/en/projects/ecoshield"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://portfolio-jmal.vercel.app/fr/projects/ecoshield"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://portfolio-jmal.vercel.app/ar/projects/ecoshield"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://portfolio-jmal.vercel.app/"/>
+  </url>
+  <url>
+    <loc>https://portfolio-jmal.vercel.app/ar/projects/ecoshield</loc>
+    <lastmod>2026-08-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://portfolio-jmal.vercel.app/en/projects/ecoshield"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://portfolio-jmal.vercel.app/fr/projects/ecoshield"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://portfolio-jmal.vercel.app/ar/projects/ecoshield"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://portfolio-jmal.vercel.app/"/>
+  </url>
+  <url>
+    <loc>https://portfolio-jmal.vercel.app/en/projects/erp</loc>
+    <lastmod>2026-08-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://portfolio-jmal.vercel.app/en/projects/erp"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://portfolio-jmal.vercel.app/fr/projects/erp"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://portfolio-jmal.vercel.app/ar/projects/erp"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://portfolio-jmal.vercel.app/"/>
+  </url>
+  <url>
+    <loc>https://portfolio-jmal.vercel.app/fr/projects/erp</loc>
+    <lastmod>2026-08-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://portfolio-jmal.vercel.app/en/projects/erp"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://portfolio-jmal.vercel.app/fr/projects/erp"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://portfolio-jmal.vercel.app/ar/projects/erp"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://portfolio-jmal.vercel.app/"/>
+  </url>
+  <url>
+    <loc>https://portfolio-jmal.vercel.app/ar/projects/erp</loc>
+    <lastmod>2026-08-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://portfolio-jmal.vercel.app/en/projects/erp"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://portfolio-jmal.vercel.app/fr/projects/erp"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://portfolio-jmal.vercel.app/ar/projects/erp"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://portfolio-jmal.vercel.app/"/>
+  </url>
+  <url>
+    <loc>https://portfolio-jmal.vercel.app/en/projects/employees-payroll</loc>
+    <lastmod>2026-08-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://portfolio-jmal.vercel.app/en/projects/employees-payroll"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://portfolio-jmal.vercel.app/fr/projects/employees-payroll"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://portfolio-jmal.vercel.app/ar/projects/employees-payroll"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://portfolio-jmal.vercel.app/"/>
+  </url>
+  <url>
+    <loc>https://portfolio-jmal.vercel.app/fr/projects/employees-payroll</loc>
+    <lastmod>2026-08-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://portfolio-jmal.vercel.app/en/projects/employees-payroll"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://portfolio-jmal.vercel.app/fr/projects/employees-payroll"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://portfolio-jmal.vercel.app/ar/projects/employees-payroll"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://portfolio-jmal.vercel.app/"/>
+  </url>
+  <url>
+    <loc>https://portfolio-jmal.vercel.app/ar/projects/employees-payroll</loc>
+    <lastmod>2026-08-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://portfolio-jmal.vercel.app/en/projects/employees-payroll"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://portfolio-jmal.vercel.app/fr/projects/employees-payroll"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://portfolio-jmal.vercel.app/ar/projects/employees-payroll"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://portfolio-jmal.vercel.app/"/>
   </url>
 </urlset>
