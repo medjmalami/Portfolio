@@ -1,4 +1,4 @@
-import { ArrowLeft, ExternalLink, Github, Lock } from "lucide-react"
+import { ArrowLeft, Github, Lock } from "lucide-react"
 import { useEffect } from "react"
 import { Link, Navigate, useLocation, useParams } from "react-router-dom"
 import { LanguageSwitcher } from "../components/language-switcher"
@@ -25,7 +25,7 @@ export default function ProjectDetail() {
   const project = projects.find((item) => item.id === projectId)
   const study = projectId ? getProjectCaseStudy(projectId) : undefined
 
-  const lang = langParam === "fr" || langParam === "ar" ? langParam : "en"
+
 
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "auto" })

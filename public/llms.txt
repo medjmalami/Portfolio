@@ -1,0 +1,25 @@
+# Mohamed Amine Jmal
+
+> Backend Engineer specializing in APIs, microservices, and AI-integrated systems —
+> LangGraph, RAG pipelines, FastAPI, PostgreSQL. Based in Sfax, Tunisia. Open to
+> backend/AI engineering roles and select freelance web development projects.
+
+## Background
+- Software Engineering student at ISIMS Sfax, Tunisia
+- Former AI Engineer Intern at ZetaBox — built a tender-processing pipeline
+  (FastAPI, LangGraph, Gemini, async SQLAlchemy)
+- National Student Entrepreneur Status (SNEE, Initiator Level), University of Sfax
+
+## Projects
+- [Tender Processing Pipeline](https://github.com/medjmalami/tenders): LangGraph-based
+  agentic pipeline that scrapes, classifies, and drafts proposals for public tenders
+  (built during ZetaBox internship)
+- [EcoShield AI](https://github.com/medjmalami/ecoShield): water infrastructure
+  monitoring system using LSTM models for anomaly detection and flow optimization —
+  AI Night Challenge winner
+
+## Contact
+- Email: jmalmohamedamine1@gmail.com
+- GitHub: https://github.com/medjmalami
+- LinkedIn: https://linkedin.com/in/medjamlami
+- Portfolio: https://portfolio-jmal.vercel.app
