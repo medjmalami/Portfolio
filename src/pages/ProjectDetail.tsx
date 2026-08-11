@@ -1,5 +1,5 @@
-import { ArrowLeft, Github, Lock } from "lucide-react"
-import { useEffect } from "react"
+import { ArrowLeft, ChevronLeft, ChevronRight, Github, Lock } from "lucide-react"
+import { useEffect, useState } from "react"
 import { Link, Navigate, useLocation, useParams } from "react-router-dom"
 import { LanguageSwitcher } from "../components/language-switcher"
 import { ThemeSwitcher } from "../components/theme-switcher"
@@ -25,11 +25,15 @@ export default function ProjectDetail() {
   const project = projects.find((item) => item.id === projectId)
   const study = projectId ? getProjectCaseStudy(projectId) : undefined
 
-
+  const [mediaIndex, setMediaIndex] = useState(0)
 
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "auto" })
   }, [location.pathname])
+
+  useEffect(() => {
+    setMediaIndex(0)
+  }, [projectId])
 
   useSEO({
     title: project ? `${t(project.titleKey)} | Mohamed Amine Jmal` : "Project | Mohamed Amine Jmal",
@@ -37,6 +41,13 @@ export default function ProjectDetail() {
   })
 
   if (!project || !study) return <Navigate to={`/${language}`} replace />
+
+  const mediaItems = project.media.length > 0 ? project.media : [{ type: "screenshot" as const, src: project.image, alt: project.alt }]
+  const currentMedia = mediaItems[mediaIndex]
+  const hasMultiple = mediaItems.length > 1
+
+  const goPrev = () => setMediaIndex((prev) => (prev - 1 + mediaItems.length) % mediaItems.length)
+  const goNext = () => setMediaIndex((prev) => (prev + 1) % mediaItems.length)
 
   return (
     <main className="case-study-page min-h-screen bg-background text-foreground">
@@ -74,25 +85,6 @@ export default function ProjectDetail() {
               </div>
             </div>
             <div className="mt-8 grid gap-3 sm:grid-cols-2 sm:max-w-md">
-              {/*project.liveUrl ? (
-                <Button asChild variant="outline" className="w-full justify-center">
-                  <a
-                    href={project.liveUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center gap-2"
-                  >
-                    <ExternalLink className="h-4 w-4 shrink-0" />
-                    {t("projects.liveDemo")}
-                  </a>
-                </Button>
-              ) : (
-                <div className="flex min-h-10 w-full items-center justify-center rounded-md border border-border px-3 text-sm text-muted-foreground">
-                  <Lock className="mr-2 h-4 w-4 shrink-0" />
-                  {t("projects.noLiveDemo")}
-                </div>
-                )*/}
-
               {project.codeUrl ? (
                 <Button asChild variant="outline" className="w-full justify-center">
                   <a
@@ -116,9 +108,70 @@ export default function ProjectDetail() {
 
           <section className="mt-12 lg:mt-16" aria-labelledby="project-media-heading">
             <div className="sr-only"><h2 id="project-media-heading">{t("projects.screenshots")}</h2></div>
-            <div className="mt-6 grid gap-6 md:grid-cols-2">
-              {(project.media.length > 0 ? project.media : [{ type: "screenshot" as const, src: project.image, alt: project.alt }]).map((item, index) => item.type === "screenshot" ? <figure key={`${item.src}-${index}`} className="case-study-media md:col-span-2"><img src={item.src} alt={item.alt} className={`aspect-[16/8] w-full object-cover ${project.imagePosition ?? ""}`} /><figcaption>{item.label ?? item.alt}</figcaption></figure> : <figure key={`${item.src}-${index}`} className="case-study-media md:col-span-2"><video className="aspect-video w-full bg-muted object-cover" controls preload="metadata" aria-label={item.title}><source src={item.src} /></video><figcaption>{item.title}{item.description ? ` — ${item.description}` : ""}</figcaption></figure>)}
+
+            <div className="relative mt-6">
+              {currentMedia.type === "screenshot" ? (
+                <figure className="case-study-media">
+                  <img
+                    src={currentMedia.src}
+                    alt={currentMedia.alt}
+                    className={`aspect-[16/8] w-full object-cover ${project.imagePosition ?? ""}`}
+                  />
+                  <figcaption>{currentMedia.label ?? currentMedia.alt}</figcaption>
+                </figure>
+              ) : (
+                <figure className="case-study-media">
+                  <video
+                    className="aspect-video w-full bg-muted object-cover"
+                    controls
+                    preload="metadata"
+                    aria-label={currentMedia.title}
+                  >
+                    <source src={currentMedia.src} />
+                  </video>
+                  <figcaption>
+                    {currentMedia.title}
+                    {currentMedia.description ? ` — ${currentMedia.description}` : ""}
+                  </figcaption>
+                </figure>
+              )}
+
+              {hasMultiple && (
+                <>
+                  <button
+                    type="button"
+                    onClick={goPrev}
+                    aria-label="Previous media"
+                    className="absolute left-2 top-1/2 -translate-y-1/2 rounded-full border border-border bg-background/80 p-2 shadow-sm backdrop-blur transition hover:bg-background"
+                  >
+                    <ChevronLeft className="h-5 w-5" />
+                  </button>
+                  <button
+                    type="button"
+                    onClick={goNext}
+                    aria-label="Next media"
+                    className="absolute right-2 top-1/2 -translate-y-1/2 rounded-full border border-border bg-background/80 p-2 shadow-sm backdrop-blur transition hover:bg-background"
+                  >
+                    <ChevronRight className="h-5 w-5" />
+                  </button>
+                </>
+              )}
             </div>
+
+            {hasMultiple && (
+              <div className="mt-4 flex items-center justify-center gap-2">
+                {mediaItems.map((_, index) => (
+                  <button
+                    key={index}
+                    type="button"
+                    onClick={() => setMediaIndex(index)}
+                    aria-label={`Go to media ${index + 1}`}
+                    className={`h-2 rounded-full transition-all ${index === mediaIndex ? "w-6 bg-foreground" : "w-2 bg-border"
+                      }`}
+                  />
+                ))}
+              </div>
+            )}
           </section>
 
           <section className="case-study-body mt-16 border-t border-border pt-10 lg:mt-24 lg:pt-14">
@@ -130,6 +183,6 @@ export default function ProjectDetail() {
 
         </article>
       </div>
-    </main>
+    </main >
   )
 }
