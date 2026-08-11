@@ -1,5 +1,5 @@
 import { ArrowLeft, ChevronLeft, ChevronRight, Github, Lock } from "lucide-react"
-import { useEffect, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import { Link, Navigate, useLocation, useParams } from "react-router-dom"
 import { LanguageSwitcher } from "../components/language-switcher"
 import { ThemeSwitcher } from "../components/theme-switcher"
@@ -26,12 +26,15 @@ export default function ProjectDetail() {
   const study = projectId ? getProjectCaseStudy(projectId) : undefined
 
   const [mediaIndex, setMediaIndex] = useState(0)
+  const scrollerRef = useRef<HTMLDivElement>(null)
+  const isProgrammaticScroll = useRef(false)
 
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "auto" })
   }, [location.pathname])
 
   useEffect(() => {
+    scrollerRef.current?.scrollTo({ left: 0 })
     setMediaIndex(0)
   }, [projectId])
 
@@ -40,14 +43,46 @@ export default function ProjectDetail() {
     description: project ? truncateDescription(t(project.descriptionKey)) : "",
   })
 
-  if (!project || !study) return <Navigate to={`/${language}`} replace />
-
-  const mediaItems = project.media.length > 0 ? project.media : [{ type: "screenshot" as const, src: project.image, alt: project.alt }]
-  const currentMedia = mediaItems[mediaIndex]
+  const mediaItems = project
+    ? project.media.length > 0
+      ? project.media
+      : [{ type: "screenshot" as const, src: project.image, alt: project.alt }]
+    : []
   const hasMultiple = mediaItems.length > 1
 
-  const goPrev = () => setMediaIndex((prev) => (prev - 1 + mediaItems.length) % mediaItems.length)
-  const goNext = () => setMediaIndex((prev) => (prev + 1) % mediaItems.length)
+  const scrollToIndex = (index: number) => {
+    const el = scrollerRef.current
+    if (!el) return
+    isProgrammaticScroll.current = true
+    el.scrollTo({ left: index * el.clientWidth, behavior: "smooth" })
+    setMediaIndex(index)
+    window.setTimeout(() => {
+      isProgrammaticScroll.current = false
+    }, 400)
+  }
+
+  const goPrev = () => scrollToIndex((mediaIndex - 1 + mediaItems.length) % mediaItems.length)
+  const goNext = () => scrollToIndex((mediaIndex + 1) % mediaItems.length)
+
+  // Keep the dots (and desktop arrow state) in sync when the user swipes on mobile
+  useEffect(() => {
+    const el = scrollerRef.current
+    if (!el) return
+    let raf = 0
+    const onScroll = () => {
+      if (isProgrammaticScroll.current) return
+      cancelAnimationFrame(raf)
+      raf = requestAnimationFrame(() => {
+        const width = el.clientWidth || 1
+        const index = Math.round(el.scrollLeft / width)
+        setMediaIndex((prev) => (prev !== index ? index : prev))
+      })
+    }
+    el.addEventListener("scroll", onScroll, { passive: true })
+    return () => el.removeEventListener("scroll", onScroll)
+  }, [mediaItems.length])
+
+  if (!project || !study) return <Navigate to={`/${language}`} replace />
 
   return (
     <main className="case-study-page min-h-screen bg-background text-foreground">
@@ -110,31 +145,37 @@ export default function ProjectDetail() {
             <div className="sr-only"><h2 id="project-media-heading">{t("projects.screenshots")}</h2></div>
 
             <div className="relative mt-6">
-              {currentMedia.type === "screenshot" ? (
-                <figure className="case-study-media">
-                  <img
-                    src={currentMedia.src}
-                    alt={currentMedia.alt}
-                    className={`aspect-[16/8] w-full object-cover ${project.imagePosition ?? ""}`}
-                  />
-                  <figcaption>{currentMedia.label ?? currentMedia.alt}</figcaption>
-                </figure>
-              ) : (
-                <figure className="case-study-media">
-                  <video
-                    className="aspect-video w-full bg-muted object-cover"
-                    controls
-                    preload="metadata"
-                    aria-label={currentMedia.title}
-                  >
-                    <source src={currentMedia.src} />
-                  </video>
-                  <figcaption>
-                    {currentMedia.title}
-                    {currentMedia.description ? ` — ${currentMedia.description}` : ""}
-                  </figcaption>
-                </figure>
-              )}
+              <div
+                ref={scrollerRef}
+                className="no-scrollbar flex snap-x snap-mandatory overflow-x-auto scroll-smooth"
+              >
+                {mediaItems.map((media, index) => (
+                  <figure key={index} className="case-study-media w-full flex-none snap-center">
+                    {media.type === "screenshot" ? (
+                      <img
+                        src={media.src}
+                        alt={media.alt}
+                        className={`aspect-[16/9] w-full object-cover ${project.imagePosition ?? ""}`}
+                        loading={index === 0 ? "eager" : "lazy"}
+                      />
+                    ) : (
+                      <video
+                        className="aspect-[16/9] w-full bg-muted object-cover"
+                        controls
+                        preload="metadata"
+                        aria-label={media.title}
+                      >
+                        <source src={media.src} />
+                      </video>
+                    )}
+                    <figcaption>
+                      {media.type === "screenshot"
+                        ? media.label ?? media.alt
+                        : `${media.title}${media.description ? ` — ${media.description}` : ""}`}
+                    </figcaption>
+                  </figure>
+                ))}
+              </div>
 
               {hasMultiple && (
                 <>
@@ -142,7 +183,7 @@ export default function ProjectDetail() {
                     type="button"
                     onClick={goPrev}
                     aria-label="Previous media"
-                    className="absolute left-2 top-1/2 -translate-y-1/2 rounded-full border border-border bg-background/80 p-2 shadow-sm backdrop-blur transition hover:bg-background"
+                    className="absolute left-2 top-1/2 hidden -translate-y-1/2 rounded-full border border-border bg-background/80 p-2 shadow-sm backdrop-blur transition hover:bg-background md:flex"
                   >
                     <ChevronLeft className="h-5 w-5" />
                   </button>
@@ -150,7 +191,7 @@ export default function ProjectDetail() {
                     type="button"
                     onClick={goNext}
                     aria-label="Next media"
-                    className="absolute right-2 top-1/2 -translate-y-1/2 rounded-full border border-border bg-background/80 p-2 shadow-sm backdrop-blur transition hover:bg-background"
+                    className="absolute right-2 top-1/2 hidden -translate-y-1/2 rounded-full border border-border bg-background/80 p-2 shadow-sm backdrop-blur transition hover:bg-background md:flex"
                   >
                     <ChevronRight className="h-5 w-5" />
                   </button>
@@ -164,7 +205,7 @@ export default function ProjectDetail() {
                   <button
                     key={index}
                     type="button"
-                    onClick={() => setMediaIndex(index)}
+                    onClick={() => scrollToIndex(index)}
                     aria-label={`Go to media ${index + 1}`}
                     className={`h-2 rounded-full transition-all ${index === mediaIndex ? "w-6 bg-foreground" : "w-2 bg-border"
                       }`}

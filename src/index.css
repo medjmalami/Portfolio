@@ -3,173 +3,209 @@
 @tailwind utilities;
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
+
+.no-scrollbar {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+    .text-balance {
+        text-wrap: balance;
+    }
 
-  .case-study-nav {
-    border-bottom: 1px solid hsl(var(--border));
-    background: hsl(var(--background) / 0.86);
-    backdrop-filter: blur(16px);
-  }
+    .case-study-nav {
+        border-bottom: 1px solid hsl(var(--border));
+        background: hsl(var(--background) / 0.86);
+        backdrop-filter: blur(16px);
+    }
 
-  .case-study-kicker,
-  .case-study-label {
-    color: hsl(var(--primary));
-    font-size: 0.7rem;
-    font-weight: 700;
-    letter-spacing: 0.16em;
-    line-height: 1.4;
-    text-transform: uppercase;
-  }
+    .case-study-kicker,
+    .case-study-label {
+        color: hsl(var(--primary));
+        font-size: 0.7rem;
+        font-weight: 700;
+        letter-spacing: 0.16em;
+        line-height: 1.4;
+        text-transform: uppercase;
+    }
 
-  .case-study-hero {
-    border-top: 1px solid hsl(var(--border));
-    padding-top: 1.5rem;
-  }
+    .case-study-hero {
+        border-top: 1px solid hsl(var(--border));
+        padding-top: 1.5rem;
+    }
 
-  .case-study-cover {
-    overflow: hidden;
-    border: 1px solid hsl(var(--border));
-    background: hsl(var(--muted));
-    box-shadow: 0 24px 70px hsl(var(--foreground) / 0.08);
-  }
+    .case-study-cover {
+        overflow: hidden;
+        border: 1px solid hsl(var(--border));
+        background: hsl(var(--muted));
+        box-shadow: 0 24px 70px hsl(var(--foreground) / 0.08);
+    }
 
-  .case-study-cover img {
-    display: block;
-    filter: saturate(0.92);
-  }
+    .case-study-cover img {
+        display: block;
+        filter: saturate(0.92);
+    }
 
-  .case-study-section {
-    display: grid;
-    gap: 2rem;
-    border-top: 1px solid hsl(var(--border));
-    padding-top: 2rem;
-  }
+    .case-study-section {
+        display: grid;
+        gap: 2rem;
+        border-top: 1px solid hsl(var(--border));
+        padding-top: 2rem;
+    }
 
-  .case-study-heading {
-    max-width: 34rem;
-    font-size: clamp(1.6rem, 3vw, 2.35rem);
-    font-weight: 500;
-    letter-spacing: -0.04em;
-    line-height: 1.08;
-  }
+    .case-study-heading {
+        max-width: 34rem;
+        font-size: clamp(1.6rem, 3vw, 2.35rem);
+        font-weight: 500;
+        letter-spacing: -0.04em;
+        line-height: 1.08;
+    }
 
-  .case-study-copy {
-    max-width: 42rem;
-    margin-top: 1.5rem;
-    font-size: 1.08rem;
-    line-height: 1.9;
-  }
+    .case-study-copy {
+        max-width: 42rem;
+        margin-top: 1.5rem;
+        font-size: 1.08rem;
+        line-height: 1.9;
+    }
 
-  .case-study-step {
-    display: grid;
-    grid-template-columns: 3rem minmax(0, 1fr);
-    gap: 1rem;
-    border-top: 1px solid hsl(var(--border));
-    padding: 1.25rem 0;
-  }
+    .case-study-step {
+        display: grid;
+        grid-template-columns: 3rem minmax(0, 1fr);
+        gap: 1rem;
+        border-top: 1px solid hsl(var(--border));
+        padding: 1.25rem 0;
+    }
 
-  .case-study-step:last-child { border-bottom: 1px solid hsl(var(--border)); }
-  .case-study-index { color: hsl(var(--primary)); font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.75rem; padding-top: 0.25rem; }
+    .case-study-step:last-child {
+        border-bottom: 1px solid hsl(var(--border));
+    }
 
-  .case-study-note {
-    display: grid;
-    grid-template-columns: 2rem minmax(0, 1fr);
-    gap: 1rem;
-    border: 1px solid hsl(var(--border));
-    padding: 1.25rem;
-    background: hsl(var(--muted) / 0.35);
-  }
+    .case-study-index {
+        color: hsl(var(--primary));
+        font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+        font-size: 0.75rem;
+        padding-top: 0.25rem;
+    }
 
-  .case-study-media { overflow: hidden; border: 1px solid hsl(var(--border)); background: hsl(var(--muted) / 0.35); }
-  .case-study-media img { display: block; }
-  .case-study-media figcaption { border-top: 1px solid hsl(var(--border)); padding: 0.85rem 1rem; color: hsl(var(--muted-foreground)); font-size: 0.8rem; line-height: 1.5; }
+    .case-study-note {
+        display: grid;
+        grid-template-columns: 2rem minmax(0, 1fr);
+        gap: 1rem;
+        border: 1px solid hsl(var(--border));
+        padding: 1.25rem;
+        background: hsl(var(--muted) / 0.35);
+    }
 
-  @media (min-width: 1024px) {
-    .case-study-section { grid-template-columns: 13rem minmax(0, 1fr); }
-  }
+    .case-study-media {
+        overflow: hidden;
+        border: 1px solid hsl(var(--border));
+        background: hsl(var(--muted) / 0.35);
+    }
+
+    .case-study-media img {
+        display: block;
+    }
+
+    .case-study-media figcaption {
+        border-top: 1px solid hsl(var(--border));
+        padding: 0.85rem 1rem;
+        color: hsl(var(--muted-foreground));
+        font-size: 0.8rem;
+        line-height: 1.5;
+    }
+
+    @media (min-width: 1024px) {
+        .case-study-section {
+            grid-template-columns: 13rem minmax(0, 1fr);
+        }
+    }
 }
 
 @layer base {
-  :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-    --radius: 0.5rem;
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
+    :root {
+        --background: 0 0% 100%;
+        --foreground: 222.2 84% 4.9%;
+        --card: 0 0% 100%;
+        --card-foreground: 222.2 84% 4.9%;
+        --popover: 0 0% 100%;
+        --popover-foreground: 222.2 84% 4.9%;
+        --primary: 222.2 47.4% 11.2%;
+        --primary-foreground: 210 40% 98%;
+        --secondary: 210 40% 96.1%;
+        --secondary-foreground: 222.2 47.4% 11.2%;
+        --muted: 210 40% 96.1%;
+        --muted-foreground: 215.4 16.3% 46.9%;
+        --accent: 210 40% 96.1%;
+        --accent-foreground: 222.2 47.4% 11.2%;
+        --destructive: 0 84.2% 60.2%;
+        --destructive-foreground: 210 40% 98%;
+        --border: 214.3 31.8% 91.4%;
+        --input: 214.3 31.8% 91.4%;
+        --ring: 222.2 84% 4.9%;
+        --radius: 0.5rem;
+        --sidebar-background: 0 0% 98%;
+        --sidebar-foreground: 240 5.3% 26.1%;
+        --sidebar-primary: 240 5.9% 10%;
+        --sidebar-primary-foreground: 0 0% 98%;
+        --sidebar-accent: 240 4.8% 95.9%;
+        --sidebar-accent-foreground: 240 5.9% 10%;
+        --sidebar-border: 220 13% 91%;
+        --sidebar-ring: 217.2 91.2% 59.8%;
+    }
 
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
+    .dark {
+        --background: 222.2 84% 4.9%;
+        --foreground: 210 40% 98%;
+        --card: 222.2 84% 4.9%;
+        --card-foreground: 210 40% 98%;
+        --popover: 222.2 84% 4.9%;
+        --popover-foreground: 210 40% 98%;
+        --primary: 210 40% 98%;
+        --primary-foreground: 222.2 47.4% 11.2%;
+        --secondary: 217.2 32.6% 17.5%;
+        --secondary-foreground: 210 40% 98%;
+        --muted: 217.2 32.6% 17.5%;
+        --muted-foreground: 215 20.2% 65.1%;
+        --accent: 217.2 32.6% 17.5%;
+        --accent-foreground: 210 40% 98%;
+        --destructive: 0 62.8% 30.6%;
+        --destructive-foreground: 210 40% 98%;
+        --border: 217.2 32.6% 17.5%;
+        --input: 217.2 32.6% 17.5%;
+        --ring: 212.7 26.8% 83.9%;
+        --sidebar-background: 240 5.9% 10%;
+        --sidebar-foreground: 240 4.8% 95.9%;
+        --sidebar-primary: 224.3 76.3% 48%;
+        --sidebar-primary-foreground: 0 0% 100%;
+        --sidebar-accent: 240 3.7% 15.9%;
+        --sidebar-accent-foreground: 240 4.8% 95.9%;
+        --sidebar-border: 240 3.7% 15.9%;
+        --sidebar-ring: 217.2 91.2% 59.8%;
+    }
 }
 
 @layer base {
-  * {
-    @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
+    * {
+        @apply border-border;
+    }
+
+    body {
+        @apply bg-background text-foreground;
+    }
 }
+
 /* Base styles for RTL support */
 .rtl {
-  direction: rtl;
-  text-align: right;
+    direction: rtl;
+    text-align: right;
 }
 
 
@@ -177,37 +213,39 @@ body {
 
 /* Exception for cases where we don't want to reverse */
 .rtl .no-rtl-flip {
-  flex-direction: row !important;
+    flex-direction: row !important;
 }
 
 
 
 /* Convert margins/paddings for RTL */
 .rtl .mr-2 {
-  margin-right: 0;
-  margin-left: 0.5rem;
+    margin-right: 0;
+    margin-left: 0.5rem;
 }
+
 .rtl .ml-2 {
-  margin-left: 0;
-  margin-right: 0.5rem;
+    margin-left: 0;
+    margin-right: 0.5rem;
 }
+
 .rtl .pr-4 {
-  padding-right: 0;
-  padding-left: 1rem;
+    padding-right: 0;
+    padding-left: 1rem;
 }
+
 .rtl .pl-4 {
-  padding-left: 0;
-  padding-right: 1rem;
+    padding-left: 0;
+    padding-right: 1rem;
 }
 
 /* Fix button icons for RTL */
 .rtl button svg,
 .rtl a svg {
-  transform: scaleX(-1);
+    transform: scaleX(-1);
 }
 
 /* Don't transform certain icons */
 .rtl .no-flip svg {
-  transform: none !important;
+    transform: none !important;
 }
-
