@@ -20,7 +20,19 @@ export const projects: Project[] = [
     id: "tender-app",
     image: "/tenders.png",
     alt: "TenderApp dashboard showing AI-powered tender classification and proposal drafting built with LangGraph and FastAPI",
-    media: [{ type: "screenshot", src: "/tenders.png", alt: "TenderApp dashboard showing AI-powered tender classification and proposal drafting built with LangGraph and FastAPI" }],
+    media: [
+      {
+        type: "demo",
+        src: "/tenders.mp4",
+        title: "TenderApp dashboard showing AI-powered tender classification and proposal drafting built with LangGraph and FastAPI"
+      },
+      {
+        type: "screenshot",
+        src: "/tenders1.png",
+        alt: "The graph used by langgraph to classify and draft tender proposals"
+      },
+
+    ],
     titleKey: "projects.tenderapp.title",
     descriptionKey: "projects.tenderapp.description",
     technologies: ["FastAPI", "PostgreSQL", "SQLAlchemy", "Alembic", "Docker", "LangGraph", "LangChain", "Next.js"],
@@ -33,8 +45,9 @@ export const projects: Project[] = [
     image: "/ecoShield.png",
     alt: "EcoShield AI dashboard showing real-time FDI attack detection and pump power optimization for smart water infrastructure",
     media: [
+      { type: "demo", src: "/ecoShield.mp4", title: "EcoShield AI dashboard showing real-time FDI attack detection and pump power optimization for smart water infrastructure" },
       { type: "screenshot", src: "/ecoShieldDiagram.png", alt: "EcoShield AI architecture diagram" },
-      { type: "demo", src: "/ecoShield.mp4", title: "EcoShield AI dashboard showing real-time FDI attack detection and pump power optimization for smart water infrastructure" }],
+    ],
     titleKey: "projects.ecoshield.title",
     descriptionKey: "projects.ecoshield.description",
     technologies: ["FastAPI", "Node.js", "Express.js", "RabbitMQ", "JWT", "Docker", "LSTM", "MongoDB", "Redis", "SSE", "Next.js",],
