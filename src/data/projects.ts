@@ -29,7 +29,7 @@ export const projects: Project[] = [
       {
         type: "screenshot",
         src: "/tenders1.png",
-        alt: "The graph used by langgraph to classify and draft tender proposals"
+        alt: "The graph used by LangGraph to classify and draft tender proposals"
       },
 
     ],
