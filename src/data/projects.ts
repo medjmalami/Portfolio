@@ -58,7 +58,53 @@ export const projects: Project[] = [
     id: "erp",
     image: "/erp.jpg",
     alt: "ERP system dashboard showing HR, inventory, sales, and finance modules for an industrial client",
-    media: [{ type: "screenshot", src: "/erp.jpg", alt: "ERP system dashboard showing HR, inventory, sales, and finance modules for an industrial client" }],
+    media: [
+      {
+        type: "screenshot",
+        src: "/erp-login.png",
+        alt: "ERP system login page"
+      },
+      {
+        type: "screenshot",
+        src: "/erp-admin1.png",
+        alt: "ERP system admin dashboard"
+      },
+      {
+        type: "screenshot",
+        src: "/erp-admin2.png",
+        alt: "ERP system admin dashboard"
+      },
+      {
+        type: "screenshot",
+        src: "/erp-admin3.png",
+        alt: "ERP system admin dashboard"
+      },
+      {
+        type: "screenshot",
+        src: "/erp-admin4.png",
+        alt: "ERP system admin dashboard"
+      },
+      {
+        type: "screenshot",
+        src: "/erp-hr1.png",
+        alt: "ERP system HR dashboard"
+      },
+      {
+        type: "screenshot",
+        src: "/erp-hr2.png",
+        alt: "ERP system HR dashboard"
+      },
+      {
+        type: "screenshot",
+        src: "/erp-hr3.png",
+        alt: "ERP system HR dashboard"
+      },
+      {
+        type: "screenshot",
+        src: "/erp-hr4.png",
+        alt: "ERP system HR dashboard"
+      },
+    ],
     titleKey: "projects.erp.title",
     descriptionKey: "projects.erp.description",
     technologies: ["Bun", "Hono", "PostgreSQL", "Drizzle ORM", "Docker", "S3", "JWT", "Zod", "Nginx", "Next.js",],

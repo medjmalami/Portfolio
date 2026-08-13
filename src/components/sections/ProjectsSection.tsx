@@ -30,7 +30,7 @@ export function ProjectsSection() {
                     src={project.image}
                     alt={project.alt}
                     loading="lazy"
-                    className={`object-cover w-full h-full ${project.imagePosition ?? ""}`}
+                    className={` w-full h-full ${project.imagePosition ?? ""}`}
                   />
                 </div>
                 <CardContent className="p-6 flex-1 flex flex-col">

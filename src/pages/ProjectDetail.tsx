@@ -155,7 +155,7 @@ export default function ProjectDetail() {
                       <img
                         src={media.src}
                         alt={media.alt}
-                        className={`aspect-[16/9] w-full object-cover ${project.imagePosition ?? ""}`}
+                        className={`w-full h-auto ${project.imagePosition ?? ""}`}
                         loading={index === 0 ? "eager" : "lazy"}
                       />
                     ) : (
