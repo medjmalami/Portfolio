@@ -104,6 +104,82 @@ export const projects: Project[] = [
         src: "/erp-hr4.png",
         alt: "ERP system HR dashboard"
       },
+      {
+        type: "screenshot",
+        src: "/erp-stock1.jpg",
+        alt: "ERP system stock dashboard"
+      },
+      {
+        type: "screenshot",
+        src: "/erp-stock2.png",
+        alt: "ERP system stock dashboard"
+      },
+      {
+        type: "screenshot",
+        src: "/erp-stock3.jpg",
+        alt: "ERP system stock dashboard"
+      },
+      {
+        type: "screenshot",
+        src: "/erp-stock4.png",
+        alt: "ERP system stock dashboard"
+      },
+      {
+        type: "screenshot",
+        src: "/erp-stock5.png",
+        alt: "ERP system stock dashboard"
+      },
+      {
+        type: "screenshot",
+        src: "/erp-stock6.png",
+        alt: "ERP system stock dashboard"
+      },
+      {
+        type: "screenshot",
+        src: "/erp-commercial1.jpg",
+        alt: "ERP system commercial dashboard"
+      },
+      {
+        type: "screenshot",
+        src: "/erp-commercial2.jpg",
+        alt: "ERP system commercial dashboard"
+      },
+      {
+        type: "screenshot",
+        src: "/erp-finance1.jpg",
+        alt: "ERP system finance dashboard"
+      },
+      {
+        type: "screenshot",
+        src: "/erp-finance2.jpg",
+        alt: "ERP system finance dashboard"
+      },
+      {
+        type: "screenshot",
+        src: "/erp-finance3.jpg",
+        alt: "ERP system finance dashboard"
+      },
+      {
+        type: "screenshot",
+        src: "/erp-purchase1.png",
+        alt: "ERP system purchase dashboard"
+      },
+      {
+        type: "screenshot",
+        src: "/erp-purchase2.png",
+        alt: "ERP system purchase dashboard"
+      },
+      {
+        type: "screenshot",
+        src: "/erp-purchase3.png",
+        alt: "ERP system purchase dashboard"
+      },
+      {
+        type: "screenshot",
+        src: "/erp-marketing1.png",
+        alt: "ERP system marketing dashboard"
+      },
+
     ],
     titleKey: "projects.erp.title",
     descriptionKey: "projects.erp.description",
