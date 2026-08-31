@@ -37,7 +37,7 @@ export const projects: Project[] = [
     descriptionKey: "projects.tenderapp.description",
     technologies: ["FastAPI", "PostgreSQL", "SQLAlchemy", "Alembic", "Docker", "LangGraph", "LangChain", "Next.js"],
     liveUrl: "",
-    codeUrl: "",
+    codeUrl: "https://github.com/medjmalami/tenders",
     imagePosition: "object-[0%_center]",
   },
   {
