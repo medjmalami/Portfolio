@@ -1,7 +1,7 @@
-import { Github, Linkedin, Mail, MapPin } from "lucide-react"
-import { Button } from "../ui/button"
-import { useTranslations } from "../../hooks/use-translations"
 import { motion } from "framer-motion"
+import { Github, Linkedin, Mail, MapPin } from "lucide-react"
+import { useTranslations } from "../../hooks/use-translations"
+import { Button } from "../ui/button"
 
 interface HeroSectionProps {
   scrollToSection: (section: string) => void
@@ -73,7 +73,7 @@ export function HeroSection({ scrollToSection }: HeroSectionProps) {
           className="relative aspect-square max-w-md mx-auto"
         >
           <img
-            src="/profile.jpg"
+            src="/profile.png"
             alt="Mohamed Amine Jmal - Full Stack JavaScript Developer"
             className="rounded-full object-cover w-full h-full"
           />
