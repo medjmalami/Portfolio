@@ -73,7 +73,7 @@ export function HeroSection({ scrollToSection }: HeroSectionProps) {
           className="relative aspect-square max-w-md mx-auto"
         >
           <img
-            src="/profile.png"
+            src="/profile.webp"
             alt="Mohamed Amine Jmal - Full Stack JavaScript Developer"
             className="rounded-full object-cover w-full h-full"
           />
